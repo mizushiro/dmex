@@ -69,6 +69,7 @@
 }
 @media (max-width: 700px) {
     .main-section-notice {padding:4.8rem 0 4rem;}
+    .main-notice-list {gap:1.6rem;}
     .main-notice-list .main-notice-item {width:100%;}
 }
 
