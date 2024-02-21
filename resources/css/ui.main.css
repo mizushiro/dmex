@@ -16,8 +16,10 @@
 .main-blog-btn-area {margin-top:4.4rem;text-align:center;}
 .link-move {display:inline-flex;flex-direction:column;gap:.8rem;align-items:center;justify-content:center;text-decoration:none;}
 .link-move-text {color:#000;font-size:2rem;line-height:2.4rem;font-weight:800}
-.link-move-bullet {width:3.6rem;height:3.6rem;border:1px solid #000;border-radius:999rem;display:flex;align-items:center;justify-content:center}
+.link-move-bullet {width:3.6rem;height:3.6rem;border:1px solid #000;border-radius:999rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
 .down-arrow {aspect-ratio:14/9;display:block;width:1.4rem;background:url("../images/common/down-arrow.svg") 50% 50% no-repeat;background-size:contain;}
+.link-move:hover .link-move-bullet {background-color:#000}
+.link-move:hover .down-arrow {background-image:url("../images/common/down-arrow-hover.svg")}
 @media (min-width: 701px) {
     .main-blog-item:hover .blog-thumb-images {display:none;}
     .main-blog-item:hover .main-blog-item-data {margin-top:1.2rem;}
