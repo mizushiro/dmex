@@ -33,7 +33,7 @@
     .main-section-blog {padding:3.2rem 0 5.6rem;}
     .main-blog-list {gap:1.2rem;}
     .main-blog-list .main-blog-item {width:100%;height:auto;}
-    .blog-thumb-images {width:8rem;position:absolute;left:3.2rem;top:3.2rem;}
+    .blog-thumb-images {width:8rem;position:absolute;left:3.2rem;top:3.2rem;height:8rem;}
     .main-blog-bullet {display:none;}
     .main-blog-item-data {gap:.8rem;}
     .main-blog-item-type {padding-left:10.2rem;}
