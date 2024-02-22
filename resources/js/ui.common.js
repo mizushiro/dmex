@@ -1,7 +1,10 @@
  document.addEventListener('DOMContentLoaded', () => {
     UI.parts.include({
         src: 'header.html',
-        dataId: 'header'
+        dataId: 'header',
+        callback:() => {
+            UI.exe.toggle = new ToggleUI();
+        }
     });
     UI.parts.include({
         src: 'footer.html',
@@ -30,4 +33,8 @@
             });
         }
     });
+
+    UI.callback.nav = (v) => {
+        console.log(v);
+    }
 });
