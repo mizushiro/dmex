@@ -56,10 +56,12 @@
     .keyword-position6 {top:46rem;left:2rem;}
 }
 @media (max-width: 800px) {
+    .main-section-service {padding-bottom:6rem;}
     .main-service-item {padding-top:1.2rem;height:auto;padding-bottom:8rem;min-height:46rem;}
     .main-service-title {font-size:2.4rem;line-height:2.4rem;}
     .main-service-desc {font-size:1.6rem;line-height:2.4rem;margin-top:.8rem;}
     .main-service-desc-small {margin-top:1.2rem;font-size:1.4rem;line-height:2rem;}
+    .main-service-img-area {height:10rem;}
     .main-service-keyword-box {width:11.8rem;height:7.1rem;padding:1.2rem;justify-content:flex-start;gap:.4rem;border-radius:1.2rem;}
     .main-service-keyword-desc {font-size:1rem;transform:scale(.9);white-space:nowrap;line-height:1;margin-left:-.5rem;}
     .main-service-keyword {font-size:1.4rem;line-height:1.7rem;}
