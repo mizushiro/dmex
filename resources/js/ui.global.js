@@ -490,17 +490,7 @@
             btn.dataset.meterial = 'arrow_back';
         }
     }
-    Global.callback.toggle_darkmode = (result) => {
-        console.log('toggle_darkmode', result);
-        const btn = document.querySelector('[data-toggle-object="'+ result.name +'"]');
-        const html = document.querySelector('html');
-        console.log(html, result.state)
-        if (result.state === 'true') {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-    }
+   
 })();
 
 class ToggleUI {
@@ -522,12 +512,17 @@ class ToggleUI {
         const el_object = e.currentTarget;
         const callbackName = el_object.dataset.callback;
         const is_name = el_object.dataset.toggleObject;
+        const el_objects = document.querySelectorAll('[data-toggle-object="'+ is_name +'"]');
         const el_target = document.querySelector('[data-toggle-target="'+ is_name +'"]');
 
         let data_state = el_object.dataset.toggleState;
         let is_state = data_state !== 'true' ? 'true' : 'false';
+
+        for(let item of el_objects) {
+            item.dataset.toggleState = is_state;
+        }
        
-        el_object.dataset.toggleState = is_state;
+        // el_object.dataset.toggleState = is_state;
         !!el_target ? el_target.dataset.toggleState = is_state : '';
               
         !!callbackName && UI.callback[callbackName]({
