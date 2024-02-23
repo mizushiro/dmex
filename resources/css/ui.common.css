@@ -62,6 +62,11 @@ html.scroll_off {overflow:hidden}
 .clamp-base {display:-webkit-box;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden}
 .text-center {text-align:center}
 .font-600 {font-weight:600}
+/* scrollbar */
+.scrollbar-8 {overflow-y:auto;-webkit-overflow-scrolling:touch}
+.scrollbar-8::-webkit-scrollbar {height:.8rem;width:.8rem;}
+.scrollbar-8::-webkit-scrollbar-track {border-radius:999em;background-color:transparent}
+.scrollbar-8::-webkit-scrollbar-thumb {width:.8rem;border-radius:999em;background-color:#D9D9D9;}
 /* title */
 .title-size-40 {font-size:4rem;line-height:5.6rem;font-weight:900;color:#000}
 .title-size-40-700 {font-size:4rem;line-height:4.8rem;font-weight:700;color:#111}
@@ -98,6 +103,9 @@ input:-moz-placeholder {color:#949494}
 .input-size-64-g {height:6.4rem;border-radius:1.2rem;border:none;background-color:#fff;outline:none;font-size:1.6rem;color:#000;font-weight:400}
 .input-size-48-transparent {height:4.8rem;font-size:1.8rem;font-weight:300;color:#000;background-color:transparent;border:none;outline:none;padding-right:.4rem}
 .textarea-w {border-radius:.8rem;padding:1.2rem 2rem;border:none;background-color:#fff;outline:none;font-size:1.6rem;color:#000;font-weight:400}
+@media (max-width:700px) {
+    .input-size-48-transparent {font-size:1.6rem;}
+}
 /* select */
 select {display:inline-block;position:relative;background-color:transparent;appearance:none;-moz-appearance:none;-webkit-appearance:none;cursor:pointer;outline:none;vertical-align:middle;}
 select::-ms-expand {display:none}
@@ -111,7 +119,7 @@ select::-ms-expand {display:none}
 .box-checkbox-a .form-checkbox {position:absolute;left:0;top:0;opacity:0}
 .box-checkbox-a label:before {content:'';position:absolute;left:0;top:0;background-repeat:no-repeat;background-position:50% 50%;background-size:contain}
 .box-checkbox-size-24 {min-height:2.4rem}
-.box-checkbox-size-24 label {padding-left:2.8rem;line-height:2.4rem}
+.box-checkbox-size-24 label {padding-left:3.2rem;line-height:2.4rem}
 .box-checkbox-size-24 label:before {width:2.4rem;height:2.4rem;background-image:url("../images/common/checkbox-2.svg")}
 .box-checkbox-size-24 input[type="checkbox"]:checked+label:before {background-image:url("../images/common/checkbox-2-on.svg")}
 .box-checkbox-size-30 {min-height:3rem}
