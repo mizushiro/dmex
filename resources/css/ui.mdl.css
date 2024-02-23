@@ -1,0 +1,52 @@
+
+.mt-x5{margin-top: calc(var(--gap) * 5);}
+
+.mdl-tab {
+    position: relative;
+    width: 100%;
+    display: flex;
+    
+}
+
+.mdl-tab-wrap {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+}
+
+.mdl-tab-btn {
+    flex: 1;
+    border: 0.1rem solid #CCD4FF;
+    background-color: #F7F7FE;
+    padding: 0.8rem 1.6rem;
+    border-top-left-radius: 2.4rem;
+    border-top-right-radius: 2.4rem;
+    min-height: 6.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mdl-tab-btn span {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #111;
+}
+
+.mdl-tab-btn[data-selected=true] {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 0;
+    background-color: #fff;
+}
+.mdl-tab-btn[data-selected=true] span {
+    font-weight: 700;
+}
+.mdl-tab-item {
+    display: none;
+}
+
+.mdl-tab-item[data-selected=true] {
+    display: block;
+}

@@ -35,6 +35,8 @@ a, button{color:blue}
     --Gradient-Sky-Blue:#6471F6 ;
     --Typo-Point:#98FFFF;
     --Text-Blue:#4234E9;
+
+    --gap: .8rem;
 }
 
 /* layout */
@@ -374,6 +376,7 @@ select::-ms-expand {display:none}
 
 }
 @media (max-width:700px) {
+    .header{top:0;}
     [data-m="hide"] {display:none;}
     [data-m="show"] {display:inherit;}
     .header {
