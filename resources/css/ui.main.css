@@ -17,6 +17,68 @@
 }
 /* E : title box */
 
+/* S : service tab */
+.main-service-tab {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    gap:1rem;
+}
+.main-service-tab-item {
+    position: relative;
+    width: 14rem;
+    height: 12.4rem;
+    display: flex;
+    justify-content: center;
+}
+.main-service-tab-btn {
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 8.8rem;
+    height: 8.8rem;
+    box-shadow: 1.2rem 1.3rem 2.6rem rgba(82, 62, 235, 13%), .3rem .3rem 1.7rem rgba(255, 255, 255, 13%);
+    border-radius: 2.8rem;
+}
+.main-service-tab-btn::before{
+    content: "";
+    display: block;
+    width: 3.4rem;
+    height: 3.4rem;
+    background: url(../images/common/sp_x40.png) no-repeat 0 0 / 16rem ;
+}
+.main-service-tab-btn[data-service="1"],
+.main-service-tab-btn[data-service="3"],
+.main-service-tab-btn[data-service="5"],
+.main-service-tab-btn[data-service="7"]{background: linear-gradient(-45deg, #9558FF, #60C6FF);}
+.main-service-tab-btn[data-service="2"],
+.main-service-tab-btn[data-service="4"],
+.main-service-tab-btn[data-service="6"],
+.main-service-tab-btn[data-service="8"]{background: linear-gradient(-45deg, #985DFF, #FF9847);}
+
+.main-service-tab-btn[data-service="1"]::before{background-position: 0 0;}
+.main-service-tab-btn[data-service="2"]::before{background-position: -4rem 0;}
+.main-service-tab-btn[data-service="3"]::before{background-position: -8rem 0;}
+.main-service-tab-btn[data-service="4"]::before{background-position: -12rem 0;}
+.main-service-tab-btn[data-service="5"]::before{background-position: 0 -4rem;}
+.main-service-tab-btn[data-service="6"]::before{background-position: -4rem -4rem;}
+.main-service-tab-btn[data-service="7"]::before{background-position: -8rem -4rem;}
+.main-service-tab-btn[data-service="8"]::before{background-position: -12rem -4rem;}
+.main-service-tab-btn span{
+    display: block;
+    position: absolute;
+    bottom:0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    width: 14rem;
+}
+
+/* E : service tab */
+
 /* S : service */
 .main-service-item {min-height:85.6rem;padding-top:13.7rem;position:relative;}
 .main-service-title-box {display:flex;justify-content:center}

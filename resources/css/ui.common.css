@@ -173,6 +173,10 @@ select::-ms-expand {display:none}
     top:-6rem;
     padding:0 1.6rem;
 }
+[data-page="main"] .header::before {
+    background:linear-gradient(to left, #241C56CC, #040114, #241C56CC);
+    opacity:.5;
+}
 .header::before {
     content:"";
     display:block;
@@ -181,8 +185,7 @@ select::-ms-expand {display:none}
     height:100%;
     top:0;
     left:0;
-    background:linear-gradient(to left, #241C56CC, #040114, #241C56CC);
-    opacity:.5;
+    background:linear-gradient(to right, #2B2A32, #3C395A 50%, #3C395A);
 }
 .header-wrap {
     position:relative;
