@@ -1,51 +1,18 @@
 
-.mt-x5{margin-top: calc(var(--gap) * 5);}
-
-.mdl-tab {
-    position: relative;
-    width: 100%;
-    display: flex;
-}
-
-.mdl-tab-wrap {
-    display: flex;
-    width: 100%;
-    gap: 0;
-    justify-content: space-between;
-}
-
-.mdl-tab-btn {
-    flex: 1;
-    border: 0.1rem solid #CCD4FF;
-    background-color: #F7F7FE;
-    padding: 0.8rem 1.6rem;
-    border-top-left-radius: 2.4rem;
-    border-top-right-radius: 2.4rem;
-    min-height: 6.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mdl-tab-btn span {
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: #111;
-}
-
-.mdl-tab-btn[data-selected=true] {
-    background-color: #000;
-    color: #fff;
-    border-bottom: 0;
-    background-color: #fff;
-}
-.mdl-tab-btn[data-selected=true] span {
-    font-weight: 700;
-}
-.mdl-tab-item {
-    display: none;
-}
-
-.mdl-tab-item[data-selected=true] {
-    display: block;
+.mt-x5 {margin-top:calc(var(--gap) * 5);}
+.mdl-tab {position:relative;width:100%;display:flex;}
+.mdl-tab-wrap {display:flex;width:100%;gap:0;justify-content:space-between;}
+.mdl-tab-btn {flex:1;border:0.1rem solid #CCD4FF;background-color:#F7F7FE;display:flex;justify-content:center;align-items:center;}
+.mdl-tab-btn span {font-weight:400;color:#111;}
+.mdl-tab-btn[data-selected=true] {color:#fff;border-bottom:0;background-color:#fff;}
+.mdl-tab-btn[data-selected=true] span {font-weight:700;}
+.mdl-tab-item {display:none;}
+.mdl-tab-item[data-selected=true] {display:block;}
+.mdl-tab-size-64 {padding:0.8rem 1.6rem;border-top-left-radius:2.4rem;border-top-right-radius:2.4rem;min-height:6.4rem;}
+.mdl-tab-text-24 {font-size:2.4rem;line-height:3.2rem;}
+.mdl-tab-text-16 {font-size:1.6rem;line-height:2.2rem;}
+@media (max-width:700px) {
+    .mdl-tab-size-64 {padding:0.8rem 1.6rem;border-top-left-radius:1.6rem;border-top-right-radius:1.6rem;min-height:4.8rem;}
+    .mdl-tab-text-24 {font-size:1.6rem;line-height:2.2rem;}
+    .mdl-tab-text-16 {font-size:1.4rem;line-height:2rem;}
 }

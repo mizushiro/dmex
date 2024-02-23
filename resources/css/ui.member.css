@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* S : 로그인 */
-.icon-smail {display:inline-block;background:url("../images/common/icon-smile.svg") no-repeat 50% 50%;width:2.5rem;height:2.5rem;background-size:contain;margin-right:.4rem;}
+.icon-smile {display:inline-block;background:url("../images/common/icon-smile.svg") no-repeat 50% 50%;width:2.5rem;height:2.5rem;background-size:contain;margin-right:.4rem;}
 .title-size-40-700 + .title-desc-size-20 {margin-top:1.8rem;}
-.title-desc-size-20 .icon-smail {vertical-align:middle;position:relative;top:-.3rem;}
+.title-desc-size-20 .icon-smile {vertical-align:middle;position:relative;top:-.3rem;}
 .member-form-group {margin-top:4.4rem;display:flex;flex-direction:column;gap:1.6rem;}
 .member-form-item {display:flex;min-height:6.4rem;border-radius:1.2rem;padding:.8rem 2.4rem;position:relative;background-color:#F4F4F4;align-items:center}
 .member-form-item .input-size-48-transparent {min-width:0;flex:1;}
