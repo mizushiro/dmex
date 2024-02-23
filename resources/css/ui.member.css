@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* S : 로그인 */
+.icon-smail {display:inline-block;background:url("../images/common/icon-smile.svg") no-repeat 50% 50%;width:2.5rem;height:2.5rem;background-size:contain;margin-right:.4rem;}
+.title-size-40-700 + .title-desc-size-20 {margin-top:1.8rem;}
+.title-desc-size-20 .icon-smail {vertical-align:middle;position:relative;top:-.3rem;}
+.member-form-group {margin-top:4.4rem;display:flex;flex-direction:column;gap:1.6rem;}
+.member-form-item {display:flex;min-height:6.4rem;border-radius:1.2rem;padding:.8rem 2.4rem;position:relative;background-color:#F4F4F4;}
+.member-form-item .input-size-48-transparent {min-width:0;flex:1;}
+.member-form-item-title {font-size:1.8rem;font-weight:600;color:#000;line-height:2.2rem;padding-top:1.3rem;flex-shrink:0;width:12rem;}
+.member-form-item-title.requisite:after {content:'';width:.6rem;height:.6rem;border-radius:999rem;background-color:#6A7DDC;display:inline-block;margin-left:.6rem;vertical-align:top;position:relative;top:.2rem;}
+.member-form-order {margin-top:2.4rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.member-form-order-menu {display:flex;gap:1.7rem;}
+.order-menu-item {font-size:1.6rem;text-decoration:none;color:#5C5C5C;line-height:2.4rem;font-weight:600;position:relative;}
+.order-menu-item ~ .order-menu-item:before {content:'';position:absolute;left:-.9rem;width:1px;height:1.2rem;background-color:#E3E3E3;top:.6rem;}
+.order-login-item i {display:block;aspect-ratio:1/1;width:6.6rem;background-repeat:no-repeat;background-position:50% 50%;background-size:contain;}
+.order-login-box {display:flex;align-items:center;justify-content:center;gap:3.4rem;padding-top:3.8rem;border-top:1px solid #BDC3E3;margin-top:9.6rem;}
+.icon-naver {background-image:url("../images/common/icon-naver.svg");}
+.icon-kakao {background-image:url("../images/common/icon-kakao.svg");}
+.icon-link {background-image:url("../images/common/icon-link.svg");}
+.tab-content-box {margin-top:3.5rem;}
+@media (max-width:700px) {
+    .member-form-group {gap:1.2rem;}
+    .member-form-item-title {font-size:1.6rem;width:10rem;}
+    .member-form-item {min-height:5.6rem;padding:.4rem 2rem;}
+}
+/* E : 로그인 */
