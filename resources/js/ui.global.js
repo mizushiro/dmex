@@ -328,150 +328,83 @@
 		}
 	}
 
-    Global.scrollEvent = {
-		options : {
-			selector: document.querySelector('html, body'),
-			focus: false,
-			top: 0,
-			left:0,
-			add: 0,
-			align: 'default',
-			effect:'smooth', //'auto'
-			callback: false,	
+    Global.scroll = {
+		option: {
+			selector: null,
+			area: null
 		},
-		init() {
-			const el_areas = document.querySelectorAll('.ui-scrollmove-btn[data-area]');
 
-			for (let i = 0, len = el_areas.length; i < len; i++) {
-				const that = el_areas[i];
+		init(option) {
+			const opt = Object.assign({}, this.option, option);
+			const el_area = (opt.area === undefined || opt.area === null) ? window : opt.area;
+			const el_parallax = (opt.selector === undefined || opt.selector === null) ? document.querySelector('.ui-scrollevent') : opt.selector;
+			const el_items = el_parallax.querySelectorAll('.ui-scrollevent-item');
+			let prev_st = el_parallax.scrollTop;
+			let ps;
 
-				that.removeEventListener('click', this.act);
-				that.addEventListener('click', this.act);
-			}
-			// for (let that of el_areas) {
-			// 	that.removeEventListener('click', this.act);
-			// 	that.addEventListener('click', this.act);
-			// }
-		},
-		act(e) {
-			const el = e.currentTarget;
-			const area = el.dataset.area;
-			const name = el.dataset.name;
-			const add = el.dataset.add === undefined ? 0 : el.dataset.add;
-			const align = el.dataset.align === undefined ? 'default' : el.dataset.align;
-			const callback = el.dataset.callback === undefined ? false : el.dataset.callback;
-			let el_area = document.querySelector('.ui-scrollmove[data-area="'+ area +'"]');
-			const item = el_area.querySelector('.ui-scrollbar-item');
-			
-			if (!!item) {
-				el_area = el_area.querySelector('.ui-scrollbar-item');
-			}
+			const act = () => {
+                console.log(1111111);
 
-			const el_item = el_area.querySelector('.ui-scrollmove-item[data-name="'+ name +'"]');
-			
-			let top = (el_area.getBoundingClientRect().top - el_item.getBoundingClientRect().top) - el_area.scrollTop;
-			let left = (el_area.getBoundingClientRect().left - el_item.getBoundingClientRect().left) - el_area.scrollLeft;
+				const isWin = el_area === window;
+				const areaH = isWin ? window.innerHeight : el_area.offsetHeight;
+				let areaT = 0;
 
-			if (align === 'center') {
-				top = top - (el_item.offsetHeight / 2);
-				left = left - (el_item.offsetWidth / 2);
-			}
-
-			Global.scroll.move({
-				top: top,
-				left: left,
-				add: add,
-				selector: el_area,
-				align: align,
-				focus: el_item,
-				callback: callback
-			});
-		},
-		move(option) {
-			const opt = Object.assign({}, this.options, option);
-			//const opt = {...this.options, ...option};
-			const top = opt.top;
-			const left = opt.left;
-			const callback = opt.callback;
-			const align = opt.align;
-			const add = opt.add;
-			const focus = opt.focus;
-			const effect = opt.effect;
-			let selector = opt.selector;
-			const item = selector.querySelector('.ui-scrollbar-item');
-			const isCustomScroll = selector.classList.contains('ui-scrollbar');
-
-			if (!!item && !!isCustomScroll) {
-				selector = selector.querySelector('.ui-scrollbar-item');
-			}
-
-			switch (align) {
-				case 'center':
-					selector.scrollTo({
-						top: Math.abs(top) - (selector.offsetHeight / 2) + add,
-						left: Math.abs(left) - (selector.offsetWidth / 2) + add,
-						behavior: effect
-					});
-					break;
-				
-				case 'default':
-				default :
-					selector.scrollTo({
-						top: Math.abs(top) + add,
-						left: Math.abs(left) + add,
-						behavior: effect
-					});
-			}
-			this.checkEnd({
-				selector : selector,
-				nowTop : selector.scrollTop, 
-				nowLeft : selector.scrollLeft,
-				align : align,
-				callback : callback,
-				focus : focus
-			});
-		},
-		checkEndTimer : {},
-		checkEnd(opt) {
-			const el_selector = opt.selector;
-			const align = opt.align
-			const focus = opt.focus
-			const callback = opt.callback
-			
-			let nowTop = opt.nowTop;
-			let nowLeft = opt.nowLeft;
-
-			Global.scrollEvent.checkEndTimer = setTimeout(() => {
-				//스크롤 현재 진행 여부 판단
-				if (nowTop === el_selector.scrollTop && nowLeft === el_selector.scrollLeft) {
-					clearTimeout(Global.scrollEvent.checkEndTimer);
-					//포커스가 위치할 엘리먼트를 지정하였다면 실행
- 					if (!!focus ) {
-						focus.setAttribute('tabindex', 0);
-						focus.focus();
+				for (let i = 0, len = el_items.length; i < len; i++) {
+					const that = el_items[i];
+					const callbackname = that.dataset.act;
+					const h = Math.floor(that.offsetHeight);
+					!isWin ? areaT = el_area.getBoundingClientRect().top : '';
+					const _start = Math.floor(that.getBoundingClientRect().top) - (areaT + el_area.scrollTop); 
+					let start = Math.floor(that.getBoundingClientRect().top) - areaH;
+					let _n = 0;
+					let _per_s = 0;
+					let _per_e = 0;
+	
+					if (start < 0) {
+						_n = Math.abs(start);
+						_per_s = Math.round(_n / areaH * 100);
+						_per_s = _per_s >= 100 ? 100 : _per_s;
+					} else {
+						_n = 0;
+						_per_s = 0;
 					}
-					//스크롤 이동후 콜백함수 실행
-					if (!!callback) {
-						if (typeof callback === 'string') {
-							Global.callback[callback]();
-						} else {
-							callback();
-						}
+	
+					if (start + areaH < 0) {
+						_n = Math.abs(start + areaH);
+						_per_e = Math.round(_n / h * 100);
+						_per_e = _per_e >= 100 ? 100 : _per_e;
+					} else {
+						_n = 0;
+						_per_e = 0;
 					}
-				} else {
-					nowTop = el_selector.scrollTop;
-					nowLeft = el_selector.scrollLeft;
 
-					Global.scrollEvent.checkEnd({
-						selector: el_selector,
-						nowTop: nowTop,
-						nowLeft: nowLeft,
-						align: align,
-						callback: callback,
-						focus: focus
-					});
+					that.setAttribute('data-scrollevent-s', _per_s);
+					that.setAttribute('data-scrollevent-e', _per_e);
+
+
+					if (prev_st < el_parallax.scrollTop) {
+						ps = 'down';
+					} else if (prev_st > el_parallax.scrollTop) {
+						ps ='up';
+					}
+
+					prev_st = el_parallax.scrollTop;
+
+					if (!!Global.callback[callbackname]) {
+						Global.callback[callbackname]({
+							el: that,
+							name: callbackname,
+							px: _n,
+							start: _per_s,
+							end: _per_e,
+							ps: ps
+						});
+					}
 				}
-			},100);
+			}
+	
+			act();
+			el_area.addEventListener('scroll', act);
 		}
 	}
    
@@ -492,6 +425,45 @@
     }
    
 })();
+
+class ScrollPage {
+    constructor(opt) {
+        this.el_wrap = document.querySelector('.mdl-scroll');
+        this.el_items = this.el_wrap.querySelectorAll('[data-scroll-callback]');
+        this.sctop = this.el_wrap.scrollTop;
+        this.wraph = this.el_wrap.offsetHeight;
+        this.ary_top_s = [];
+        this.ary_top_e = [];
+        this.init();
+    }
+    init() {
+        for (let item of this.el_items) {
+            const rect = item.getBoundingClientRect();
+            this.ary_top_s.push(rect.top + this.sctop - this.wraph)
+            this.ary_top_e.push(rect.top + this.sctop);
+        }
+
+        console.log(this.ary_top_s, this.ary_top_e);
+
+        const act = (e) => {
+            const n = this.el_wrap.scrollTop;
+            for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
+                const n_s = Number(this.ary_top_s[i]);
+                const n_e = Number(this.ary_top_e[i]);
+                if (n_s < n && n_e > n) {
+                    const _n = n_e - n_s;
+                    const __n = n - n_s;
+                    let per = (__n / _n * 100) * 1.2;
+
+                    per > 100 ? per = 100 : '';
+                    console.log(i, Math.floor(per))
+                }
+            }
+        }
+       
+        window.addEventListener('scroll', act);
+    }
+}
 
 class ToggleUI {
     constructor(opt) {

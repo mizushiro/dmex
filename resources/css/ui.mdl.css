@@ -1,5 +1,7 @@
 
 .mt-x5 {margin-top:calc(var(--gap) * 5);}
+.pt-x0 {padding-top: 0 !important;}
+
 .mdl-tab {position:relative;width:100%;display:flex;}
 .mdl-tab-wrap {display:flex;width:100%;gap:0;justify-content:space-between;}
 .mdl-tab-btn {flex:1;border:0.1rem solid #CCD4FF;background-color:#F7F7FE;display:flex;justify-content:center;align-items:center;}
