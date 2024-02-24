@@ -11,10 +11,21 @@
 
             <a href="" class="btn-ghost">마이 대시보드</a>
             <a href="" class="btn-ghost">서비스 관리</a>
+            <div class="header-language" data-toggle-target="lang">
+                <div class="header-language-wrap">
+                    <button type="button" class="header-language-btn" data-toggle-object="lang" data-toggle-state="false">
+                        <span>Language</span>
+                    </button>
+                    <div class="header-language-select">
+                        <button type="button" data-toggle-object="lang">한국어</button>
+                        <button type="button" data-toggle-object="lang">English</button>
+                        <button type="button" data-toggle-object="lang">日本語</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="header-util" data-m="show">
             <a href="" class="btn-member" aria-label="회원가입"></a>
-            <button type="button" class="btn-nav" aria-label="메뉴보기" data-toggle-object="nav" data-callback="nav" data-toggle-state="false"></button>
             <button type="button" class="btn-nav" aria-label="메뉴보기" data-toggle-object="nav" data-callback="nav" data-toggle-state="false"></button>
         </div>
     </div>
@@ -30,7 +41,183 @@
         </nav>
     </div>
 
-    <div class="header-m" data-toggle-target="nav">
-        dddd
+    <div class="header-m" data-toggle-target="nav" data-m="show">
+        <div class="header-m-wrap">
+            <div class="header-m-top">
+                <button type="button" class="btn-nav-close" aria-label="메뉴닫기" data-toggle-object="nav" data-callback="nav" data-toggle-state="false"></button>
+
+                <div class="header-language" data-toggle-target="lang2" data-style="dark">
+                    <div class="header-language-wrap">
+                        <button type="button" class="header-language-btn" data-toggle-object="lang2" data-toggle-state="false">
+                            <span>Language</span>
+                        </button>
+                        <div class="header-language-select">
+                            <button type="button" data-toggle-object="lang2">한국어</button>
+                            <button type="button" data-toggle-object="lang2">English</button>
+                            <button type="button" data-toggle-object="lang2">日本語</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-m-top">
+                <p>로그인 해 주세요</p>
+                <button type="button" class="btn-util" data-login="true">
+                    <span>로그인</span>
+                </button>
+            </div>
+            <!-- <div class="header-m-top">
+                <p>홍길동님 반갑습니다.</p>
+                <button type="button" class="btn-util" data-login="false">
+                    <span>로그앙웃</span>
+                </button>
+            </div> -->
+            <div class="header-m-top">
+                <div class="header-m-util">
+                    <button type="button" class="btn-util" data-type="util">
+                        <span>마이 대시보드</span>
+                    </button>
+                    <button type="button" class="btn-util" data-type="util">
+                        <span>서비스 관리</span>
+                    </button>
+                    <button type="button" class="btn-util" data-type="util">
+                        <span>데모신청</span>
+                    </button>
+                </div>
+            </div>
+
+            <section class="header-m-scroll">
+                <nav class="nav-main">
+                    <h3 class="nav-main-tit">주요서비스</h3>
+                    <ul class="nav-main-list">
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">스트리밍 솔루션</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">실시간 라이브 편성</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">라이브 송출 대행</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">CDN</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">AI 챗봇</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">Form</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">웹 플레이어</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="nav-main-item">
+                            <div class="nav-main-txt">유튜브 자동 업로드</div>
+                            <div class="nav-main-group">
+                                <button type="button" data-icon="plus" aria-label="신청"></button>
+                                <button type="button">
+                                    <span>신청</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="mdl-acco" data-id="navAcco">
+                    <div class="mdl-acco-item">
+                        <div class="mdl-acco-head">
+                            <div class="mdl-acco-head-wrap">
+                                <strong class="mdl-acco-tit">마이페이지</strong>
+                            </div>
+                            <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
+                        </div>
+                        <div class="mdl-acco-body">
+                            <div class="mdl-acco-wrap">
+                                <div class="box">
+                                    <a href="">개인정보 변경</a>
+                                    <a href="">서비스 신청 내역</a>
+                                    <a href="">결제정보 변경</a>
+                                    <a href="">환불계좌 관리</a>
+                                    <a href="">예치금 현황</a>
+                                    <a href="">연결정보 변경</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-acco-item">
+                        <div class="mdl-acco-head">
+                            <a href="#link2" class="mdl-acco-btn" aria-label="title link">블로그</a>
+                        </div>
+                    </div>
+                    <div class="mdl-acco-item">
+                        <div class="mdl-acco-head">
+                            <div class="mdl-acco-head-wrap">
+                                <strong class="mdl-acco-tit">고객센터</strong>
+                            </div>
+                            <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
+                        </div>
+                        <div class="mdl-acco-body">
+                            <div class="mdl-acco-wrap">
+                                <div class="box">
+                                    <a href="">1:1  문의</a>
+                                    <a href="">자주하는 질문</a>
+                                    <a href="">공지사항</a>
+                                    <a href="">매뉴얼 자료실</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-m-link">
+                    <a href="">회사소개</a>
+                    <a href="">이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                </div>
+            </section>
+            
+        </div>
+        
     </div>
 </div> 
