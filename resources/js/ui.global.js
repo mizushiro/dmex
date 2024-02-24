@@ -62,7 +62,7 @@
         },
         scroll: {
             y: 0,
-            direction: 'down'
+            direction: 'down',
         },		
         breakPoint: [600, 905],
     };
@@ -328,85 +328,6 @@
 		}
 	}
 
-    Global.scroll = {
-		option: {
-			selector: null,
-			area: null
-		},
-
-		init(option) {
-			const opt = Object.assign({}, this.option, option);
-			const el_area = (opt.area === undefined || opt.area === null) ? window : opt.area;
-			const el_parallax = (opt.selector === undefined || opt.selector === null) ? document.querySelector('.ui-scrollevent') : opt.selector;
-			const el_items = el_parallax.querySelectorAll('.ui-scrollevent-item');
-			let prev_st = el_parallax.scrollTop;
-			let ps;
-
-			const act = () => {
-                console.log(1111111);
-
-				const isWin = el_area === window;
-				const areaH = isWin ? window.innerHeight : el_area.offsetHeight;
-				let areaT = 0;
-
-				for (let i = 0, len = el_items.length; i < len; i++) {
-					const that = el_items[i];
-					const callbackname = that.dataset.act;
-					const h = Math.floor(that.offsetHeight);
-					!isWin ? areaT = el_area.getBoundingClientRect().top : '';
-					const _start = Math.floor(that.getBoundingClientRect().top) - (areaT + el_area.scrollTop); 
-					let start = Math.floor(that.getBoundingClientRect().top) - areaH;
-					let _n = 0;
-					let _per_s = 0;
-					let _per_e = 0;
-	
-					if (start < 0) {
-						_n = Math.abs(start);
-						_per_s = Math.round(_n / areaH * 100);
-						_per_s = _per_s >= 100 ? 100 : _per_s;
-					} else {
-						_n = 0;
-						_per_s = 0;
-					}
-	
-					if (start + areaH < 0) {
-						_n = Math.abs(start + areaH);
-						_per_e = Math.round(_n / h * 100);
-						_per_e = _per_e >= 100 ? 100 : _per_e;
-					} else {
-						_n = 0;
-						_per_e = 0;
-					}
-
-					that.setAttribute('data-scrollevent-s', _per_s);
-					that.setAttribute('data-scrollevent-e', _per_e);
-
-
-					if (prev_st < el_parallax.scrollTop) {
-						ps = 'down';
-					} else if (prev_st > el_parallax.scrollTop) {
-						ps ='up';
-					}
-
-					prev_st = el_parallax.scrollTop;
-
-					if (!!Global.callback[callbackname]) {
-						Global.callback[callbackname]({
-							el: that,
-							name: callbackname,
-							px: _n,
-							start: _per_s,
-							end: _per_e,
-							ps: ps
-						});
-					}
-				}
-			}
-	
-			act();
-			el_area.addEventListener('scroll', act);
-		}
-	}
    
     //common exe
     Global.parts.resizeState();
@@ -427,8 +348,11 @@
 })();
 
 class ScrollPage {
-    constructor(opt) {
+    constructor() {
         this.el_wrap = document.querySelector('.mdl-scroll');
+        if (!this.el_wrap) {
+            this.el_wrap = document.querySelector('html');
+        }
         this.el_items = this.el_wrap.querySelectorAll('[data-scroll-callback]');
         this.sctop = this.el_wrap.scrollTop;
         this.wraph = this.el_wrap.offsetHeight;
@@ -445,7 +369,7 @@ class ScrollPage {
 
         console.log(this.ary_top_s, this.ary_top_e);
 
-        const act = (e) => {
+        const act = () => {
             const n = this.el_wrap.scrollTop;
             for (let i = 0, len = this.ary_top_s.length; i < len; i++) {
                 const n_s = Number(this.ary_top_s[i]);
@@ -453,14 +377,18 @@ class ScrollPage {
                 if (n_s < n && n_e > n) {
                     const _n = n_e - n_s;
                     const __n = n - n_s;
-                    let per = (__n / _n * 100) * 1.2;
+                    let per = Math.round((__n / _n * 100) * 1.2);
+                    const _name = this.el_items[i].dataset.scrollCallback;
 
                     per > 100 ? per = 100 : '';
-                    console.log(i, Math.floor(per))
+                    UI.callback[_name] && UI.callback[_name]({
+                        percent: per,
+                        element: this.el_items[i],
+                    });
                 }
             }
         }
-       
+        act();
         window.addEventListener('scroll', act);
     }
 }
@@ -519,6 +447,7 @@ class ToggleUI {
         });
     }
 }
+
 class Tab {
     constructor(opt) {
         this.current = opt.current ? opt.current : false;
