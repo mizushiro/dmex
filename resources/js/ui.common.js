@@ -18,7 +18,13 @@
         src: 'footer.html',
         dataId: 'footer',
         callback:() => {
-            
+            const el_top = document.querySelector('.floating-top');
+
+            el_top.addEventListener('click', () => {
+                UI.scroll.move({
+                    top: 0
+                })
+            });
         }
     });
 

@@ -647,3 +647,78 @@ main{position: relative; z-index: 1;}
 @media (max-width:389px) {
     html{font-size: 2.57vw !important;}
 }
+
+.floating {
+    position: fixed;
+    bottom:2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1.4rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.floating-chatbot{
+    width: 8.9rem;
+    height: 14.6rem;
+    border-radius: 6rem;
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    align-items: center;
+    gap:1.8rem;
+    background-color: #FFF0D3;
+    color:#000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+.floating-chatbot::before{
+    content: "";
+    display: block;
+    width: 5.2rem;
+    height: 4.5rem;
+    background: url(../images/common/chatbot.png) no-repeat 50% 50% / 5.2rem;
+}
+.floating-chatbot:hover,
+.floating-chatbot.active{background-color: #6471F6; color: #fff;}
+
+.floating-top{
+    width: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:.3rem;
+    color:#000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all .2s ease;
+}
+.floating-top::before{
+    content: "";
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: url(../images/common/ico-top.svg) no-repeat 50% 50% / 3.2rem;
+}
+.floating-top:hover,
+.floating-top.active{font-weight:700; color: #6471F6;}
+.floating-top:hover::before,
+.floating-top.active::before{background-image: url(../images/common/ico-top-hover.svg);}
+@media (max-width:700px) {
+    .floating {
+        right: -.6rem;
+    }
+    .floating-chatbot {
+        gap: .4rem;
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 2rem;
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    .floating-chatbot:hover,
+    .floating-chatbot.active{border-radius: 4.8rem; transform:translateX(-1.2rem);}
+}

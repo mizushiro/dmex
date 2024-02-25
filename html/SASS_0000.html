@@ -707,8 +707,8 @@
             </div>
             <div class="footer-banner-control">
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-button-play" data-state="play"></div>
                 <div class="swiper-button-next"></div>
-                <div class="swiper-button-play"> </div>
             </div>
         </div>
 
@@ -720,6 +720,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             //main visual swiper
+            
             UI.exe.swiperMain = new Swiper('.main-visual .swiper', {
                 slidesPerView: 1,
                 spaceBetween: 0,
@@ -750,6 +751,14 @@
             });
 
             //main footer banner swiper
+            const el_foooterbanner = document.querySelector('.footer-banner-swiper');
+            const el_foooterplay = document.querySelector('.footer-banner-control .swiper-button-play');
+            if (Number(UI.state.col) === 4) {
+                el_foooterbanner.setAttribute('dir', '')
+            } else {
+                el_foooterbanner.setAttribute('dir', 'rtl')
+            }
+
             UI.exe.swiperFooter = new Swiper('.footer-banner-swiper', {
                 slidesPerView: 'auto',
                 // slidesPerView: 8,
@@ -763,6 +772,21 @@
                     prevEl: '.footer-banner-control .swiper-button-prev',
                 },
             });
+            const actPlayStop = (e) => {
+                const _this = e.currentTarget;
+                if (_this.dataset.state === 'play') {
+                    _this.dataset.state = 'stop';
+                    _this.setAttribute('aria-label', 'play');
+                    UI.exe.swiperFooter.autoplay.stop();
+                } else {
+                    UI.exe.swiperFooter.autoplay.start();
+                    _this.dataset.state = 'play';
+                    _this.setAttribute('aria-label', 'stop');
+                }
+            }
+            el_foooterplay.removeEventListener('click', actPlayStop);
+            el_foooterplay.addEventListener('click', actPlayStop);
+            
 
             const serviceAniMotion = (v, n) => {
                 console.log(v,n[0])
