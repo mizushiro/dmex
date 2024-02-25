@@ -122,7 +122,7 @@
         
         <!-- S : service -->       
         <div class="main-section-service">
-            <div class="max-w-128 main-service-item">
+            <div class="max-w-128 main-service-item" data-scroll-callback="srv1">
                 <div class="main-service-title-box">
                     <h2 class="main-service-title">스트리밍 솔루션</h2>
                 </div>
@@ -806,6 +806,23 @@
             UI.callback.srv7 = (v) => { serviceAniMotion(v, [40]); }
          
             UI.exe.scrollpage = new ScrollPage();
+            
+            const el_serviceTabs = document.querySelectorAll('.main-service-tab-btn');
+            const serviceMove = (e) => {
+                const _this = e.currentTarget;
+                const n = _this.dataset.service;
+                const _target = document.querySelector('.main-service-item[data-scroll-callback="srv'+ n +'"]');
+                const rect = _target.getBoundingClientRect();
+                const _body = document.querySelector('html');
+                console.log(rect.y, _body.scrollTop);
+
+                UI.scroll.move({
+                    top: rect.y - _body.scrollTop
+                })
+            }
+            for (let item of el_serviceTabs) {
+                item.addEventListener('click', serviceMove)
+            }
             
         });
         
