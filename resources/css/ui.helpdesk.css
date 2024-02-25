@@ -1,0 +1,58 @@
+
+/* FAQ acco */
+.table-acco {
+    position: relative;
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+.table-acco-head {
+    height: 6rem;
+    border-bottom: .1rem solid #343434;
+}
+.table-acco-th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.table-acco-td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.8rem 0;
+}
+.table-acco-body .mdl-acco-item {border-bottom: .1rem solid #E3E3E3}
+.mdl-acco-head-wrap [data-grid-col="title"]{justify-content:flex-start;}
+.mdl-acco-head-wrap [data-grid-col="state"]{font-weight: 700; color: var(--Gradient-Blue);}
+.faq-wrap {
+    width: 100%;
+    padding-bottom:2rem;
+    display: flex;
+    flex-direction: column;
+    gap:2rem
+}
+.faq-wrap-box {background-color: #F5F5F5; padding: 2.4rem 2.8rem;}
+.faq-wrap-box strong{font-weight: 700; display: block; margin-bottom: 1.2rem;}
+
+/* 1:1문의 */
+[data-grid="faq-title"] {
+    width: 100% !important;
+    display: grid !important;
+    grid-template:
+    "title usedate date state arrow" 1fr
+    /1fr 12rem 12rem 8rem 2.8rem;
+}
+[data-grid="faq-title"] [data-grid-col="title"] {grid-area: title;}
+[data-grid="faq-title"] [data-grid-col="usedate"] {grid-area: usedate;}
+[data-grid="faq-title"] [data-grid-col="date"] {grid-area: date;}
+[data-grid="faq-title"] [data-grid-col="state"] {grid-area: state;}
+.table-acco .mdl-acco-btn::after{
+    width: 1.6rem;
+    height: .8rem;
+    right:.8rem;
+    background: url(../images/common/ico-faq-arrow.svg) no-repeat 50% 50% / 1.6rem;
+}

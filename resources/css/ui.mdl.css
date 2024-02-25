@@ -1,6 +1,7 @@
 .mt-x5 {margin-top: calc(var(--gap) * 5);}
 .pt-x0 {padding-top: 0 !important;}
 
+/* tab base */
 .mdl-tab {
     position: relative;
     width: 100%;
@@ -65,7 +66,7 @@
     }
 }
 
-
+/* acoo base */
 .mdl-acco {
     width: 100%;
     position: relative;
@@ -99,7 +100,9 @@
     padding: 0;
     letter-spacing: 0;
 }
-.mdl-acco-btn[aria-expanded="true"]::after {content: "";}
+.mdl-acco-item[data-expanded="true"] .mdl-acco-btn::after {
+    transform: translate(0, -50%) rotate(180deg);
+}
 .mdl-acco-btn::after {
     content: "";
     display: block;
@@ -123,3 +126,4 @@
     position: relative;
     width: 100%;
 }
+ 
