@@ -812,7 +812,10 @@ class Layer {
                 break;
 
             case 'select':
-                this.madeSelect();
+                if (!!document.querySelector('[data-id="'+ this.id +'"]')) {
+                    this.resetSelect();
+                    this.madeSelect();
+                }
                 break;
 
             case 'tooltip':

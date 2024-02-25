@@ -13,7 +13,9 @@
 }
 .table-acco-head {
     height: 6rem;
-    border-bottom: .1rem solid #343434;
+}
+.table-acco-body {
+    border-top: .1rem solid #343434;
 }
 .table-acco-th {
     display: flex;
@@ -55,6 +57,22 @@
 [data-grid="faq-title"] [data-grid-col="usedate"] {grid-area: usedate;}
 [data-grid="faq-title"] [data-grid-col="date"] {grid-area: date;}
 [data-grid="faq-title"] [data-grid-col="state"] {grid-area: state;}
+.table-acco .mdl-acco-btn::after{
+    width: 1.6rem;
+    height: .8rem;
+    right:.8rem;
+    background: url(../images/common/ico-faq-arrow.svg) no-repeat 50% 50% / 1.6rem;
+}
+
+/* 자주하는질문 */
+[data-grid="faq2-title"] {
+    width: 100% !important;
+    display: grid !important;
+    grid-template:
+    "title  arrow" 1fr
+    /1fr 2.8rem;
+}
+[data-grid="faq2-title"] [data-grid-col="title"] {grid-area: title;}
 .table-acco .mdl-acco-btn::after{
     width: 1.6rem;
     height: .8rem;
