@@ -5,6 +5,10 @@
 .title-desc-size-20 .icon-smile {vertical-align:middle;position:relative;top:-.3rem;}
 .member-form-group {margin-top:4.4rem;display:flex;flex-direction:column;gap:1.6rem;}
 .member-form-item {display:flex;min-height:6.4rem;border-radius:1.2rem;padding:.7rem 2.4rem;position:relative;background-color:#F4F4F4;align-items:center;border:1px solid transparent}
+.member-form-item[data-type="line"] {border: .1rem solid #BDC3E3; background-color: #fff; padding: 2rem;}
+.member-form-item[data-dir="column"] > *{width: 100%;}
+.member-form-item[data-dir="column"]{flex-direction: column;}
+.member-form-item[data-dir="column"] textarea {width: 100%; padding:1rem 0;}
 .member-form-item.error-case {border-color:#000;}
 .member-form-item .input-size-48-transparent {min-width:0;flex:1;}
 .member-form-item-title {font-size:1.8rem;font-weight:600;color:#000;line-height:2.2rem;padding-top:1.3rem;flex-shrink:0;width:12rem;align-self:flex-start}
@@ -23,6 +27,25 @@
 .input-value-del:hover .icon-del {background-image:url("../images/common/icon-del-hover.svg")}
 .tab-content-box {margin-top:3.5rem;}
 .error-massage {font-size:1.8rem;line-height:2.2rem;padding-left:2.2rem;margin-top:-.4rem;color:#F00;}
+.file-area{width: 100%; text-align: center; font-size: 1.2rem; color:#111; line-height: 2rem;}
+.file-btn-wrap{gap:2.8rem;display: flex;justify-content: center; align-items: center;margin-top: 1.4rem;}
+.btn-txt{font-size: 1.6rem;font-weight: 600; color:#000; display: flex; align-items: center;}
+[data-ico="file"]::before{
+    content:"";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .6rem;
+    background: url(../images/common/ico-file.svg) no-repeat 50% 50% / 2rem;
+}
+[data-ico="library"]::before{
+    content:"";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: .6rem;
+    background: url(../images/common/ico-library.svg) no-repeat 50% 50% / 2rem;
+}
 @media (max-width:700px) {
     .member-form-group {gap:1.2rem;}
     .member-form-item-title {font-size:1.6rem;width:10rem;}

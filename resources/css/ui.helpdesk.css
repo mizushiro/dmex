@@ -1,9 +1,14 @@
 
 /* FAQ acco */
+.table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
 .table-acco {
     position: relative;
     width: 100%;
-    max-width: 100rem;
     margin: 0 auto;
 }
 .table-acco-head {

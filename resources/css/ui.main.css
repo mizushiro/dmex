@@ -149,6 +149,14 @@
     animation-timing-function: ease-in;
     animation-play-state:paused;
 }
+.main-visual .slogan strong span{
+    animation-name: shadow;
+    animation-delay: 1s;
+    animation-duration: 5.8s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
 .main-visual .swiper-slide-active .slogan p,
 .main-visual .swiper-slide-active .slogan h3,
 .main-visual .swiper-slide-active .slogan strong{animation-play-state: running;}
@@ -252,6 +260,13 @@
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease-in;
+}
+@keyframes shadow {
+    0%{text-shadow: -2rem 0 2rem rgba(255,255,255,0.6), 2rem 0rem 2rem rgba(137, 4, 245, 0.3);}
+    25%{text-shadow: 0rem -2rem 3rem rgba(255,255,255,0.5),  0rem 2rem 3rem rgba(217, 4, 245, 0.4);}
+    50%{text-shadow: 2rem 0rem 2rem rgba(255,255,255,0.7), -2rem 0 2rem rgba(4, 116, 245, 0.3);}
+    80%{text-shadow: 0rem 2rem 3rem rgba(255,255,255,0.5), 0rem -2rem 3rem rgba(245, 169, 4, 0.2);}
+    100%{text-shadow: -2rem 0 2rem rgba(255,255,255,0.6), 2rem 0rem 2rem rgba(137, 4, 245, 0.3);}
 }
 @keyframes visualStrong {
     0% {transform: rotateY(360deg) scale(3); opacity: 0; filter: blur(2rem);}
@@ -439,7 +454,7 @@
 .main-service-item .group{width: 100%; position: relative;}
 .main-service-item:first-child{margin-top: -13rem}
 .srv-img1 {width: 23.9rem; position: relative; margin-top: -13rem;}
-.srv-img1 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img1 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img1 .img1{top: 0; left: 0; z-index: 3;}
 .srv-img1 .img2{top: .5rem; left: .8rem; z-index: 2;}
 .srv-img1 .img3{top: .5rem; left: .8rem; z-index: 1;}
@@ -454,7 +469,7 @@
 .srv-img1[data-scroll-play="on"] .img6{top: 2.5rem; left: 19rem;}
 
 .srv-img2 {width: 23.9rem; position: relative; margin-top: -13rem;}
-.srv-img2 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img2 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img2 .img1{top: -3.2rem; left: 8rem; z-index: 3; opacity: 0;}
 .srv-img2 .img2{top: .5rem; left: .8rem; z-index: 2;}
 .srv-img2 .img3{top: -2.7rem; left: .8rem; z-index: 1;}
@@ -469,7 +484,7 @@
 .srv-img2[data-scroll-play="on"] .img6{top: .5rem; left: 13.7rem; opacity: 1;}
 
 .srv-img3 {width: 23.9rem; position: relative; margin-top: -13rem;}
-.srv-img3 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img3 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img3 .img1{top: -10.4rem; left: 5rem; z-index: 4; opacity: 0; transform: rotateY(720deg) scale(0.5);}
 .srv-img3 .img2{top: .5rem; left: .8rem; z-index: 3;}
 .srv-img3 .img3{top: .5rem; left: .8rem; z-index: 1;}
@@ -482,7 +497,7 @@
 .srv-img3[data-scroll-play="on"] .img5{top: -1.8rem; left: 22rem; opacity: 1;}
 
 .srv-img4 {width: 23.9rem; position: relative; margin-top: -17rem;}
-.srv-img4 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img4 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img4 .img1{top: 0; left: 8rem; z-index: 3;}
 .srv-img4 .img4{top: 6.5rem; left: 3rem; z-index: 1; opacity: 0;}
 .srv-img4 .img5{top: 5.8rem; left: 15rem; z-index: 1; opacity: 0;}
@@ -498,8 +513,8 @@
 .srv-img4[data-scroll-play="on"] .img6{top: -3.5rem; left: 1rem; }
 .srv-img4[data-scroll-play="on"] .img7{top: 11.5rem; left: 12rem;}
 
-.srv-img5 {width: 23.9rem; position: relative; margin-top: -17rem;}
-.srv-img5 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img5 {width: 23.9rem; position: relative; margin-top: -17rem; margin-left: -4rem;}
+.srv-img5 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img5 .img1{top: 4rem; left: 7rem; z-index: 2; transform: rotateY(360deg); opacity: 0.5;}
 .srv-img5 .img2{top: 11rem; left: 27rem; z-index: 3; opacity:0;}
 .srv-img5 .img3{top: -3rem; left: 3.7rem; z-index: 0; opacity:0;}
@@ -512,7 +527,7 @@
 .srv-img5[data-scroll-play="on"] .img5{top: 0rem; left: 6rem; opacity:1;}
 
 .srv-img6 {width: 23.9rem; position: relative; margin-top: 0rem; height:20rem}
-.srv-img6 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img6 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img6 .img1{top: -7rem; left: 3rem; z-index: 0;}
 .srv-img6 .img2{top: 4.8rem; left: 3.3rem; z-index: 4;}
 .srv-img6 .img3{top: 0.9rem; left: 3.3rem; z-index: 2;}
@@ -529,7 +544,7 @@
 .srv-img6[data-scroll-play="on"] .img7{top:auto; bottom: 11rem; left: 19rem;  height: 7.3rem; opacity: 1;  }
 
 .srv-img7 {width: 23.9rem; position: relative; margin-top: 0rem; height:20rem}
-.srv-img7 > img{position: absolute; top:0; left:0; transition: all .3s ease;}
+.srv-img7 > img{position: absolute; top:0; left:0; transition: all .7s ease-in;}
 .srv-img7 .img1{top: -2rem; left: -2.5rem; z-index: 0;}
 .srv-img7 .img2{top: 1.9rem; left: 1.5rem; z-index: 2;opacity: 0;}
 .srv-img7 .img3{top: 2.7rem; left: 4.5rem; z-index: 1;opacity: 0;transition-delay: .2s;}
@@ -563,6 +578,25 @@
 .keyword-position6 {top:7rem;left:9.609375%;}
 .main-service-keyword-desc {font-size:1.2rem;font-weight:500;line-height:2.6rem;background:linear-gradient(90deg, #EB5C8D 0%, #9A67F3 76.01%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .main-service-keyword {font-size:2rem;font-weight:700;line-height:2.6rem;color:#060B24;}
+
+.keyword-position2{animation-delay: .2s;
+animation-name: dongdong;animation-duration: .8s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+.keyword-position3{animation-delay: .4s;
+animation-name: dongdong;animation-duration: .8s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+.keyword-position4{animation-delay: .5s;
+animation-name: dongdong;animation-duration: .7s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+.keyword-position5{animation-delay: .1s;
+animation-name: dongdong;animation-duration: .9s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+.keyword-position6{animation-delay: .6s;
+animation-name: dongdong;animation-duration: .7s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+.keyword-position1 {animation-delay: .3s;
+animation-name: dongdong;animation-duration: 1.1s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear;}
+
+
+@keyframes dongdong {
+    0% {transform: translate(0rem, 0rem);}
+    100% {transform: translate(0rem, .6rem);}
+}
 
 @media (max-width: 1280px) {
     .main-service-item:first-child{margin-top: -16rem;}
@@ -615,7 +649,7 @@
 @media (max-width: 390px) {
     .main-service-img-area > [data-scroll-callback]{transform: scale(0.5) translateY(6rem); z-index: 20;}
     .main-service-img-area > .srv-img3[data-scroll-callback]{transform: scale(0.5) translate(-2rem,6rem);}
-    .main-service-img-area > .srv-img5[data-scroll-callback]{transform: scale(0.5) translate(-5rem,6rem);}
+    .main-service-img-area > .srv-img5[data-scroll-callback]{transform: scale(0.5) translate(-1rem,6rem);}
     .main-service-img-area > .srv-img6[data-scroll-callback]{transform: scale(0.5) translate(-2.6rem,4rem);}
     .main-service-img-area > .srv-img7[data-scroll-callback]{transform:scale(0.5) translate(0.4rem,-5rem);}
 
