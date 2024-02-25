@@ -742,3 +742,16 @@ main{position: relative; z-index: 1;}
     .floating-chatbot:hover,
     .floating-chatbot.active{border-radius: 4.8rem; transform:translateX(-1.2rem);}
 }
+
+
+/* paging */
+.pagination{display: flex; justify-content: center; align-items: center; margin: 6.4rem auto; gap: .8rem;}
+.paging-move,
+.paging-num{display: flex; justify-content: center; align-items: center; width:2.8rem; height: 2.8rem; font-size: 1.6rem; color:#000; text-decoration: none;}
+.paging-move{border: .1rem solid #ccc; border-radius: .8rem;}
+.paging-move[data-page="first"]{background: url(../images/common/paging-first.svg) no-repeat 50% 50% / 1.2rem;}
+.paging-move[data-page="last"]{background: url(../images/common/paging-first.svg) no-repeat 50% 50% / 1.2rem;transform: rotate(180deg);}
+.paging-move[data-page="prev"]{background: url(../images/common/paging-prev.svg) no-repeat 50% 50% / 1.2rem;}
+.paging-move[data-page="next"]{background: url(../images/common/paging-prev.svg) no-repeat 50% 50% / 1.2rem;transform: rotate(180deg);}
+
+

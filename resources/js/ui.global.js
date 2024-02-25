@@ -198,12 +198,13 @@
          * 
          */
         include(opt) {
-            console.log(opt);
-            const selector = document.querySelector('[data-id="'+ opt.dataId +'"]');
+            let selector = document.querySelector('[data-id="'+ opt.dataId +'"]');
             const src = opt.src;
             const type = !opt.type ? 'HTML' : opt.type;
             const insert = !!opt.insert ? opt.insert : false;
             const callback = !!opt.callback ? opt.callback : false;
+
+            !selector ? selector = document.querySelector('body') : '';
 
             if (!!selector && !!src) {
                 switch (type) {
@@ -961,32 +962,14 @@ class Layer {
     setFetch() {
         UI.parts.include({
             id: 'body',
-            src: this.opt.src + '.html',
+            src: this.opt.src,
             type: 'HTML',
             insert: true,
             callback: () => {
-                const el_link = document.querySelector('link[data-usage="'+ this.id +'"]');
-                const el_script = document.querySelector('script[data-usage="'+ this.id +'"]');
-                
-                let _script = document.createElement('script');
-                _script.dataset.usage = this.id;
-                _script.type = 'module';
-                _script.src = this.src + '.js?v=' + Date.now();
-
-                let _link = document.createElement('link');
-                _link.dataset.usage = this.id;
-                _link.rel = 'stylesheet';
-                _link.href = this.src + '.css?v=' + Date.now();
-
                 let _btn = document.createElement('button');
                 _btn.type = 'button';
                 _btn.setAttribute('aria-lable', '마지막 구간입니다. 클릭하시면 닫힙니다.');
                 _btn.classList.add('mdl-layer-last');
-
-                el_link && el_link.remove();
-                el_script && el_script.remove();
-                document.body.appendChild(_script);
-                document.head.appendChild(_link);
 
                 this.el.modal = document.querySelector('.mdl-layer[data-id="'+ this.id +'"]');
                 this.el.btn_close = this.el.modal.querySelector('.mdl-layer-close');
@@ -1173,6 +1156,9 @@ class Layer {
         }
 
         _prev ? _prev.dataset.layerCurrent = 'false' : '';
+
+        console.log( this.modal);
+
         this.modal.dataset.layerCurrent = 'true';
         this.modal || this.src && this.setFetch();
         this.modal.dataset.state = 'show';
