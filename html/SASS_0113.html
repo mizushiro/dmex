@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-50">
+            <h2 class="title-size-40-700 text-center">상세 / 수정</h2>
+            <div class="member-form-group">
+                <div class="member-form-item">
+                    <span class="member-form-item-title requisite">제목</span>
+                    <input type="text" class="input-size-48-transparent" placeholder="제목을 입력하세요." />
+                    <button type="button" class="input-value-del">
+                        <i class="icon-del"></i>
+                    </button>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <div class="member-form-item" data-dir="column">
+                    <span class="member-form-item-title requisite">내용</span>
+                    <textarea placeholder="내용을 입력하세요" class="input-size-48-transparent min-h-96"></textarea>
+                    <p class="write-data">0/3000자</p>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <span class="member-form-item-title requisite mb-m-8">배너</span>
+                <div class="member-form-item" data-type="line" data-dir="column">
+                    <div class="file-area">
+                        클릭하여 파일을 추가하거나 파일을 끌어서 첨부하세요
+                    </div>
+                    <div class="file-btn-wrap">
+                        <button type="button" class="btn-txt" data-ico="file">
+                            파일선택
+                        </button>
+                        <button type="button" class="btn-txt" data-ico="library">
+                            라이브러리에서 선택
+                        </button>
+                    </div>
+                </div>
+                <div class="add-img-list">
+                    <div class="add-img-item">
+                        <div class="add-img-box">
+                            <img src="https://picsum.photos/id/23/200/300" alt="">
+                        </div>
+                        <button type="button" class="btn-img-del">
+                            <i class="icon-x-8"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="write-info">2024-12-23 12:34:12 홍길동</p>
+            </div>
+
+            <div class="btn-wrap mt-16">
+                <button type="button" class="btn-base btn-color-gray btn-size-64">삭제</button>
+                <button type="button" class="btn-base btn-color-gray btn-size-64">취소</button>
+                <button type="button" class="btn-base btn-color-blue btn-size-64">등록하기</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.faqTab = new Tab({
+                id: 'faqTab',
+                current: 'faq1',
+                callback: (v) => {
+                    console.log(v.current)
+                    if (v.current === 'faq2') {
+                       setTimeout(() => {
+                            
+                       }, 0)
+                    }
+                }
+            });
+
+            UI.exe.select_form1 = new Layer({
+                id: 'select_form1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
+            UI.exe.select_date1 = new Layer({
+                id: 'select_date1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
+            UI.exe.testAcco = new Accordion({
+                id :'testAcco',
+                current: null,
+                callback: (v) => {
+                    console.log('callback:', v);
+                }
+            });
+ 
+        });
+    </script>
+</div>
+</body>
+</html>
