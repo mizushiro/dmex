@@ -12,9 +12,11 @@
 .min-h-158 {min-height:15.8rem;}
 
 /* tab base */
-.mdl-tab {position:relative;width:100%;display:flex;overflow-x: auto;}
+.mdl-tab {position:relative;width:100%;display:flex;}
+.mdl-tab.x-scroll {overflow-x:scroll;}
+.x-scroll .mdl-tab-btn {min-width:16rem;flex-shrink:0;}
 .mdl-tab-wrap {display:flex;width:100%;gap:0;justify-content:space-between;}
-.mdl-tab-btn {flex:1;border:0.1rem solid #CCD4FF;background-color:#F7F7FE;display:flex;justify-content:center;align-items:center;white-space: nowrap;}
+.mdl-tab-btn {flex:1;border:0.1rem solid #CCD4FF;background-color:#F7F7FE;display:flex;justify-content:center;align-items:center;}
 .mdl-tab-btn span {font-weight:400;color:#111;}
 .mdl-tab-btn[data-selected=true] {color:#fff;border-bottom:0;background-color:#fff;}
 .mdl-tab-btn[data-selected=true] span {font-weight:700;}
