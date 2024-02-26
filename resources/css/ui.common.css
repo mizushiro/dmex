@@ -198,7 +198,7 @@ main{position:relative;z-index:1;}
     position:sticky;
     width:100%;
     height:15.2rem;
-    z-index:2;
+    z-index:11;
     top:-6rem;
     padding:0 1.6rem;
     backdrop-filter:blur(1.5rem);
@@ -733,12 +733,13 @@ main{position:relative;z-index:1;}
     }
     .floating-chatbot {
         gap:.4rem;
-        width:9.6rem;
-        height:9.6rem;
+        width:8rem;
+        height:8rem;
         border-radius:2rem 0 0 2rem;
     }
     .floating-chatbot:hover,
     .floating-chatbot.active{border-radius:4.8rem;transform:translateX(-1.2rem);}
+    .floating-chatbot::before {background-size:4rem}
 }
 
 
