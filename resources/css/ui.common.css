@@ -81,6 +81,10 @@ html.scroll_off {overflow:hidden}
 .scrollbar-8::-webkit-scrollbar {height:.8rem;width:.8rem;}
 .scrollbar-8::-webkit-scrollbar-track {border-radius:999em;background-color:transparent}
 .scrollbar-8::-webkit-scrollbar-thumb {width:.8rem;border-radius:999em;background-color:#D9D9D9;}
+.scrollbar-4 {-webkit-overflow-scrolling:touch}
+.scrollbar-4::-webkit-scrollbar {height:.4rem;width:.4rem;}
+.scrollbar-4::-webkit-scrollbar-track {border-radius:999em;background-color:transparent}
+.scrollbar-4::-webkit-scrollbar-thumb {width:.4rem;border-radius:999em;background-color:#D9D9D9;}
 /* title */
 .title-size-40 {font-size:4rem;line-height:5.6rem;font-weight:900;color:#000}
 .title-size-40-700 {font-size:4rem;line-height:4.8rem;font-weight:700;color:#111}
