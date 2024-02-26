@@ -57,11 +57,15 @@
 .member-agree-list {display:flex;flex-direction:column;margin-top:3.6rem;gap:.8rem;}
 .all-agree {margin-bottom:1.2rem}
 .agree-link {text-decoration:none;font-size:1.6rem;line-height:2rem;font-weight:400;color:#111;}
+.member-agree-item .mdl-acco-btn {position:static;}
+.member-agree-item .mdl-acco-btn:after {display:none;}
 .arrow-bullet {display:inline-block;background:url("../images/common/arrow-bullet.svg") no-repeat 50% 50%;background-size:contain;aspect-ratio:28/14;width:2.8rem;position:relative;top:.2rem;}
-.agree-content-box {padding:2.4rem 2rem 2.4rem 2.8rem;background-color:#F6F6F8;border-radius:1.6rem;font-weight:300;margin-top:1rem;margin-bottom:2.8rem;}
+.agree-content-box {padding:2.4rem 2rem 2.4rem 2.8rem;background-color:#F6F6F8;border-radius:1.6rem;font-weight:300;margin-top:1rem}
 .agree-content-box .scrollbar-8 {max-height:23.4rem;padding-right:.4rem;}
 .agree-desc {font-size:1.6rem;line-height:2.6rem;color:#111;}
 .agree-link:hover .arrow-bullet {background-image:url("../images/common/arrow-bullet-hover.svg")}
+.mdl-acco-item .arrow-bullet {transform:rotate(90deg);}
+.mdl-acco-item[data-expanded="true"] .arrow-bullet {transform:rotate(270deg);}
 @media (max-width:700px) {
     .agree-content-box {padding:2rem 1.6rem 2rem 2.4rem;}
     .agree-desc {font-size:1.4rem;line-height:2.2rem;}
