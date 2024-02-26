@@ -574,11 +574,18 @@
                     <div class="main-section-cs-content">
                         <div class="inquiry-form-group">
                             <div class="inquiry-form-item">
+                                <div class="mdl-select select-size-50" data-id="select_date1">
+                                    <select title="문의항목을 선택하세요" id="select_date1_1">
+                                        <option value="1" selected="">문의항목을 선택하세요</option>
+                                    </select>
+                                </div>
+                                <!--
                                 <div class="select-item-box select-size-58">
                                     <select name="" id="">
                                         <option value="">문의항목을 선택하세요</option>
                                     </select>
                                 </div>
+                                -->
                             </div>
                             <div class="inquiry-form-item">
                                 <input type="text" class="input-size-50-w" placeholder="이름">
@@ -824,6 +831,14 @@
             for (let item of el_serviceTabs) {
                 item.addEventListener('click', serviceMove)
             }
+
+            UI.exe.select_date1 = new Layer({
+                id: 'select_date1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
             
         });
         
