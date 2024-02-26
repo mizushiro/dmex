@@ -61,7 +61,7 @@ a, button{color:blue}
 }
 @media (max-width:700px) {
     .max-w-128 {padding:0 1.6rem}
-    .page-content {padding-top:4rem;padding-bottom:10rem;}
+    .page-content {padding-top:11.2rem;padding-bottom:10rem;}
 }
 @media (max-width:540px) {
     .max-w-50 {padding-left:1.6rem;padding-right:1.6rem;}
