@@ -5,14 +5,17 @@
 .table-acco-head {height:6rem;}
 .table-acco-body {border-top:.1rem solid #343434;}
 .table-acco-th {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:600;}
-.table-acco-td {display:flex;justify-content:center;align-items:center;font-size:1.4rem;font-weight:400;padding:1.8rem 0;}
+.table-acco-td {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:400;padding:1.8rem 0;}
 .table-acco-body .mdl-acco-item {border-bottom:.1rem solid #E3E3E3;}
 .mdl-acco-item[data-expanded="true"] .table-acco-td {font-weight:600;}
 .mdl-acco-item[data-expanded="true"] [data-grid-col="state"] {font-weight:700;}
 .mdl-acco-head-wrap [data-grid-col="title"] {justify-content:flex-start;}
+.mdl-acco-head-wrap [data-grid-col="date"],
+.mdl-acco-head-wrap [data-grid-col="state"]{font-size:1.4rem;}
 .mdl-acco-head-wrap [data-grid-col="state"] {color:var(--Gradient-Blue);}
 .faq-wrap {width:100%;padding-bottom:2rem;display:flex;flex-direction:column;gap:2rem;}
 .faq-wrap-box {background-color:#F5F5F5;padding:2.4rem 2.8rem;}
+.faq-wrap-box p {font-size:1.6rem;line-height:3.2rem;color:#000;font-weight:400;}
 .faq-wrap-box strong {font-weight:700;display:block;margin-bottom:1.2rem;}
 .mdl-input-wrap {display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;}
 .mdl-input {border-radius:1.2rem;border:.1rem solid #CCD4FF;padding:0 2rem;min-height:4.8rem;display:flex;align-items:center;gap:0.4rem;}
@@ -20,6 +23,11 @@
 .btn-search {width:3.6rem;height:3.6rem;background:url(../images/common/ico-search.svg) no-repeat 50% 50% / 1.6rem;margin-right:-1.2rem;flex-shrink:0;}
 .mdl-input input[type="date"] {text-align:center;padding-right:0;background:url(../images/common/ico-date.svg) no-repeat 100% 50% / 1.6rem;}
 [data-icon="date"]{width:1.6rem;height:1.6rem;background:url(../images/common/ico-date.svg) no-repeat 100% 50% / 1.6rem;display:block;}
+.acc-img-area {display:flex;justify-content:center;margin-bottom:2.4rem;}
+p ~ .acc-img-area {margin-top:2.4rem;}
+.acc-img-area img {max-width:100%;}
+.icon-download {aspect-ratio:1/1;display:block;width:2rem;background:url(../images/common/icon-download.svg) no-repeat 50% 50%;background-size:contain;}
+.btn-download {display:flex;align-items:center;justify-content:center;}
 @media (max-width:800px) {
     .mdl-selection-wrap {flex-wrap:wrap;}
     .table-head .mdl-input-wrap {width:100%;}
@@ -27,6 +35,8 @@
     .table-head .mdl-input-wrap .mdl-input[data-type="period"] input {flex:1;text-align:left}
     .table-head .mdl-input-wrap .input-sh {width:100%;}
     .table-head .mdl-input-wrap .input-sh input {flex:1;}
+    .table-acco-td {font-size:1.4rem;}
+    .faq-wrap-box p {font-size:1.4rem;line-height:2.2rem;}
 }
 @media (max-width:600px) {
     .table-head .mdl-input-wrap .mdl-select {width:100%;}
@@ -48,4 +58,19 @@
 /* 자주하는질문 */
 [data-grid="faq2-title"] {width:100% !important;display:grid !important;grid-template:"title  arrow" 1fr/1fr 2.8rem;}
 [data-grid="faq2-title"] [data-grid-col="title"] {grid-area:title;}
-.table-acco .mdl-acco-btn::after{width:1.6rem;height:.8rem;right:.8rem;background:url(../images/common/ico-faq-arrow.svg) no-repeat 50% 50% / 1.6rem;}
+
+/* 공지사항 */
+[data-grid="notice-title"] {width:100% !important;display:grid !important;grid-template:"title date arrow" 1fr/1fr 12rem 2.8rem;}
+[data-grid="notice-title"] [data-grid-col="title"] {grid-area:title;}
+[data-grid="notice-title"] [data-grid-col="date"] {grid-area:date;}
+@media (max-width:700px) {
+    [data-grid="notice-title"] {grid-template:"title date arrow" 1fr/1fr 0 2.8rem;}
+    [data-grid="notice-title"] [data-grid-col="date"] {display:none;}
+}
+/* 매뉴얼 자료실 */
+[data-grid="reference-title"] {width:100% !important;display:grid !important;grid-template:"title date arrow" 1fr/1fr 16rem 2.8rem;}
+[data-grid="reference-title"] [data-grid-col="title"] {grid-area:title;}
+[data-grid="reference-title"] [data-grid-col="download"] {grid-area:date;}
+@media (max-width:700px) {
+    [data-grid="reference-title"] {grid-template:"title date arrow" 1fr/1fr 4.8rem 2.8rem;}
+}

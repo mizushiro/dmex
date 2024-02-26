@@ -23,7 +23,7 @@
     <header class="header" data-id="header"></header>
     <main class="page-content">
         <div class="max-w-128">
-            <h2 class="title-size-40-700 text-center">자주하는 질문</h2>
+            <h2 class="title-size-40-700 text-center">공지사항</h2>
            
             <div class="tab-content-box">
                 <div class="table-head">
@@ -49,6 +49,11 @@
                         </label>
                     </div>
                     <div class="mdl-input-wrap">
+                        <div class="mdl-input" data-type="period">
+                            <input type="date" value="2024-12-31">
+                            ~
+                            <input type="date" value="2024-12-31">
+                        </div>
                         <div class="mdl-input input-sh">
                             <input type="text" placeholder="검색어를 입력해주세요">
                             <button type="button" class="btn-search" aria-label="검색"></button>
@@ -56,13 +61,14 @@
                     </div>
                 </div>
                 <div class="table-acco">
-                    <div class="table-acco-body mdl-acco" data-id="faqAcco">
+                    <div class="table-acco-body mdl-acco" data-id="noticeAcco">
                         <div class="mdl-acco-item">
                             <div class="mdl-acco-head faq-acco-tit">
-                                <div class="mdl-acco-head-wrap" data-grid="faq2-title">
+                                <div class="mdl-acco-head-wrap" data-grid="notice-title">
                                     <div class="table-acco-td" data-grid-col="title">
-                                        결제계좌변경은 어떻게 하나요?
+                                        [결제관련] 실시간 스트리밍 서비스 장점은 무엇인가요
                                     </div>
+                                    <div class="table-acco-td" data-grid-col="date">2024.02.05</div>
                                 </div>
                                 <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
                             </div>
@@ -71,6 +77,7 @@
                                     <!-- 내용 --->
                                     <div class="faq-wrap">
                                         <div class="faq-wrap-box">
+                                            <div class="acc-img-area"><img src="https://picsum.photos/id/23/200/300" alt=""></div>
                                             <p>실시간스트리밍 서비스는 라이브 영상을 인터넷을 통해 실시간으로 방송하고 시청할 수 있는 서비스입니다.최근 스마트폰과 인터넷의 발달로 인해 크게 성장하고 있으며,다양한 분야에서 활용되고 있습니다. 실시간 스트리밍 서비스 이용 방법 :웹 브라우저 또는 스트리밍 플랫폼 앱을 이용하여 시청할 수 있습니다./  스마트폰:스트리밍 플랫폼 앱을 이용하여 시청할 수 있습니다./  스마트 TV:  스트리밍 플랫폼 앱을 이용하여 시청할 수 있습니다.</p>
                                             <p>실시간스트리밍 서비스는 다양한 장점이 있지만,이용 시 주의해야 할 점도 있습니다.위에 안내된 내용을 참고하여 현명하게 이용하시기 바랍니다.<br>동영상 및오디오 업로드 솔루션 제공!  누구나 손쉽게 고품질 콘텐츠를 전 세계와 공유하세요.  최고의 플랫폼으로 더 많은 고객과 교류할 수 있습니다. 지금바로 시작해보세요!
                                             </p>
@@ -82,10 +89,11 @@
                     
                         <div class="mdl-acco-item">
                             <div class="mdl-acco-head faq-acco-tit">
-                                <div class="mdl-acco-head-wrap" data-grid="faq2-title">
+                                <div class="mdl-acco-head-wrap" data-grid="notice-title">
                                     <div class="table-acco-td" data-grid-col="title">
                                         결제계좌변경은 어떻게 하나요?
                                     </div>
+                                    <div class="table-acco-td" data-grid-col="date">2024.02.05</div>
                                 </div>
                                 <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
                             </div>
@@ -124,8 +132,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            UI.exe.faqAcco = new Accordion({
-                id :'faqAcco',
+            UI.exe.noticeAcco = new Accordion({
+                id :'noticeAcco',
                 current: null,
                 callback: (v) => {
                     console.log('callback:', v);
