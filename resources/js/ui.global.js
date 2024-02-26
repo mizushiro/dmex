@@ -615,7 +615,7 @@ class Tab {
         
         UI.scroll.move({ 
             selector: _wrap, 
-            left: _rect.left + _wrap.scrollLeft - (_rect.width ), 
+            left: _rect.left + _wrap.scrollLeft - _rect.width, 
             add : 0,
             align: 'center' 
         });
