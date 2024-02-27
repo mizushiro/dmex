@@ -87,7 +87,16 @@
             UI.exe.modal_sass_0120 = new Layer({
                 id :'modal_sass_0120',
                 type: 'modal',
-                src: 'SASS_0120_modal.html'
+                src: 'SASS_0120_modal.html',
+                callback: () => {
+                    UI.exe.agreeAcco = new Accordion({
+                        id :'agreeAcco',
+                        current: null,
+                        callback: (v) => {
+                            console.log('callback:', v);
+                        }
+                    });
+                }
             });
 
         });
