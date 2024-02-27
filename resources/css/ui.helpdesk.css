@@ -27,7 +27,7 @@
 p ~ .acc-img-area {margin-top:2.4rem;}
 .acc-img-area img {max-width:100%;}
 .icon-download {aspect-ratio:1/1;display:block;width:2rem;background:url(../images/common/icon-download.svg) no-repeat 50% 50%;background-size:contain;}
-.btn-download {display:flex;align-items:center;justify-content:center;}
+.btn-download {display:flex;align-items:center;justify-content:center;position:relative;z-index:2;}
 @media (max-width:800px) {
     .mdl-selection-wrap {flex-wrap:wrap;}
     .table-head .mdl-input-wrap {width:100%;}

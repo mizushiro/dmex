@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-50">
+            <h2 class="title-size-40-700 text-center">예치금 현황</h2>
+            <div class="balance-area">
+                <div class="balance-data">
+                    <span class="balance-icon-box">
+                        <img src="../resources/images/common/icon-balance.svg" alt="">
+                    </span>
+                    <p class="balance-data-info"><span class="balance-value">302,000</span>원</p>
+                </div>
+                <button type="button" class="btn-base btn-color-blue btn-size-64">충전하기</button>
+            </div>
+            <div class="balance-list-area">
+                <div class="table-head">
+                    <p class="table-head-title">충전내역</p>
+                    <div class="mdl-input-wrap">
+                        <div class="mdl-input" data-type="period">
+                            <input type="date" value="2024-12-31">
+                            ~
+                            <input type="date" value="2024-12-31">
+                        </div>
+                    </div>
+                </div>
+                <div class="table-list">
+                    <div class="table-list-head" data-flex="table-balance-title">
+                        <div class="table-list-th" data-flex-col="number">번호</div>
+                        <div class="table-list-th" data-flex-col="date">날짜</div>
+                        <div class="table-list-th" data-flex-col="payment">금액</div>
+                    </div>
+                    <div class="table-list-body">
+                        <div class="table-list-body-item" data-flex="table-balance-title">
+                            <div class="table-list-td" data-flex-col="number">123</div>
+                            <div class="table-list-td" data-flex-col="date">2014.12.31</div>
+                            <div class="table-list-td" data-flex-col="payment">203,000</div>
+                        </div>
+                        <div class="table-list-body-item" data-flex="table-balance-title">
+                            <div class="table-list-td" data-flex-col="number">122</div>
+                            <div class="table-list-td" data-flex-col="date">2014.12.31</div>
+                            <div class="table-list-td" data-flex-col="payment">23,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
+                    <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
+                    <a href="" class="paging-num" data-selected="true">1</a>
+                    <a href="" class="paging-num">2</a>
+                    <a href="" class="paging-num">3</a>
+                    <a href="" class="paging-num">4</a>
+                    <a href="" class="paging-num">5</a>
+                    <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
+                    <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+
+    </script>
+</div>
+</body>
+</html>

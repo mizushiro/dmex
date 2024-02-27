@@ -81,3 +81,49 @@
 .leave-list {display:flex;flex-direction:column;gap:1.2rem;}
 .leave-info-box {padding:2.4rem 2rem;font-size:1.6rem;line-height:2.6rem;color:#111;font-weight:300;border:1px solid #E3E2F2;border-radius:1.6rem;}
 /* E :회원탈퇴 */
+/* S : 결제정보변경 */
+.payment-list {margin-top:4.4rem;display:flex;flex-direction:column;gap:1.6rem;}
+.payment-item {padding:2.4rem;border-radius:1.6rem;border:1px solid #E3E2F2;min-height:9.6rem;display:flex;justify-content:center;align-items:center;}
+.payment-item-desc {font-size:1.6rem;line-height:2.4rem;color:#111;font-weight:300;}
+.payment-item-content {display:flex;align-items:center;gap:1.6rem;width:100%;}
+.payment-item-img {width:6.4rem;height:4.8rem;border-radius:.8rem;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.payment-item-info {flex:1;display:flex;flex-direction:column;}
+.payment-item-name {font-size:1.6rem;color:#111;font-weight:600;line-height:2.4rem;}
+.payment-item-number {font-size:1.6rem;color:#111;font-weight:300;line-height:2.4rem;}
+.payment-item-btn {flex-shrink:0;}
+.btn-del {display:flex;align-items:center;gap:.8rem;font-size:1.2rem;color:#000;font-weight:600;}
+.btn-del .icon-x-8 {width:1.2rem;}
+/* E : 결제정보변경 */
+/* S : 예치금 현황 */
+.balance-area {margin-top:4rem;display:flex;flex-direction:column;gap:1.6rem;}
+.balance-data {padding:4.8rem 2.4rem;border-radius:1.6rem;border:1px solid #E3E2F2;background-color:#F7F7FE;display:flex;align-items:center;justify-content:center;gap:1.2rem;}
+.balance-icon-box {width:4rem;height:4rem;border-radius:1.2rem;background:linear-gradient(128deg, #6AB7FF 13.62%, #C76DFF 86.93%);display:flex;align-items:center;justify-content:center;}
+.balance-data-info {font-size:2rem;font-weight:300;color:#080A7F;line-height:1;}
+.balance-value {font-size:3.6rem;letter-spacing:-.108rem;font-weight:700;line-height:1;}
+.balance-list-area {margin-top:6.4rem;}
+.table-head-title {color:#000;font-size:2rem;line-height:1;font-weight:600;}
+
+.table-list {position:relative;width:100%;margin:0 auto;}
+.table-list-head {height:4.8rem;}
+.table-list-body {border-top:.1rem solid #343434;}
+.table-list-th {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:600;line-height:2.4rem;}
+.table-list-td {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:400;padding:1.2rem 0;line-height:2.4rem;}
+.table-list-body-item {border-bottom:1px solid #E3E3E3;}
+
+[data-flex="table-balance-title"] {width:100%;display:flex;}
+[data-flex="table-balance-title"] [data-flex-col="number"] {width:6.4rem;flex-shrink:0}
+[data-flex="table-balance-title"] [data-flex-col="date"] {flex:1}
+[data-flex="table-balance-title"] [data-flex-col="payment"] {width:6.4rem;flex-shrink:0;}
+.table-list-td[data-flex-col="payment"] {justify-content:flex-end;font-weight:600;}
+
+.balance-charge-area {padding:0 1.6rem;}
+.balance-charge-desc {font-size:1.6rem;color:#000;line-height:2.4rem;font-weight:400;margin:1.6rem 0;}
+.balance-charge-agree {border-top:1px solid #E3E2F2;padding:1.6rem 0;}
+.balance-agree-content-box {margin-top:1.6rem;}
+.balance-agree-content-sub {font-size:1.4rem;font-weight:400;color:#111;line-height:1.6rem;}
+.balance-agree-content-sub ~ .balance-agree-content-sub {margin-top:.8rem;}
+.balance-agree-content-box .scrollbar-4 {max-height:14.7rem;margin-top:1.6rem;overflow-y:auto;padding-right:.8rem;}
+.balance-agree-content-box .agree-desc {font-size:1.2rem;line-height:1.8rem;}
+.balance-charge-choice {border-top:1px solid #E3E2F2;padding:1.6rem 0 2.4rem;}
+.balance-charge-choice-title {font-size:2rem;font-weight:600;color:#111;line-height:2rem;text-align:center;}
+/* S : 예치금 현황 */

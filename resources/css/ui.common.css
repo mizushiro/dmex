@@ -146,12 +146,11 @@ select::-ms-expand {display:none}
 .box-checkbox-size-30 label:before {width:3rem;height:3rem;background-image:url("../images/common/checkbox-1.svg")}
 .box-checkbox-size-30 input[type="checkbox"]:checked+label:before {background-image:url("../images/common/checkbox-1-on.svg")}
 /* radio */
-.form_element-radio {position:relative;min-height:24px;line-height:24px;display:inline-block}
+.form_element-radio {position:relative;min-height:2.4rem;line-height:2.4rem;display:inline-block}
 .form_element-radio input[type="radio"] {position:absolute;opacity:0;left:0}
-.form_element-radio input[type="radio"]:checked + label:after {background-color:#000}
-.form_element-radio label {display:block;position:relative;padding:0 0 0 32px;line-height:24px;font-size:1.6rem;color:#111;font-weight:400;}
-.form_element-radio label:before {content:'';width:24px;height:24px;position:absolute;top:0;left:0;border:1px solid #949494;background-color:#fff;border-radius:50%;box-sizing:border-box;flex-shrink:0}
-.form_element-radio label:after {content:'';width:12px;height:12px;position:absolute;background-color:#fff;border-radius:50%;top:6px;left:6px;flex-shrink:0}
+.form_element-radio label {display:block;position:relative;padding:0 0 0 3.2rem;line-height:2.4rem;font-size:1.6rem;color:#111;font-weight:400;}
+.form_element-radio label:before {content:'';width:2.4rem;height:2.4rem;position:absolute;top:0;left:0;flex-shrink:0;;background-repeat:no-repeat;background-position:50% 50%;background-size:contain;background-image:url("../images/common/radio-off.svg")}
+.form_element-radio input[type="radio"]:checked + label:before {background-image:url("../images/common/radio-on.svg")}
 
 /* button */
 .btn-wrap .btn-base{flex:1;}
