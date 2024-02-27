@@ -126,4 +126,8 @@
 .balance-agree-content-box .agree-desc {font-size:1.2rem;line-height:1.8rem;}
 .balance-charge-choice {border-top:1px solid #E3E2F2;padding:1.6rem 0 2.4rem;}
 .balance-charge-choice-title {font-size:2rem;font-weight:600;color:#111;line-height:2rem;text-align:center;}
+.balance-charge-choice-list {margin-top:1.6rem;display:flex;flex-direction:column;gap:1.6rem;}
+.balance-charge-choice-item {display:flex;gap:.4rem;align-items:center}
+.balance-charge-choice-unit {font-size:1.6rem;font-weight:400;color:#111;}
+.balance-charge-choice-item .input-size-24-transparent {width:10rem;}
 /* S : 예치금 현황 */

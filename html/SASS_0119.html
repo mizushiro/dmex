@@ -31,7 +31,7 @@
                     </span>
                     <p class="balance-data-info"><span class="balance-value">302,000</span>원</p>
                 </div>
-                <button type="button" class="btn-base btn-color-blue btn-size-64">충전하기</button>
+                <button type="button" class="btn-base btn-color-blue btn-size-64" onclick="UI.exe.modal_sass_0120.show()">충전하기</button>
             </div>
             <div class="balance-list-area">
                 <div class="table-head">
@@ -82,7 +82,15 @@
     <script src="../resources/js/ui.global.js"></script>
     <script src="../resources/js/ui.common.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
 
+            UI.exe.modal_sass_0120 = new Layer({
+                id :'modal_sass_0120',
+                type: 'modal',
+                src: 'SASS_0120_modal.html'
+            });
+
+        });
     </script>
 </div>
 </body>
