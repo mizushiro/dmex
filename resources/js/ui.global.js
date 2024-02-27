@@ -1223,6 +1223,8 @@ class Layer {
                 this.hide();
             }, this.delaytime);
         }
+
+        this.callback && this.callback();
        
     }
     backClick = (e) => {
