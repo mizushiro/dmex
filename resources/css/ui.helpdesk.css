@@ -1,6 +1,7 @@
 
 /* FAQ acco */
-.table-head {display:flex;justify-content:space-between;align-items:center;margin-bottom:4rem;flex-wrap:wrap;gap:1.2rem;}
+.table-head {display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem;flex-wrap:wrap;gap:1.2rem;}
+.table-head.j-end {justify-content:flex-end}
 .table-acco {position:relative;width:100%;margin:0 auto;}
 .table-acco-head {height:6rem;}
 .table-acco-body {border-top:.1rem solid #343434;}
@@ -29,7 +30,8 @@ p ~ .acc-img-area {margin-top:2.4rem;}
 .icon-download {aspect-ratio:1/1;display:block;width:2rem;background:url(../images/common/icon-download.svg) no-repeat 50% 50%;background-size:contain;}
 .btn-download {display:flex;align-items:center;justify-content:center;position:relative;z-index:2;}
 @media (max-width:800px) {
-    .mdl-selection-wrap {flex-wrap:wrap;}
+    .mdl-selection-wrap {flex-wrap:wrap;width:100%;}
+    .mdl-selection-wrap .mdl-select {width:100%;}
     .table-head .mdl-input-wrap {width:100%;}
     .table-head .mdl-input-wrap .mdl-input[data-type="period"] {flex:1;gap:.8rem;}
     .table-head .mdl-input-wrap .mdl-input[data-type="period"] input {flex:1;text-align:left}

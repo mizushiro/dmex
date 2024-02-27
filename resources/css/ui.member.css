@@ -31,7 +31,7 @@
 .icon-link {background-image:url("../images/common/icon-link.svg");}
 .icon-del {background:url("../images/common/icon-del.svg") no-repeat 50% 50%;background-size:contain;display:block;width:1.4rem;height:1.4rem;}
 .input-value-del:hover .icon-del {background-image:url("../images/common/icon-del-hover.svg")}
-.tab-content-box {margin-top:3.5rem;}
+.tab-content-box {margin-top:4rem;}
 .error-massage {font-size:1.8rem;line-height:2.2rem;padding-left:2.2rem;margin-top:-.4rem;color:#F00;}
 .file-area {width:100%;text-align:center;font-size:1.2rem;color:#111;line-height:2rem;}
 .file-btn-wrap {gap:2.8rem;display:flex;justify-content:center;align-items:center;}
@@ -164,3 +164,38 @@
     .btn-connect-area {margin-top:4rem;}
 }
 /* E : 연결정보변경 */
+/* S : 서비스 신청 내역 */
+[data-flex="table-service-title"] {width:100%;display:flex;gap:1.2rem;}
+[data-flex="table-service-title"] [data-flex-col="name"] {width:16rem;}
+[data-flex="table-service-title"] [data-flex-col="desc"] {flex:1;}
+[data-flex="table-service-title"] [data-flex-col="payment"] {width:12rem;}
+[data-flex="table-service-title"] [data-flex-col="date"] {width:16rem;}
+[data-flex="table-service-title"] [data-flex-col="state"] {width:8rem;}
+[data-flex="table-service-title"] [data-flex-col="admin"] {width:19rem;}
+.service-application-btn {display:flex;gap:.8rem;align-items:center;}
+.service-application-btn .icon-x-8 {width:1.2rem;}
+.icon-edit {background:url("../images/common/icon-edit.svg") no-repeat 50% 50%;background-size:contain;aspect-ratio:1/1;width:1.2rem;display:block;}
+.table-list-td-title {font-size:1.4rem;font-weight:600;color:#000;line-height:2.2rem;display:none;}
+.service-application-item-value {font-size:1.6rem;font-weight:400;color:#343434;line-height:2.2rem;}
+.service-application-list .table-list-body-item {padding:2rem 0;align-items:center}
+.service-application-item {display:flex;align-items:center;justify-content:center}
+[data-flex="table-service-payment-title"] {width:100%;display:flex;gap:1.2rem;}
+[data-flex="table-service-payment-title"] [data-flex-col="state"] {width:16%;}
+[data-flex="table-service-payment-title"] [data-flex-col="date"] {flex:1;}
+[data-flex="table-service-payment-title"] [data-flex-col="payment"] {width:16%;}
+[data-flex="table-service-payment-title"] [data-flex-col="etc"] {flex:1;}
+.service-payment-list .table-list-body-item {padding:2rem 0;align-items:center}
+@media (max-width:1000px) {
+    .service-application-list .table-list-head,
+    .service-payment-list .table-list-head {display:none;}
+    .service-application-list .table-list-body,
+    .service-payment-list .table-list-body {border-top:none;display:flex;flex-direction:column;gap:.8rem;}
+    .service-application-list .table-list-body-item,
+    .service-payment-list-body .table-list-body-item {border:1px solid #e3e3e3;padding:2rem;border-radius:1.6rem;flex-direction:column;align-items:flex-start;gap:.8rem;}
+    .service-application-list .service-application-item,
+    .service-payment-list-body .service-application-item {width:100% !important;gap:.8rem;justify-content:flex-start;align-items:flex-start;}
+    .service-application-list .service-application-item[data-flex-col="admin"] {align-items:center;}
+    .service-application-item-value {font-size:1.4rem;flex:1;}
+    .table-list-td-title {display:block;}
+}
+/* E : 서비스 신청 내역 */
