@@ -30,21 +30,33 @@
         </div>  
     </main>
     <footer class="footer" data-id="footer"></footer>
-
-    <script src="../resources/js/ui.global.js"></script>
-    <script src="../resources/js/ui.common.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            
-            UI.exe.modal_sass_0120 = new Layer({
-                id :'modal_sass_0120',
-                type: 'modal',
-                src: 'SASS_0120_modal.html'
-            });
- 
-        });
-    </script>
 </div>
+
+
+
+<script src="../resources/js/ui.global.js"></script>
+<script src="../resources/js/ui.common.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        
+        UI.exe.modal_sass_0120 = new Layer({
+            id :'modal_sass_0120',
+            type: 'modal',
+            src: 'SASS_0120_modal.html',
+            callback: () => {
+                UI.exe.agreeAcco = new Accordion({
+                    id :'agreeAcco',
+                    current: null,
+                    callback: (v) => {
+                        console.log('callback:', v);
+                    }
+                });
+            }
+        });
+
+    });
+</script>
+
 </body>
 </html>
