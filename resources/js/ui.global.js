@@ -78,6 +78,9 @@
                     Global.state.scroll.y > scroll_pos ? 'up' : Global.state.scroll.y < scroll_pos ? 'down' : ''; 
                 Global.state.scroll.y = scroll_pos;
                 el_html.dataset.direction = Global.state.scroll.direction;
+                el_html.dataset.top = scroll_pos < 10 ? true : false;
+                console.log(scroll_pos)
+
             }
             window.addEventListener('scroll', (e) => {
                 last_know_scroll_position = window.scrollY;
@@ -794,7 +797,6 @@
 
     //common callback
     Global.callback.toggle_nav = (result) => {
-        console.log('toggle_nav', result);
         const btn = document.querySelector('[data-toggle-object="'+ result.name +'"]');
 
         if (result.state === 'true') {

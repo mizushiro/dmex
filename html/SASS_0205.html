@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <h2 class="title-size-40-700 text-center">블로그</h2>
+           
+            <div class="blog-visual">
+                <div class="blog-visual-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slogan">
+                                <h3>데모신청을 통해 서비스를 제대로 경험해보기</h3>
+                                <p>관계와 성장을 고민하는조직에게 필요합니다. 그렇게 성장하기 위해서…</p>
+                            </div>
+                            <img src="../resources/images/blog/blog_hero_1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slogan">
+                                <h3>eee 데모신청을 통해 서비스를 제대로 경험해보기</h3>
+                                <p>관계와 성장을 고민하는조직에게 필요합니다. 그렇게 성장하기 위해서…</p>
+                            </div>
+                            <img src="../resources/images/blog/blog_hero_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination-wrapper">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-paginationp-txt"><b>1</b>/<span>4</span></div>
+                    </div>
+                </div>
+                <div class="blog-visual-control">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="blog-list">
+            </div>
+            <script>
+                const mainBlog = [
+                    { thumb: "https://picsum.photos/id/23/305/168"},
+                    { thumb: "https://picsum.photos/id/57/305/168"},
+                    { thumb: "https://picsum.photos/id/83/305/168"},
+                    { thumb: "https://picsum.photos/id/84/305/168"},
+                    { thumb: "https://picsum.photos/id/23/305/168"},
+                    { thumb: "https://picsum.photos/id/57/305/168"},
+                    { thumb: "https://picsum.photos/id/83/305/168"},
+                ];
+                mainBlog.forEach(function (data, i) {
+                    const template = `
+                    <div class="blog-item">
+                        <div class="blog-thumb-images"><img src="${mainBlog[i].thumb}" /></div>
+                        
+                        <div class="blog-item-data">
+                            <p class="blog-item-type">CDN</p>
+                            <p class="blog-item-title clamp-base">데모신청을 통해 서비스를 제대로 경험해보기</p>
+                            <p class="blog-item-date">2024.12.31</p>
+                        </div>
+                        <a href="" class="link-full"></a>
+                    </div>
+                    `;
+                    
+                    document.querySelector(".blog-list").insertAdjacentHTML("beforeend", template);
+                });
+                const banner = `<a href="#" class="blog-list-banner"><img src="../resources/images/blog/bn_demosrv.png" alt=""><p>광고배너</p></a>`;
+                document.querySelector(".blog-list").insertAdjacentHTML("beforeend", banner);
+            </script>
+        </div>
+
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            UI.exe.swiperMain = new Swiper('.blog-visual .swiper', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                // autoplay: {
+                //     delay: 2500,
+                // },
+                pagination: {
+                    el: '.blog-visual .swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.blog-visual-control .swiper-button-next',
+                    prevEl: '.blog-visual-control .swiper-button-prev',
+                },
+                on: {
+                    init: (v) => {
+                        const el_num = document.querySelector('.blog-visual .swiper-paginationp-txt');
+                        const el_num_b = el_num.querySelector('b');
+                        const el_num_span = el_num.querySelector('span');
+                        el_num_b.textContent = v.realIndex + 1;
+                        el_num_span.textContent = v.slides.length;
+                    },
+                    slideChange: (v) => {
+                        const el_num_b = document.querySelector('.blog-visual .swiper-paginationp-txt b');
+                        el_num_b.textContent = v.realIndex + 1;
+                    }
+                }
+            });
+ 
+        });
+    </script>
+</div>
+</body>
+</html>

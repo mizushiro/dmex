@@ -53,6 +53,8 @@ a, button{color:blue}
 }
 
 /* layout */
+.max-w-960 {max-width:96rem;margin-left:auto;margin-right:auto}
+
 .max-w-128 {max-width:128rem;margin-left:auto;margin-right:auto}
 .max-w-50 {max-width:50.4rem;margin-left:auto;margin-right:auto}
 .page-content {padding-top:8.8rem;padding-bottom:14rem;}
@@ -691,7 +693,14 @@ main{position:relative;z-index:1;}
     .header-logo{width:9.1rem;height:2.4rem;}
 }
 
+[data-top="false"] .floating{
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateY(0);
+}
 .floating {
+    opacity: 0;
+    pointer-events: none;
     position:fixed;
     bottom:2rem;
     right:2rem;
@@ -701,6 +710,8 @@ main{position:relative;z-index:1;}
     justify-content:center;
     align-items:center;
     z-index:10;
+    transition: all .2s ease-in;
+    transform: translateY(4rem);
 }
 .floating-chatbot{
     width:8.9rem;
@@ -771,7 +782,7 @@ main{position:relative;z-index:1;}
 .paging-move,
 .paging-num {display:flex;justify-content:center;align-items:center;min-width:2.8rem;height:2.8rem;font-size:1.6rem;color:#000;text-decoration:none;font-weight:400;}
 .paging-num[data-selected="true"] {font-weight:700;}
-.paging-move {border:.1rem solid #ccc;border-radius:.8rem;transition:background .2s}
+.paging-move {border:.1rem solid #ccc;border-radius:.8rem;}
 .paging-move[data-page="first"] {background:url('../images/common/paging-first.svg') no-repeat 50% 50% / 1.2rem;}
 .paging-move[data-page="last"] {background:url('../images/common/paging-first.svg') no-repeat 50% 50% / 1.2rem;transform:rotate(180deg);}
 .paging-move[data-page="prev"] {background:url('../images/common/paging-prev.svg') no-repeat 50% 50% / 1.2rem;}
@@ -785,5 +796,72 @@ main{position:relative;z-index:1;}
     .pagination {margin-top:3.2rem;}
     .paging-num {font-size:1.4rem;}
 }
+
+
+/* chatbot */
+.mdl-layer.chatbot .mdl-layer-header{
+    border-top-left-radius: 3.2rem;
+    border-top-right-radius: 3.2rem;
+    background-color: #5D5FEF;
+    color:#fff;
+    display: flex;
+    padding: 0 4rem;
+    height: 9.6rem;
+    align-items: center;
+    gap:3.2rem;
+}
+.mdl-layer.chatbot .mdl-layer-header h1{width: 9rem; margin-top: 0;}
+.mdl-layer.chatbot .mdl-layer-header p{font-size: 1.6rem; font-weight: 600; line-height: 1.3;}
+.mdl-layer.chatbot .mdl-layer-footer{background-color: #F9F9FF; height: auto; border-top:.1rem solid #E3E2F2; padding: 1.6rem 1.8rem 2rem 2.8rem; gap:1.2rem}
+.mdl-layer.chatbot .mdl-layer-footer input{flex:1; border:0; background-color: transparent; outline: 0; font-size: 1.8rem;}
+.mdl-layer.chatbot .mdl-layer-body{padding: 2.8rem; display: flex; flex-direction: column; gap:3.4rem; max-height:calc(100vh - 30rem) ;}
+
+.mdl-layer.chatbot .mdl-layer-body::-webkit-scrollbar {position:absolute;width:1.2rem;height:1.2rem;background-color:transparent;}
+.mdl-layer.chatbot .mdl-layer-body::-webkit-scrollbar-track {background-color:transparent;}
+.mdl-layer.chatbot .mdl-layer-body::-webkit-scrollbar-thumb {background-color:rgba(0, 0, 0, 0.2);border-radius:.8rem;background-clip:padding-box;border:.3rem solid transparent;}
+.mdl-layer.chatbot .mdl-layer-body::-webkit-scrollbar-corner {background-color:transparent;}
+
+.mdl-layer.chatbot .btn-chat{max-width: 4.4rem; max-height: 4.4rem; min-width: 4.4rem; min-height: 4.4rem; background: #111 url(../images/common/btn-chat.svg) no-repeat 50% 50% / 2.4rem; padding:2.4rem ; border-radius: 50%;}
+.chat-balloon{padding: 1.2rem 1.6rem; border: .1rem solid #E3E2F2; border-radius: 1.6rem; font-size: 1.6rem; position: relative;}
+.chat-date {margin-top: .8rem; padding-left: 0.8rem; font-size: 1.2rem; color:#000;}
+.chat-user .chat-balloon{background: #EAEEFF; font-weight: 600; border: 0;}
+.chat-bot .chat-balloon::before{
+    content: "";
+    display: block;
+    width: 2.6rem;
+    height: 1.6rem;
+    background: url(../images/common/chat-tail-bot.svg) no-repeat 0 0 / 2.6rem;
+    position: absolute;
+    top:-0.1rem; left:-1.1rem;
+}
+.chat-user .chat-balloon::before{
+    content: "";
+    display: block;
+    width: 2.6rem;
+    height: 1.6rem;
+    background: url(../images/common/chat-tail-user.svg) no-repeat 0 0 / 2.6rem;
+    position: absolute;
+    top:-0.1rem; right:-1.1rem;
+}
+.chat-bot{padding-left: 8.6rem ; position: relative;}
+.chat-bot::before{
+    content: "";
+    display: block;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    background:#F4F3F8 url(../images/common/chatbot.png) no-repeat 50% 50% / 4rem;
+    position: absolute;
+    left:0;
+    top:-.6rem;
+}
+
+
+
+
+
+
+
+
 
 
