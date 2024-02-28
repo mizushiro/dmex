@@ -23,11 +23,20 @@
     <header class="header" data-id="header"></header>
     <main class="page-content">
         <div class="max-w-50">
-            <h2 class="title-size-40-700 text-center">웹플레이어 배너 수정</h2>
+            <h2 class="title-size-40-700 text-center">동영상 등록</h2>
             <div class="member-form-group">
                 <div class="member-form-item">
                     <span class="member-form-item-title requisite">제목</span>
                     <input type="text" class="input-size-48-transparent" placeholder="제목을 입력하세요." />
+                    <button type="button" class="input-value-del">
+                        <i class="icon-del"></i>
+                    </button>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <div class="member-form-item">
+                    <span class="member-form-item-title requisite">회차</span>
+                    <input type="text" class="input-size-48-transparent" placeholder="숫자입력" />
                     <button type="button" class="input-value-del">
                         <i class="icon-del"></i>
                     </button>
@@ -41,7 +50,7 @@
                 </div>
                 <p class="error-massage">유효성 메세지 영역</p>
 
-                <span class="member-form-item-title requisite mb-m-8">배너</span>
+                <span class="member-form-item-title requisite mb-m-8">썸네일</span>
                 <div class="member-form-item" data-type="line" data-dir="column">
                     <div class="file-area">
                         클릭하여 파일을 추가하거나 파일을 끌어서 첨부하세요
@@ -55,21 +64,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="add-img-list">
-                    <div class="add-img-item">
-                        <div class="add-img-box">
-                            <img src="https://picsum.photos/id/23/200/300" alt="">
-                        </div>
-                        <button type="button" class="btn-img-del">
-                            <i class="icon-x-8"></i>
-                        </button>
-                    </div>
-                </div>
-                <p class="write-info">2024-12-23 12:34:12 홍길동</p>
             </div>
 
             <div class="btn-wrap mt-16">
-                <button type="button" class="btn-base btn-color-gray btn-size-64">삭제</button>
                 <button type="button" class="btn-base btn-color-gray btn-size-64">취소</button>
                 <button type="button" class="btn-base btn-color-blue btn-size-64">등록하기</button>
             </div>
@@ -94,7 +91,20 @@
                 }
             });
 
-            UI.exe.autoSelect();
+            UI.exe.select_form1 = new Layer({
+                id: 'select_form1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
+            UI.exe.select_date1 = new Layer({
+                id: 'select_date1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
             UI.exe.testAcco = new Accordion({
                 id :'testAcco',
                 current: null,
