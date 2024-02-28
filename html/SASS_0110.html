@@ -90,9 +90,9 @@
                     </div>
                     <script>
                         const formEdit = [
-                            { id1: "check1-1", id2: "check1-2", id3: "check1-3", id4: "check1-4"},
-                            { id1: "check2-1", id2: "check2-2", id3: "check2-3", id4: "check2-4"},
-                            { id1: "check3-1", id2: "check3-2", id3: "check3-3", id4: "check3-4"},
+                            { id1: "check1-1", id2: "check1-2", id3: "check1-3", id4: "check1-4", id5: "check1-5"},
+                            { id1: "check2-1", id2: "check2-2", id3: "check2-3", id4: "check2-4", id5: "check2-5"},
+                            { id1: "check3-1", id2: "check3-2", id3: "check3-3", id4: "check3-4", id5: "check2-5"},
                         ];
                         formEdit.forEach(function (data, i) {
                             const template = `
@@ -128,8 +128,8 @@
                                 </div>
                                 <div class="from-edit-list-item-col" data-flex-col="type">
                                     <div class="mobile-show table-list-td-title">형식</div>
-                                    <div class="mdl-select select-size-42-g" data-id="select_date1">
-                                        <select title="문의유형 선택" id="${formEdit[i].id4}">
+                                    <div class="mdl-select select-size-42-g" data-id="${formEdit[i].id4}">
+                                        <select title="문의유형 선택" id="${formEdit[i].id5}">
                                             <option value="1" selected="">형식선택</option>
                                         </select>
                                     </div>
@@ -213,22 +213,7 @@
     <script src="../resources/js/ui.common.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            UI.exe.select_date1 = new Layer({
-                id: 'select_date1',
-                type: 'select',
-                callback: (v) => {
-                    console.log(v);
-                }
-            });
-
-            UI.exe.testAcco = new Accordion({
-                id :'testAcco',
-                current: null,
-                callback: (v) => {
-                    console.log('callback:', v);
-                }
-            });
- 
+            UI.exe.autoSelect();
         });
     </script>
 </div>
