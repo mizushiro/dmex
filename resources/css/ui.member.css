@@ -113,6 +113,7 @@
 .table-list-head {height:4.8rem;}
 .table-list-body {border-top:.1rem solid #343434;}
 .table-list-th {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:600;line-height:2.4rem;}
+.table-list-th.requisite::after {content:'';width:.6rem;height:.6rem;border-radius:999rem;background-color:#6A7DDC;display:inline-block;margin-left:.4rem;position:relative;top:1rem;flex-shrink:0;align-self:flex-start}
 .table-list-td {display:flex;justify-content:center;align-items:center;font-size:1.6rem;font-weight:400;padding:1.2rem 0;line-height:2.4rem;}
 .table-list-body-item {border-bottom:1px solid #E3E3E3;}
 
@@ -204,3 +205,77 @@
     .table-list-td-title {display:block;}
 }
 /* E : 서비스 신청 내역 */
+/* S : Form */
+.line-box-a {border:1px solid #BDC3E3;background-color:#fff;padding:2.8rem;display:flex;flex-direction:column;gap:1.2rem;margin-top:3.2rem;border-radius:2rem;}
+[data-flex="table-from-edit-title"] {width:100%;display:flex;gap:1.2rem;}
+[data-flex="table-from-edit-title"] [data-flex-col="align"] {width:6rem;}
+[data-flex="table-from-edit-title"] [data-flex-col="use"] {width:6rem;}
+[data-flex="table-from-edit-title"] [data-flex-col="requisite"] {width:8rem;}
+[data-flex="table-from-edit-title"] [data-flex-col="list"] {width:8rem;}
+[data-flex="table-from-edit-title"] [data-flex-col="name"] {flex:1;}
+[data-flex="table-from-edit-title"] [data-flex-col="type"] {flex:1;}
+[data-flex="table-from-edit-title"] [data-flex-col="base"] {flex:1;}
+[data-flex="table-from-edit-title"] [data-flex-col="info"] {flex:1;}
+[data-flex="table-from-edit-title"] [data-flex-col="btn"] {width:4rem;justify-content:flex-end;}
+.icon-add {aspect-ratio:1/1;width:1.8rem;background:url("../images/common/icon-add.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.icon-x-12-sora {aspect-ratio:1/1;width:1.2rem;background:url("../images/common/icon-x-12-sora.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.icon-align {aspect-ratio:24/14;width:2.4rem;background:url("../images/common/icon-align.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.icon-file {aspect-ratio:16/18;width:1.6rem;background:url("../images/common/icon-file.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.from-edit-list .table-list-head {height:3.6rem;}
+.from-edit-list .table-list-body {border-top:none;display:flex;flex-direction:column;gap:.8rem;margin-top:.8rem;}
+.from-edit-list-item-col {display:flex;align-items:center;justify-content:center;}
+.from-edit-list-item-col .input-size-42-g {width:100%;}
+.from-edit-list-item-col .mdl-select {width:100%;}
+.from-edit-setting {display:flex;flex-direction:column;gap:.8rem;}
+.from-edit-setting-item {width:100%;display:flex;align-items:center;gap:1.2rem;}
+.from-edit-setting-title {font-size:1.6rem;line-height:2rem;color:#000;font-weight:600;width:10.8rem;flex-shrink:0;}
+.from-edit-setting-content {width:calc(100% - 33rem);display:flex;gap:1.6rem;align-items:center;}
+.from-edit-setting-desc {font-size:1.6rem;line-height:2rem;color:#000;font-weight:400;}
+.from-edit-setting-content .input-size-42-g {flex:1;}
+.from-edit-setting-radio-group {display:flex;gap:1.6rem;}
+@media (max-width:1024px) {
+    .member-form-item-group {flex-direction:column;gap:1.6rem;}
+    .member-form-item-group .form-item-col-25 {width:100%;}
+    [data-flex="table-from-edit-title"] {justify-content:flex-end;}
+    .table-list-head .table-list-th:not([data-flex-col="btn"]) {display:none;}
+    .from-edit-list-item {position:relative;padding-right:4rem;flex-wrap:wrap;}
+    .from-edit-list .table-list-body {gap:1.2rem;}
+    [data-flex="table-from-edit-title"] [data-flex-col="align"],
+    [data-flex="table-from-edit-title"] [data-flex-col="use"],
+    [data-flex="table-from-edit-title"] [data-flex-col="requisite"],
+    [data-flex="table-from-edit-title"] [data-flex-col="list"] {width:calc((100% - 3.6rem) / 4);justify-content:flex-start;}
+    [data-flex="table-from-edit-title"] [data-flex-col="name"],
+    [data-flex="table-from-edit-title"] [data-flex-col="type"],
+    [data-flex="table-from-edit-title"] [data-flex-col="base"],
+    [data-flex="table-from-edit-title"] [data-flex-col="info"] {width:calc((100% - 1.8rem) / 2);flex:auto;}
+    .from-edit-list .table-list-td-title {display:block;flex-shrink:0;width:6rem;}
+    [data-flex="table-from-edit-title"] [data-flex-col="use"] .table-list-td-title,
+    [data-flex="table-from-edit-title"] [data-flex-col="requisite"] .table-list-td-title,
+    [data-flex="table-from-edit-title"] [data-flex-col="list"] .table-list-td-title {width:auto;padding-right:.8rem;}
+    .from-edit-list-item[data-flex="table-from-edit-title"] [data-flex-col="btn"] {position:absolute;right:0;bottom:0}
+    .from-edit-list-item ~ .from-edit-list-item {border-top:1px solid #e3e3e3;padding-top:1.2rem;}
+}
+@media (max-width:800px) {
+    .from-edit-setting-item {flex-wrap:wrap;gap:.8rem;}
+    .from-edit-setting-title {width:100%;}
+    .from-edit-setting-content {width:calc(100% - 20rem);}
+    .from-edit-setting {gap:1.2rem;}
+    .from-edit-setting-item ~ .from-edit-setting-item {border-top:1px solid #e3e3e3;padding-top:1.2rem;}
+}
+@media (max-width:700px) {
+    .line-box-a {padding:1.6rem;border-radius:1.6rem;}
+    [data-flex="table-from-edit-title"] [data-flex-col="align"],
+    [data-flex="table-from-edit-title"] [data-flex-col="use"],
+    [data-flex="table-from-edit-title"] [data-flex-col="requisite"],
+    [data-flex="table-from-edit-title"] [data-flex-col="list"] {width:calc((100% - 1.2rem) / 2);}
+    [data-flex="table-from-edit-title"] [data-flex-col="name"],
+    [data-flex="table-from-edit-title"] [data-flex-col="type"],
+    [data-flex="table-from-edit-title"] [data-flex-col="base"],
+    [data-flex="table-from-edit-title"] [data-flex-col="info"] {width:100%;}
+    .from-edit-setting-content {width:100%;flex-wrap:wrap;}
+    .from-edit-setting-radio-group {width:100%;}
+    .from-edit-setting-item .btn-line-deep-block {width:100%;}
+    .btn-wrap.mt-56 {margin-top:4rem;}
+    .from-edit-setting-desc {font-size:1.4rem;}
+}
+/* E : Form */

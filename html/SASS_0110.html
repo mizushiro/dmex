@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <h2 class="title-size-40-700 text-center">Form 수정</h2>
+            <div class="member-form-group">
+                <div class="member-form-item-group">
+                    <div class="member-form-item-col form-item-col-1">
+                        <div class="member-form-item">
+                            <span class="member-form-item-title requisite">제목</span>
+                            <input type="text" class="input-size-48-transparent" placeholder="제목을 입력하세요." />
+                            <button type="button" class="input-value-del">
+                                <i class="icon-del"></i>
+                            </button>
+                        </div>
+                        <p class="error-massage">유효성 메세지 영역</p>
+                    </div>
+                    <div class="member-form-item-col form-item-col-25">
+                        <div class="member-form-item">
+                            <span class="member-form-item-title requisite">회차</span>
+                            <input type="text" class="input-size-48-transparent" placeholder="숫자입력" />
+                            <button type="button" class="input-value-del">
+                                <i class="icon-del"></i>
+                            </button>
+                        </div>
+                        <p class="error-massage">유효성 메세지 영역</p>
+                    </div>
+                </div>
+
+                <div class="member-form-item" data-dir="column">
+                    <span class="member-form-item-title requisite">내용</span>
+                    <textarea placeholder="내용을 입력하세요" class="input-size-48-transparent min-h-96"></textarea>
+                    <p class="write-data">0/3000자</p>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <div class="member-form-item" data-dir="column">
+                    <span class="member-form-item-title requisite">이용약관</span>
+                    <textarea placeholder="이용약관을 입력하세요" class="input-size-48-transparent min-h-96"></textarea>
+                    <p class="write-data">0/3000자</p>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <div class="member-form-item" data-dir="column">
+                    <span class="member-form-item-title requisite">주의사항 문구</span>
+                    <textarea placeholder="이용약관을 입력하세요" class="input-size-48-transparent min-h-96"></textarea>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+            </div>
+            <div class="line-box-a">
+                <div class="from-edit-list">
+                    <div class="table-list-head" data-flex="table-from-edit-title">
+                        <div class="table-list-th" data-flex-col="align">정렬</div>
+                        <div class="table-list-th" data-flex-col="use">사용</div>
+                        <div class="table-list-th" data-flex-col="requisite">필수입력</div>
+                        <div class="table-list-th" data-flex-col="list">리스트노출</div>
+                        <div class="table-list-th requisite" data-flex-col="name">이름</div>
+                        <div class="table-list-th" data-flex-col="type">형식</div>
+                        <div class="table-list-th" data-flex-col="base">기본값</div>
+                        <div class="table-list-th" data-flex-col="info">안내문구</div>
+                        <div class="table-list-th" data-flex-col="btn">
+                            <button type="button" class="btn-base btn-size-36-36 btn-line-deep-block">
+                                <span class="for-a11y">추가</span>
+                                <i class="icon-add"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="from-edit-list-body table-list-body">
+                    </div>
+                    <script>
+                        const formEdit = [
+                            { id1: "check1-1", id2: "check1-2", id3: "check1-3", id4: "check1-4"},
+                            { id1: "check2-1", id2: "check2-2", id3: "check2-3", id4: "check2-4"},
+                            { id1: "check3-1", id2: "check3-2", id3: "check3-3", id4: "check3-4"},
+                        ];
+                        formEdit.forEach(function (data, i) {
+                            const template = `
+                            <div class="from-edit-list-item" data-flex="table-from-edit-title">
+                                <div class="from-edit-list-item-col" data-flex-col="align">
+                                    <div class="mobile-show table-list-td-title">정렬</div>
+                                    <i class="icon-align"></i>
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="use">
+                                    <div class="mobile-show table-list-td-title">사용</div>
+                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                        <input type="checkbox" id="${formEdit[i].id1}" class="form-checkbox" />
+                                        <label for="${formEdit[i].id1}"></label>
+                                    </span>
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="requisite">
+                                    <div class="mobile-show table-list-td-title">필수입력</div>
+                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                        <input type="checkbox" id="${formEdit[i].id2}" class="form-checkbox" />
+                                        <label for="${formEdit[i].id2}"></label>
+                                    </span>
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="list">
+                                    <div class="mobile-show table-list-td-title">리스트노출</div>
+                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                        <input type="checkbox" id="${formEdit[i].id3}" class="form-checkbox" />
+                                        <label for="${formEdit[i].id3}"></label>
+                                    </span>
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="name">
+                                    <div class="mobile-show table-list-td-title">이름</div>
+                                    <input type="text" class="input-size-42-g" />
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="type">
+                                    <div class="mobile-show table-list-td-title">형식</div>
+                                    <div class="mdl-select select-size-42-g" data-id="select_date1">
+                                        <select title="문의유형 선택" id="${formEdit[i].id4}">
+                                            <option value="1" selected="">형식선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="base">
+                                    <div class="mobile-show table-list-td-title">기본값</div>
+                                    <input type="text" class="input-size-42-g" />
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="info">
+                                    <div class="mobile-show table-list-td-title">안내문구</div>
+                                    <input type="text" class="input-size-42-g" />
+                                </div>
+                                <div class="from-edit-list-item-col" data-flex-col="btn">
+                                    <button type="button" class="btn-base btn-size-36-36 btn-line-sora">
+                                        <span class="for-a11y">추가</span>
+                                        <i class="icon-x-12-sora"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                            document.querySelector(".from-edit-list-body").insertAdjacentHTML("beforeend", template);
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="line-box-a">
+                <div class="from-edit-setting">
+                    <div class="from-edit-setting-item">
+                        <div class="from-edit-setting-title">이메일 알림</div>
+                        <div class="from-edit-setting-content">
+                            <div class="from-edit-setting-radio-group">
+                                <span class="form_element-radio">
+                                    <input type="radio" id="typeA-1" name="choiceA">
+                                    <label for="typeA-1"><span class="font-600">사용</span></label>
+                                </span>
+                                <span class="form_element-radio">
+                                    <input type="radio" id="typeA-2" name="choiceA">
+                                    <label for="typeA-2" class="font-600"><span class="font-600">미사용</span></label>
+                                </span>
+                            </div>
+                            <input type="text" class="input-size-42-g" placeholder="abc@naver.com" />
+                        </div>
+                    </div>
+                    <div class="from-edit-setting-item">
+                        <div class="from-edit-setting-title">등록알림 문구</div>
+                        <div class="from-edit-setting-content">
+                            <input type="text" class="input-size-42-g" placeholder="서명에 참여해 주셔서 감사" />
+                        </div>
+                        <p class="from-edit-setting-desc">(from 등록 완료시 alert 문구)</p>
+                    </div>
+                    <div class="from-edit-setting-item">
+                        <div class="from-edit-setting-title">이동 URL</div>
+                        <div class="from-edit-setting-content">
+                            <input type="text" class="input-size-42-g" placeholder="http://naver.com" />
+                        </div>
+                        <p class="from-edit-setting-desc">(from 등록 완료시 이동)</p>
+                    </div>
+                    <div class="from-edit-setting-item">
+                        <div class="from-edit-setting-title">첨부파일</div>
+                        <div class="from-edit-setting-content">
+                            <input type="text" class="input-size-42-g" readonly placeholder="선택된 파일 없음" />
+                        </div>
+                        <button type="button" class="btn-base btn-size-36 btn-line-deep-block">
+                            <i class="icon-file"></i> 파일선택
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrap max-w-50 mt-56">
+                <button type="button" class="btn-base btn-color-gray btn-size-64">삭제</button>
+                <button type="button" class="btn-base btn-color-gray btn-size-64">취소</button>
+                <button type="button" class="btn-base btn-color-blue btn-size-64">등록하기</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.select_date1 = new Layer({
+                id: 'select_date1',
+                type: 'select',
+                callback: (v) => {
+                    console.log(v);
+                }
+            });
+
+            UI.exe.testAcco = new Accordion({
+                id :'testAcco',
+                current: null,
+                callback: (v) => {
+                    console.log('callback:', v);
+                }
+            });
+ 
+        });
+    </script>
+</div>
+</body>
+</html>
