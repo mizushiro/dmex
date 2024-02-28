@@ -9,6 +9,11 @@
 .member-form-item[data-dir="column"] > *{width:100%;}
 .member-form-item[data-dir="column"] {flex-direction:column;}
 .member-form-item[data-dir="column"] textarea {width:100%;padding:1rem 0;}
+.member-form-item-group {display:flex;gap:.8rem;}
+.member-form-item-col .error-massage {margin-top:1.2rem;}
+.member-form-item-col .member-form-item-title {width:8rem;}
+.form-item-col-1 {flex:1;}
+.form-item-col-25 {width:25%}
 .write-data {margin-bottom:1.2rem;font-size:1.2rem;color:#000;line-height:2rem;font-weight:300;}
 .member-form-item.error-case {border-color:#000;}
 .member-form-item .input-size-48-transparent {min-width:0;flex:1;}
