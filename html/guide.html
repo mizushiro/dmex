@@ -23,7 +23,14 @@
     <main class="page-content">
 
         <!-- 아코디언 -->
+        <div class="mdl-file-list" data-id="test_a0_1" aria-labelledby="test_a0_1"></div>
+        <div class="mdl-file">
+            <input type="file" class="mdl-file-inp" id="test_a0_1" name="avatar" multiple>
+            <div class="btn-mix-outlined">file upload</div>
+        </div>
         
+
+
         <div class="table-acco">
             <div class="table-acco-head" data-grid="faq-title">
                 <div class="table-acco-th" data-grid-col="title">제목</div>
@@ -119,6 +126,8 @@
     <script src="../resources/js/ui.common.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            UI.form.fileUpload();
+
             UI.exe.testAcco = new Accordion({
                 id :'testAcco',
                 current: 0,
