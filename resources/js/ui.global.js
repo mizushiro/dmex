@@ -1620,19 +1620,23 @@ UI.exe.autoSelect = () => {
     for (let item of select) {
         if (!!item.dataset.id) {
             const _id = item.dataset.id;
-            UI.exe[_id] = new Layer({
-                id: _id,
-                type: 'select'
-            });
+            if (!UI.exe[_id]) {
+                UI.exe[_id] = new Layer({
+                    id: _id,
+                    type: 'select'
+                });
+            }
+            
         } else {
             const _id = 'select_' + Date.now() + n;
             n = n + 1;
             item.dataset.id = _id;
-
-            UI.exe[_id] = new Layer({
-                id: _id,
-                type: 'select'
-            });
+            if (!UI.exe[_id]) {
+                UI.exe[_id] = new Layer({
+                    id: _id,
+                    type: 'select'
+                });
+            }
         }
     }
 }
