@@ -224,3 +224,75 @@ input:disabled + .mdl-selection[data-type=switch] {opacity:0.3;}
 .mdl-selection[data-type="button"] span{display:flex;align-items:center;justify-content:center;}
 .mdl-selection[data-type="button"]::before{display:none;}
 input:checked + .mdl-selection[data-type="button"]{background-color:#3E3F4D;}
+
+
+/* ui file */
+.mdl-file {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+.mdl-file input:active + .btn-base,
+.mdl-file input:hover + .btn-base,
+.mdl-file input:focus + .btn-base {
+  border: 1px solid #616161;
+  background: #FAFAFA;
+}
+.mdl-file-inp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  direction: ltr;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+.mdl-file-list {
+  position: relative;
+  padding: 0 3.2rem 0 0.8rem;
+  min-height: 4rem;
+  margin-top: 0;
+  display: none;
+}
+.mdl-file-list.on {
+  display: block;
+}
+.mdl-file-list ul {
+  padding: 0;
+  margin: 0;
+}
+.mdl-file-list li {
+  position: relative;
+  padding: 0.8rem 3.2rem 0 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid #EEEEEE;
+}
+.mdl-file-list img {
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+.mdl-file-list .mdl-file-del {
+  position: absolute;
+  right: 0.5rem;
+  top: 1rem;
+  line-height: 1;
+}
+.mdl-file-list .mdl-file-del::after {
+  content: "clear";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  font-family: "Material Icons";
+  font-feature-settings: "liga";
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--gray800);
+}

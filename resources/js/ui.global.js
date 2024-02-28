@@ -380,6 +380,330 @@
 			},100);
 		}
 	}
+    Global.form = {
+		init() {
+            const classname = '.inp-base';
+			const el_inps = document.querySelectorAll(classname);
+			const prefix = (inp) => {
+				const wrap = inp.parentElement;
+
+				if (!wrap.querySelector('.prefix')){
+					const preFixTxt = document.createElement('span');
+					const theFirstChild = wrap.firstChild;
+					const txt = inp.dataset.prefix;
+
+					preFixTxt.classList.add('prefix');
+					preFixTxt.textContent = txt;
+					wrap.insertBefore(preFixTxt, theFirstChild);
+
+					const w = wrap.querySelector('.prefix').offsetWidth;
+
+					wrap.querySelector(classname).style.paddingLeft = w + 'px';
+				}
+			}
+			const suffix = (inp) => {
+				const wrap = inp.parentElement;
+
+				if (!wrap.querySelector('.suffix')){
+					const fixTxt = document.createElement('span');
+					const txt = inp.dataset.suffix;
+
+					fixTxt.classList.add('suffix');
+					fixTxt.textContent = txt;
+					wrap.appendChild(fixTxt);
+
+					const w = wrap.querySelector('.suffix').offsetWidth;
+
+					inp.dataset.suf = w;
+					wrap.querySelector(classname).style.paddingRight = w + 'px';
+				}
+			}
+
+			for (let i = 0, len = el_inps.length; i < len; i++) {
+				const inp = el_inps[i];
+
+				inp.addEventListener('focus', this.actClear);
+				inp.addEventListener('input', this.actClear);
+				inp.addEventListener('blur', this.actClear);
+				
+				//prefix, suffix text
+				!!inp.dataset.prefix && prefix(inp);
+				!!inp.dataset.suffix && suffix(inp);
+				!!inp.value && (!!inp.dataset.clear || inp.type === 'search') && (!!inp.dataset.keep || inp.type === 'search') && this.actClear(inp);
+			}
+		},
+		clearTimer:{},
+		actClear(event) {
+			let inp;
+			const isInput = event.type === 'text' || event.type === 'search' || event.type === 'number' || event.type === 'tel' || event.type === 'email' || event.type === 'file' || event.type === 'password' || event.type === 'url' || event.type === 'tel' || event.type === 'date';
+			if (isInput) {
+				inp = event;
+			} else {
+				inp = event.currentTarget;
+			}
+
+			// const id = inp.id;
+			const title = inp.title;
+			const wrap = inp.parentElement;
+			const suffix = wrap.querySelector('.suffix');
+			const isValue = inp.value;
+			let eventType = event.type;
+			const isClear = inp.dataset.clear || inp.type === 'search' ? true : false;
+			let isKeep = inp.dataset.keep;
+			const w_suffix = !!suffix ? suffix.offsetWidth : 0;
+			const paddingR = Number((inp.style.paddingRight).split('px')[0]);
+
+			if (!isClear) {
+				return false;
+			}
+
+			if (isInput) {
+				eventType = 'input';
+			}
+			
+			if (inp.type === 'search') {
+				isKeep = true;
+			}
+			
+			const clear = () => {
+				clearTimeout(this.clearTimer);
+				inp.value = '';
+				inp.focus();
+			}
+			const beforeClear = () => {
+				const btn = wrap.querySelector('.ui-clear');
+				const btnclear = () => {
+					if (!!btn) {
+						const w = btn.offsetWidth;
+						inp.style.paddingRight = paddingR - w + 'px';
+						btn.removeEventListener('click', clear);
+						btn.remove();
+					}
+				}
+				(!!isKeep) ? (!inp.value) && btnclear() : btnclear();
+			}
+
+			switch (eventType) {
+				case 'focus' :
+				case 'input' :
+					if (!!isValue) {
+						if (!wrap.querySelector('.ui-clear')) {
+							const clearbutton = document.createElement('button');
+							clearbutton.type = 'button';
+							clearbutton.classList.add('btn-clear');
+							clearbutton.classList.add('ui-clear');
+							clearbutton.setAttribute('aria-label', title + ' 값 삭제');
+							// clearbutton.dataset.id = id;
+							
+							inp.after(clearbutton);
+
+							const btn = wrap.querySelector('.ui-clear');
+							const w = btn.offsetWidth + w_suffix;
+
+							inp.style.paddingRight = w + 'px'
+							btn.style.marginRight = w_suffix + 'px';
+
+							btn.addEventListener('focus', () => clearTimeout(this.clearTimer));
+							btn.addEventListener('blur', beforeClear);
+							btn.removeEventListener('click', clear);
+							btn.addEventListener('click', clear);
+						}
+					} else {
+						beforeClear();
+					}
+					break;
+
+				case 'blur' :
+					if (!!wrap.querySelector('.ui-clear')) {
+						this.clearTimer = setTimeout(() => {
+							beforeClear();
+						},300);
+					}
+					break;
+			}
+		},
+
+		fileUpload() {
+			const el_files = document.querySelectorAll('.mdl-file-inp');
+			const fileTypes = [
+				"image/apng",
+				"image/bmp",
+				"image/gif",
+				"image/jpeg",
+				"image/pjpeg",
+				"image/png",
+				"image/svg+xml",
+				"image/tiff",
+				"image/webp",
+				"image/x-icon"
+			];
+
+			const fileDelete = (e) => {
+				const id = e.currentTarget.dataset.id;
+				
+				const list = document.querySelector('.mdl-file-list[data-id="'+ id +'"]');
+				const list_ul = list.querySelector('ul');
+				const list_li = list.querySelectorAll('li');
+				const inp = document.querySelector('#'+ id);
+				const nodes = [... list_ul.children];
+				const index = Number(nodes.indexOf(e.currentTarget.closest('li')));
+
+				const dataTransfer = new DataTransfer();
+				const _files = inp.files;	
+				let fileArray = Array.from(_files);
+				
+				fileArray.splice(index, 1);
+				fileArray.forEach((file) => { 
+					dataTransfer.items.add(file); 
+				});
+				list_li[index].remove();
+				inp.files = dataTransfer.files;	
+			}
+			const validFileType = (file) => {
+				return fileTypes.includes(file.type);
+			}
+			const returnFileSize = (number) => {
+				if(number < 1024) {
+					return number + 'bytes';
+				} else if(number >= 1024 && number < 1048576) {
+					return (number/1024).toFixed(1) + 'KB';
+				} else if(number >= 1048576) {
+					return (number/1048576).toFixed(1) + 'MB';
+				}
+			}
+
+			const updateImageDisplay = (e) => {
+				const el_file = e.currentTarget;
+				const id = el_file.id;
+				const preview = document.querySelector('.mdl-file-list[data-id="'+ id +'"]');
+				const curFiles = el_file.files;
+
+				while(preview.firstChild) {
+					preview.removeChild(preview.firstChild);
+				}
+
+				if(curFiles.length === 0) {
+					const para = document.createElement('p');
+					para.textContent = 'No files currently selected for upload';
+					preview.appendChild(para);
+				} else {
+					const list = document.createElement('ul');
+					const title = document.createElement('h4');
+					
+					title.textContent = 'File upload list';
+					title.classList.add('a11y-hidden');
+					preview.classList.add('on');
+					preview.appendChild(title);
+					preview.appendChild(list);
+					
+					for (let i = 0, len = curFiles.length; i < len; i++) {
+						const that = curFiles[i];
+						const listItem = document.createElement('li');
+						const para = document.createElement('p');
+						const delbutton = document.createElement('button');
+
+						delbutton.type = 'button';
+						delbutton.classList.add('mdl-file-del');
+						delbutton.title = '파일 삭제';
+						delbutton.dataset.id = id;
+						delbutton.dataset.n = i;
+
+						para.textContent = that.name + ', ' + returnFileSize(that.size) + '.';
+
+						if(validFileType(that)) {
+							const image = document.createElement('img');
+							image.src = URL.createObjectURL(that);
+
+							listItem.appendChild(image);
+						} 
+							
+						listItem.appendChild(para);
+						listItem.appendChild(delbutton);
+						list.appendChild(listItem);
+						delbutton.addEventListener('click', fileDelete);
+					}
+				}
+			}
+
+			for (let i = 0, len = el_files.length; i < len; i++) {
+				const that = el_files[i];
+
+				if (!that.dataset.ready) {
+					that.addEventListener('change', updateImageDisplay);
+					that.dataset.ready = true;
+				}
+			}
+		},
+		allCheck(opt) {
+			const el_parents = document.querySelectorAll('[data-allcheck-parent]');
+			const el_childs = document.querySelectorAll('[data-allcheck-child]');
+			const opt_callback = opt.allCheckCallback;
+
+			const allCheckParent = () => {
+				isAllChecked({
+					name: this.dataset.allcheckParent, 
+					type: 'parent'
+				});
+			}
+
+			const allCheckChild = () => {
+				isAllChecked({
+					name: this.dataset.allcheckChild, 
+					type: 'child'
+				});
+			}
+			
+			const isAllChecked = (opt) =>{
+				const isType = opt.type;
+				const isName = opt.name;
+				const parent = document.querySelector('[data-allcheck-parent="' + isName + '"]');
+				const childs = document.querySelectorAll('[data-allcheck-child="' + isName + '"]');
+				const allChecked = parent.checked;
+				const len = childs.length;
+				let n_checked = 0;
+				let n_disabled = 0;
+
+				for (let i = 0; i < len; i++) {
+					const child = childs[i];
+					
+					if (isType === 'parent' && !child.disabled) {
+						child.checked = allChecked;
+					} 
+					
+					n_checked = child.checked && !child.disabled ? ++n_checked : n_checked;
+					n_disabled = child.disabled ? ++n_disabled : n_disabled;
+				}
+
+				parent.checked = (len !== n_checked + n_disabled) ? false : true;
+
+				opt_callback({
+					group: isName,
+					allChecked: parent.checked
+				});
+			}
+			
+			for (let i = 0; i < el_parents.length; i++) {
+				if (!el_parents[i].dataset.apply) {
+					el_parents[i].addEventListener('change', allCheckParent);
+					isAllChecked({
+						name: el_parents[i].dataset.allcheckParent, 
+						type: 'child'
+					});
+				}
+
+				el_parents[i].dataset.apply = '1';
+			}
+
+			for (let i = 0; i < el_childs.length; i++) {
+				if (!el_childs[i].dataset.apply) {
+					el_childs[i].addEventListener('change', allCheckChild);
+				}
+
+				el_childs[i].dataset.apply = '1';
+			}
+		}
+	}
+
 
 
     Global.loading = {
@@ -1288,3 +1612,28 @@ class Layer {
         this.modal_wrap.addEventListener('animationend', this.hidden);
     }
 }
+
+UI.exe.autoSelect = () => {
+    const select = document.querySelectorAll('.mdl-select');
+    let n = 0;
+
+    for (let item of select) {
+        if (!!item.dataset.id) {
+            const _id = item.dataset.id;
+            UI.exe[_id] = new Layer({
+                id: _id,
+                type: 'select'
+            });
+        } else {
+            const _id = 'select_' + Date.now() + n;
+            n = n + 1;
+            item.dataset.id = _id;
+
+            UI.exe[_id] = new Layer({
+                id: _id,
+                type: 'select'
+            });
+        }
+    }
+}
+UI.exe.autoSelect();
