@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* S : 준비중 */
+.ready-notice {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3rem;padding-top:4rem;}
+.blue-box-80 {width:8rem;height:8rem;border-radius:2.4rem;background-color:#6471F6;display:flex;align-items:center;justify-content:center;}
+.icon-ready {aspect-ratio:1/1;width:4rem;background:url("../images/common/icon-ready.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.ready-notice-desc {font-size:2.8rem;line-height:3.2rem;color:#111;font-weight:600;}
+@media (max-width:700px) {
+    .ready-notice {padding-top:2rem;gap:2rem;}
+    .ready-notice-desc {font-size:2.2rem;}
+}
+/* E : 준비중 */
+/* S : 데모신청 */
+.with-side-area {display:flex;align-items:flex-start;gap:4rem;margin-top:4rem;}
+.with-side-content {flex:1;}
+.line-box-sky {border:1px solid #E3E2F2;border-radius:4rem;padding:2.4rem 3.6rem;}
+.side-var-box {width:32rem;border-radius:4rem;padding:2.8rem 3rem;border:1px solid #060B24;flex-shrink:0;}
+/* E : 데모신청 */

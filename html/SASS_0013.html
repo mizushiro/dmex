@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <h2 class="title-size-40-700 text-center">데모 신청</h2>
+            <div class="max-w-50">
+                <div class="mdl-tab mt-x5" data-tab-id="demoTab">
+                    <div class="mdl-tab-wrap">
+                        <button type="button" class="mdl-tab-btn mdl-tab-size-64" data-tab="demo1">
+                            <span class="mdl-tab-text-24">데모신청</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn mdl-tab-size-64" data-tab="demo2">
+                            <span class="mdl-tab-text-24">신청현황</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-tab-pnl" data-tab-id="demoTab">
+                
+                <section class="mdl-tab-item" data-tab="demo1">
+                    <div class="tab-content-box">
+                        <p class="title-desc-size-20 text-center">
+                            <i class="icon-smile"></i>
+                            <strong class="font-600">데모 서비스는 휴대폰 또는 페이팔 인증 후사용 가능합니다.</strong><br>
+                            (단, 사용량에 따라 조기 종료될 수 있으며 등록된 휴대폰별, 서비스별 <strong class="text-blue font-600">초기 1회</strong>만 가능합니다.)
+                        </p>
+                        <div class="with-side-area">
+                            <div class="with-side-content">
+                                <div class="line-box-sky">
+
+                                </div>
+                            </div>
+                            <div class="side-var-box">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mdl-tab-item" data-tab="demo2">
+                    <div class="tab-content-box">
+                        <div class="line-box-sky mt-72">
+
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>  
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.demoTab = new Tab({
+                id: 'demoTab',
+                current: 'demo1',
+                callback: (v) => {
+                    console.log(v.current)
+                    if (v.current === 'demo2') {
+                       setTimeout(() => {
+                            
+                       }, 0)
+                    }
+                }
+            });
+            UI.exe.autoSelect();
+        });
+    </script>
+</div>
+</body>
+</html>
