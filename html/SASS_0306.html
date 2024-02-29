@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <button type="button" class="btn-base btn-color-blue btn-size-64" onclick="UI.exe.modal_sass_0306.show()">
+                <span>라이브러리 수정</span>
+            </button>
+            
+        </div>  
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            
+            UI.exe.modal_sass_0306 = new Layer({
+                id :'modal_sass_0306',
+                type: 'modal',
+                src: 'SASS_0306_modal.html',
+                callback: () => {
+                    const mainVod = [
+                        { thumb: "https://picsum.photos/id/23/305/168"},
+                        { thumb: "https://picsum.photos/id/57/305/168"},
+                        { thumb: "https://picsum.photos/id/83/305/168"},
+                        { thumb: "https://picsum.photos/id/84/305/168"},
+                        { thumb: "https://picsum.photos/id/33/305/168"},
+                        { thumb: "https://picsum.photos/id/14/305/168"},
+                        { thumb: "https://picsum.photos/id/27/305/168"},
+                        { thumb: "https://picsum.photos/id/53/305/168"},
+                        { thumb: "https://picsum.photos/id/2/305/168"},
+                        { thumb: "https://picsum.photos/id/11/305/168"},
+                        { thumb: "https://picsum.photos/id/12/305/168"},
+                        { thumb: "https://picsum.photos/id/44/305/168"},
+                        { thumb: "https://picsum.photos/id/77/305/168"},
+                        { thumb: "https://picsum.photos/id/66/305/168"},
+                        { thumb: "https://picsum.photos/id/23/305/168"},
+                        { thumb: "https://picsum.photos/id/57/305/168"},
+                        { thumb: "https://picsum.photos/id/83/305/168"},
+                        { thumb: "https://picsum.photos/id/84/305/168"},
+                        { thumb: "https://picsum.photos/id/33/305/168"},
+                        { thumb: "https://picsum.photos/id/14/305/168"},
+                        { thumb: "https://picsum.photos/id/27/305/168"},
+                        { thumb: "https://picsum.photos/id/53/305/168"},
+                        { thumb: "https://picsum.photos/id/2/305/168"},
+                        { thumb: "https://picsum.photos/id/11/305/168"},
+                        { thumb: "https://picsum.photos/id/12/305/168"},
+                        { thumb: "https://picsum.photos/id/44/305/168"},
+                        { thumb: "https://picsum.photos/id/77/305/168"},
+                        { thumb: "https://picsum.photos/id/66/305/168"},
+      
+              
+                    ];
+                    mainVod.forEach(function (data, i) {
+                        const template = `
+                        <div class="srv-item">
+                            <div class="srv-item-head">
+                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                    <label for="voditem_checkbox_${i}"></label>
+                                </span>
+
+                                <div class="srv-more" data-toggle-state="false">
+                                    <div class="srv-more-wrap">
+                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                        
+                                        <div class="srv-more-select">
+                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div class="srv-thumb-images" data-type="vod"><img src="${mainVod[i].thumb}" /></div>
+                            
+                            <div class="srv-item-data">
+                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                            </div>
+                        </div>
+                        `;
+                        
+                        document.querySelector(".srv-list.pub-modal0306-1").insertAdjacentHTML("beforeend", template);
+                    });
+
+                    const vodMores = document.querySelectorAll('.btn-more');
+                    const actMoreToggle = (e) => {
+                        const _this = e.currentTarget;
+                        const _wrap = _this.closest('.srv-more');
+                        const _state = _this.dataset.toggleState;
+
+                        if (_state === 'false') {
+                            _this.dataset.toggleState = 'true';
+                            _wrap.dataset.toggleState = 'true';
+                        } else {
+                            _this.dataset.toggleState = 'false';
+                            _wrap.dataset.toggleState = 'false'; 
+                        }
+                        
+                    }
+                    for (let item of vodMores) {
+                        item.addEventListener('click', actMoreToggle);
+                    }
+                }
+            });
+            
+ 
+        });
+    </script>
+</div>
+</body>
+</html>

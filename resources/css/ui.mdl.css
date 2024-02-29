@@ -10,8 +10,13 @@
 .mt-72 {margin-top:7.2rem;}
 .mb-m-8 {margin-bottom:-.8rem;}
 
+.mr-24 {margin-right:2.4rem;}
+
 .min-h-96 {min-height:9.6rem;}
 .min-h-158 {min-height:15.8rem;}
+
+
+.mdl-section{position: relative; width: 100%;}
 
 /* tab base */
 .mdl-tab {position:relative;width:100%;display:flex;}
@@ -302,3 +307,23 @@ input:checked + .mdl-selection[data-type="button"]{background-color:#3E3F4D;}
   font-size: 2rem;
   color: var(--gray800);
 }
+
+/* 말줄임 */
+[data-ellipsis] {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+[data-ellipsis="1"] {
+    white-space: nowrap;
+    word-break: break-all;
+} 
+[data-ellipsis="2"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+} 
+[data-ellipsis="3"] {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+} 

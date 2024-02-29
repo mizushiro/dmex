@@ -159,7 +159,7 @@ select::-ms-expand {display:none}
 
 /* button */
 .btn-wrap .btn-base{flex:1;}
-.btn-wrap{display:flex;justify-content:center;gap:.8rem}
+.btn-wrap{display:flex;justify-content:center;gap:.8rem; align-items: center;}
 .btn-base {display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none;}
 .btn-size-32 {min-height:3.2rem;padding:0 1.2rem;font-size:1.2rem;line-height:2rem;gap:.8rem;}
 .btn-size-36 {min-height:3.6rem;padding:0 1.2rem;font-size:1.4rem;font-weight:400;gap:.4rem;border-radius:.8rem;}
@@ -173,6 +173,10 @@ select::-ms-expand {display:none}
 .btn-color-blue:hover {background-color:#7879F1;box-shadow:0 .4rem .8rem 0 rgba(0, 0, 0, 0.25);}
 .btn-color-gray {background-color:#F4F3F8;color:#6471F6;font-weight:700;}
 .btn-color-gray:hover {background-color:#E3E2F2;box-shadow:0 .4rem .8rem 0 rgba(0, 0, 0, 0.25);}
+.btn-color-dark {background-color:#3E3F4D;color:#ffffff;font-weight:500;white-space: nowrap;}
+.btn-color-dark:hover {background-color:#8491D5; }
+.btn-color-sky {background-color:#8491D5;color:#ffffff;font-weight:500; white-space: nowrap;}
+.btn-color-sky:hover {background-color:#E7E6F1; color:#343434;}
 
 .btn-line-sky {background-color:#fff;color:#6A7DDC;font-weight:700;border:1px solid #CCD4FF;}
 .btn-line-sky:hover {font-weight:800;}
@@ -183,6 +187,9 @@ select::-ms-expand {display:none}
 .btn-line-block {background-color:#fff;color:#343434;font-weight:500;border:1px solid #000;}
 .btn-line-block:hover {background-color:#000;color:#fff;}
 .btn-line-deep-block {border:1px solid #000;color:#000;}
+.btn-line-dark {background-color:#fff;color:#343434;font-weight:500;border:1px solid #000;white-space: nowrap;}
+.btn-line-dark:hover {border-color:#8491D5;color:#8491D5;}
+.btn-size-40.btn-del{font-size: 1.4rem;}
 
 .btn-size-56 .arrow-round {margin-right:-1.2rem;}
 .arrow-round {width:2.8rem;height:2.8rem;display:flex;align-items:center;justify-content:center;border-radius:999rem;background-color:#fff;box-shadow:.2rem .3rem 1rem 0 rgba(0, 0, 0, 0.12);transition:all .2s;flex-shrink:0}
@@ -857,8 +864,10 @@ main{position:relative;z-index:1;}
 }
 
 
-
-
+[data-flex-align="right"]{justify-content: flex-end;}
+[data-flex-align="center"]{justify-content: center;}
+[data-flex-align="right"]{justify-content: flex-start;}
+[data-flex-align="between"]{justify-content: space-between;}
 
 
 

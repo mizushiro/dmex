@@ -935,13 +935,12 @@ class Tab {
     ps = (e) => {
         const _this = e;
         const _wrap = _this.closest('.mdl-tab'); 
+        const _rect_wrap = _wrap.getBoundingClientRect();  
         const _rect = _this.getBoundingClientRect();   
-        
-        console.log(_rect.left + _wrap.scrollLeft,_rect.width )
         
         UI.scroll.move({ 
             selector: _wrap, 
-            left: _rect.left + _wrap.scrollLeft + (_rect.width / 2), 
+            left: (_rect.left - _rect_wrap.left) + _wrap.scrollLeft + (_rect.width / 2), 
             add : 0,
             align: 'center' 
         });
