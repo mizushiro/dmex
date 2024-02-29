@@ -25,6 +25,13 @@
                     top: 0
                 })
             });
+            UI.exe.modal_sass_0213 = new Layer({
+                id :'modal_sass_0213',
+                type: 'modal',
+                src: 'SASS_0213_modal.html',
+                callback: () => {
+                }
+            });
         }
     });
 
