@@ -48,12 +48,166 @@
                         </p>
                         <div class="with-side-area">
                             <div class="with-side-content">
-                                <div class="line-box-sky">
-
+                                <div class="line-box-black">
+                                    <div class="service-demo-list">
+                                        <div class="table-list-head" data-flex="table-demo-request-title">
+                                            <div class="table-list-th" data-flex-col="choice">선택</div>
+                                            <div class="table-list-th" data-flex-col="name">서비스명</div>
+                                            <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                            <div class="table-list-th" data-flex-col="date">사용기간</div>
+                                        </div>
+                                        <div class="service-demo-request-body table-list-body">
+                                            <div class="table-list-body-item" data-flex="table-demo-request-title">
+                                                <div class="demo-request-item" data-flex-col="choice">
+                                                    <div class="mobile-show table-list-td-title">상태</div>
+                                                    <div class="demo-request-item-value">
+                                                        <span class="font-600">신청완료</span>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="name">
+                                                    <div class="mobile-show table-list-td-title">서비스명</div>
+                                                    <div class="demo-request-item-value">스트리밍 솔루션</div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="history">
+                                                    <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                    <div class="demo-request-item-value">VOD| 31~60분 |최대 60개| CDN,MP3파일생성, 자막사용, 번역사용(1개 언어)<br>* 30분짜리영상 30개를CDN을사용하여 서비스</div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="date">
+                                                    <div class="mobile-show table-list-td-title">사용기간</div>
+                                                    <div class="demo-request-item-value">7일</div>
+                                                </div>
+                                            </div>
+                                            <div class="table-list-body-item state-ready" data-flex="table-demo-request-title">
+                                                <div class="demo-request-item" data-flex-col="choice">
+                                                    <div class="mobile-show table-list-td-title">상태</div>
+                                                    <div class="demo-request-item-value">
+                                                        <span class="box-checkbox-a box-checkbox-size-24">
+                                                            <input type="checkbox" id="check10" class="form-checkbox" disabled />
+                                                            <label for="check10"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="name">
+                                                    <div class="mobile-show table-list-td-title">서비스명</div>
+                                                    <div class="demo-request-item-value">스트리밍 솔루션</div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="history">
+                                                    <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                    <div class="demo-request-item-value">서비스 준비중</div>
+                                                </div>
+                                                <div class="demo-request-item" data-flex-col="date">
+                                                    <div class="mobile-show table-list-td-title">사용기간</div>
+                                                    <div class="demo-request-item-value">7일</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            const domoRequest = [
+                                                { id: "check1"},
+                                                { id: "check2"},
+                                                { id: "check3"},
+                                                { id: "check4"},
+                                            ];
+                                            domoRequest.forEach(function (data, i) {
+                                                const template = `
+                                                    <div class="table-list-body-item" data-flex="table-demo-request-title">
+                                                        <div class="demo-request-item" data-flex-col="choice">
+                                                            <div class="mobile-show table-list-td-title">상태</div>
+                                                            <div class="demo-request-item-value">
+                                                            <span class="box-checkbox-a box-checkbox-size-24">
+                                                                <input type="checkbox" id="${domoRequest[i].id}" class="form-checkbox" />
+                                                                <label for="${domoRequest[i].id}"></label>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="demo-request-item" data-flex-col="name">
+                                                            <div class="mobile-show table-list-td-title">서비스명</div>
+                                                            <div class="demo-request-item-value">스트리밍 솔루션</div>
+                                                        </div>
+                                                        <div class="demo-request-item" data-flex-col="history">
+                                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                            <div class="demo-request-item-value">VOD| 31~60분 |최대 60개| CDN,MP3파일생성, 자막사용, 번역사용(1개 언어)<br>* 30분짜리영상 30개를CDN을사용하여 서비스</div>
+                                                        </div>
+                                                        <div class="demo-request-item" data-flex-col="date">
+                                                            <div class="mobile-show table-list-td-title">사용기간</div>
+                                                            <div class="demo-request-item-value">7일</div>
+                                                        </div>
+                                                    </div>
+                                                `;
+                                                document.querySelector(".service-demo-request-body").insertAdjacentHTML("beforeend", template);
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="side-var-box">
-
+                            <div class="side-bar-box">
+                                <h4 class="side-bar-title">주문내역</h4>
+                                <div class="side-bar-content">
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">인증유형</p>
+                                        <div class="side-bar-item-content">
+                                            <span class="form_element-radio size-16">
+                                                <input type="radio" id="typeA-1" name="choiceA">
+                                                <label for="typeA-1">휴대폰 번호</label>
+                                            </span>
+                                            <span class="form_element-radio size-16">
+                                                <input type="radio" id="typeA-2" name="choiceA">
+                                                <label for="typeA-2">페이팔</label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">휴대폰 번호</p>
+                                        <div class="side-bar-item-content">
+                                            <input type="tel" class="input-size-16-transparent" placeholder="-없이 숫자만 입력" />
+                                            <button type="button" class="btn-base btn-size-32 btn-round btn-line-sky">인증번호 발송</button>
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">인증번호</p>
+                                        <div class="side-bar-item-content">
+                                            <input type="tel" class="input-size-16-transparent" placeholder="숫자만 입력" />
+                                            <button type="button" class="btn-base btn-size-32 btn-round btn-line-sky">인증번호 재발송</button>
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                            <div class="mdl-acco-item">
+                                                <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree1" class="form-checkbox" />
+                                                        <label for="agree1">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="mdl-acco-body">
+                                                    <div class="balance-agree-content-box">
+                                                        <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                        <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                        <div class="scrollbar-4">
+                                                            <p class="agree-desc font-600">제1조(목적)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-bar-total-price">
+                                    <p class="side-bar-total-price-title">합계금액</p>
+                                    <span class="side-bar-total-price-value">123,456,789원</span>
+                                </div>
+                                <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">데모신청하기</button>
                             </div>
                         </div>
                     </div>
@@ -61,8 +215,63 @@
 
                 <section class="mdl-tab-item" data-tab="demo2">
                     <div class="tab-content-box">
-                        <div class="line-box-sky mt-72">
+                        <div class="line-box-black mt-72">
+                            <div class="service-demo-list">
+                                <div class="table-list-head" data-flex="table-demo-request-title">
+                                    <div class="table-list-th" data-flex-col="name2">서비스명</div>
+                                    <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                    <div class="table-list-th" data-flex-col="date2">사용기간</div>
+                                    <div class="table-list-th" data-flex-col="date3">신청일시</div>
+                                    <div class="table-list-th" data-flex-col="state">현황</div>
+                                </div>
+                                <div class="service-demo-request-body table-list-body">
+                                    <div class="table-list-body-item" data-flex="table-demo-request-title">
+                                        <div class="demo-request-item" data-flex-col="name2">
+                                            <div class="mobile-show table-list-td-title">서비스명</div>
+                                            <div class="demo-request-item-value">스트리밍 솔루션</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="history">
+                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                            <div class="demo-request-item-value">VOD| 31~60분 |최대 60개| CDN,MP3파일생성, 자막사용, 번역사용(1개 언어)<br>* 30분짜리영상 30개를CDN을사용하여 서비스</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="date2">
+                                            <div class="mobile-show table-list-td-title">사용기간</div>
+                                            <div class="demo-request-item-value">2024.01.02~2024.01.09</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="date3">
+                                            <div class="mobile-show table-list-td-title">사용기간</div>
+                                            <div class="demo-request-item-value">2024.02.05 11:11:11</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="state">
+                                            <div class="mobile-show table-list-td-title">현황</div>
+                                            <div class="demo-request-item-value"><span>대기중</span></div>
+                                        </div>
+                                    </div>
 
+                                    <div class="table-list-body-item" data-flex="table-demo-request-title">
+                                        <div class="demo-request-item" data-flex-col="name2">
+                                            <div class="mobile-show table-list-td-title">서비스명</div>
+                                            <div class="demo-request-item-value">스트리밍 솔루션</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="history">
+                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                            <div class="demo-request-item-value">VOD| 31~60분 |최대 60개| CDN,MP3파일생성, 자막사용, 번역사용(1개 언어)<br>* 30분짜리영상 30개를CDN을사용하여 서비스</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="date2">
+                                            <div class="mobile-show table-list-td-title">사용기간</div>
+                                            <div class="demo-request-item-value">2024.01.02~2024.01.09</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="date3">
+                                            <div class="mobile-show table-list-td-title">사용기간</div>
+                                            <div class="demo-request-item-value">2024.02.05 11:11:11</div>
+                                        </div>
+                                        <div class="demo-request-item" data-flex-col="state">
+                                            <div class="mobile-show table-list-td-title">현황</div>
+                                            <div class="demo-request-item-value"><span class="text-blue">사용중</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -89,7 +298,13 @@
                     }
                 }
             });
-            UI.exe.autoSelect();
+            UI.exe.agreeAcco = new Accordion({
+                id :'agreeAcco',
+                current: null,
+                callback: (v) => {
+                    console.log('callback:', v);
+                }
+            });
         });
     </script>
 </div>

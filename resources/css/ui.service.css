@@ -9,9 +9,71 @@
     .ready-notice-desc {font-size:2.2rem;}
 }
 /* E : 준비중 */
+/* S : 주문내역 */
+.side-bar-box {width:32rem;border-radius:4rem;padding:2.8rem 3rem;border:1px solid #E3E2F2;flex-shrink:0;}
+.side-bar-title {font-size:2.4rem;font-weight:600;color:#000;line-height:2.6rem;text-align:center;}
+.side-bar-content {margin-top:2rem;border-bottom:1px solid #E3E2F2}
+.side-bar-item {border-top:1px solid #E3E2F2;padding-top:1.6rem;display:flex;}
+.side-bar-item ~ .side-bar-item {margin-top:1.6rem;}
+.side-bar-item-title {font-size:1.2rem;line-height:1.6rem;flex-shrink:0;width:8.4rem;font-weight:600;color:#000;}
+.side-bar-item-desc {font-size:1.2rem;line-height:2rem;color:#000;font-weight:400;}
+.side-bar-item-content {display:flex;flex-wrap:wrap;gap:1.4rem;}
+.side-bar-item-content .input-size-16-transparent {width:100%;}
+.side-bar-item .balance-charge-agree {border:none;padding:0;}
+.side-bar-item .balance-agree-content-sub {font-size:1.2rem;}
+.side-bar-item .mdl-acco-head {margin-bottom:1.6rem;}
+.side-bar-item .balance-agree-content-box {margin-top:0;}
+.side-bar-total-price {margin:2.4rem 0 2.8rem;}
+.side-bar-total-price-title {text-align:right;font-size:2rem;color:#000;font-weight:600;line-height:2.8rem;}
+.side-bar-total-price-value {display:block;font-size:3.6rem;color:#000;font-weight:700;line-height:4rem;text-align:right;}
+.side-bar-box .btn-size-58 {width:100%;}
+@media (max-width:700px) {
+    .side-bar-box {width:100%;border-radius:2rem;}
+    .side-bar-title {font-size:2rem;}
+    .side-bar-total-price {margin-bottom:0;}
+}
+/* E : 주문내역 */
 /* S : 데모신청 */
 .with-side-area {display:flex;align-items:flex-start;gap:4rem;margin-top:4rem;}
 .with-side-content {flex:1;}
 .line-box-sky {border:1px solid #E3E2F2;border-radius:4rem;padding:2.4rem 3.6rem;}
-.side-var-box {width:32rem;border-radius:4rem;padding:2.8rem 3rem;border:1px solid #060B24;flex-shrink:0;}
+.line-box-black {border:1px solid #343434;border-radius:4rem;padding:2.4rem 3.6rem;}
+.service-demo-list {padding-bottom:2rem;}
+.service-demo-request-body {margin-top:1.2rem;}
+.service-demo-list .table-list-body-item {padding:2rem 0;align-items:center;}
+.demo-request-item {font-size:1.6rem;color:#111;font-weight:400;display:flex;align-items:center;justify-content:center}
+.state-ready .demo-request-item {color:#999 !important;}
+.state-ready .box-checkbox-a {opacity:.4;pointer-events:none;}
+[data-flex="table-demo-request-title"] {width:100%;display:flex;gap:1.6rem;}
+[data-flex="table-demo-request-title"] [data-flex-col="choice"] {width:5.2rem;flex-shrink:0;}
+[data-flex="table-demo-request-title"] [data-flex-col="name"] {width:13.2rem;flex-shrink:0;}
+[data-flex="table-demo-request-title"] [data-flex-col="history"] {flex:1;font-weight:600;}
+[data-flex="table-demo-request-title"] [data-flex-col="date"] {width:5.6rem;flex-shrink:0;font-weight:600;}
+.table-list-body-item [data-flex-col="name"],
+.table-list-body-item [data-flex-col="history"] {justify-content:flex-start;}
+.table-list-body-item [data-flex-col="choice"] {font-size:1.4rem;}
+
+[data-flex="table-demo-request-title"] [data-flex-col="name2"] {width:18rem;flex-shrink:0;font-weight:600;}
+[data-flex="table-demo-request-title"] [data-flex-col="date2"],
+[data-flex="table-demo-request-title"] [data-flex-col="date3"] {width:16rem;flex-shrink:0;font-weight:600;}
+[data-flex="table-demo-request-title"] [data-flex-col="state"] {width:8rem;flex-shrink:0;font-weight:600;}
+.table-list-body-item [data-flex-col="name2"] {justify-content:flex-start;}
+@media (max-width:1024px) {
+    .with-side-area {gap:2rem;}
+    .service-demo-list .table-list-head {display:none;}
+    .line-box-black {padding:0;}
+    .service-demo-list {padding-bottom:0;}
+    .service-demo-request-body {margin-top:0;border-top:none;}
+    .service-demo-list .table-list-body-item {padding:2rem;flex-direction:column;gap:1.2rem;}
+    .table-list-body-item:last-child {border-bottom:none;}
+    .demo-request-item {font-size:1.4rem;}
+    .service-demo-list .table-list-td-title {display:block;flex-shrink:0;width:8rem;}
+    [data-flex="table-demo-request-title"] .demo-request-item {width:100%;justify-content:flex-start;align-items:flex-start;}
+}
+@media (max-width:700px) {
+    .with-side-area {flex-direction:column;}
+    .with-side-content {width:100%;}
+    .line-box-black {border-radius:2rem;}
+    .line-box-black.mt-72 {margin-top:4rem;}
+}
 /* E : 데모신청 */

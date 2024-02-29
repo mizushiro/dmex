@@ -443,6 +443,7 @@
     .main-service-tab-btn span {font-size:1.2rem;}
 }
 @media (max-width:700px) {
+    .main-service-tab-item {width:8.8rem;}
     .main-service-tab{
         max-width:39rem;
         padding:0;
