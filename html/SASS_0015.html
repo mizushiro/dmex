@@ -56,84 +56,223 @@
             <div class="mdl-tab-pnl" data-tab-id="serviceTab">
                 
                 <section class="mdl-tab-item" data-tab="service1">
-                    <div class="max-w-50">
-                        <div class="tab-content-box">
-                            <div class="member-form-group">
-                                <div class="member-form-item">
-                                    <span class="member-form-item-title requisite">이름</span>
-                                    <input type="text" class="input-size-48-transparent" placeholder="홍길동" />
-                                    <button type="button" class="input-value-del">
-                                        <i class="icon-del"></i>
-                                    </button>
-                                </div>
-                                <p class="error-massage">유효성 메세지 영역</p>
-
-                                <div class="member-form-item">
-                                    <span class="member-form-item-title requisite">이메일</span>
-                                    <input type="text" class="input-size-48-transparent" placeholder="abc@gmail.com" />
-                                    <button type="button" class="input-value-del">
-                                        <i class="icon-del"></i>
-                                    </button>
-                                </div>
-                                <p class="error-massage">유효성 메세지 영역</p>
-
-                                <div class="member-form-item">
-                                    <span class="member-form-item-title requisite">문의유형</span>
-                                    <div class="mdl-select" data-id="select_form1">
-                                        <select title="문의유형 선택" id="select_form1_1">
-                                            <option value="1" selected="">2024</option>
-                                            <option value="2">2023</option>
-                                            <option value="3">2022</option>
-                                            <option value="4">2021</option>
-                                            <option value="5">2020</option>
-                                        </select>
+                    <div class="tab-content-box">
+                        <div class="with-side-area mt-72">
+                            <div class="with-side-content">
+                                <div class="service-desc-box">
+                                    <div class="blue-box-80">
+                                        <i class="icon-service-1"></i>
+                                    </div>
+                                    <div class="service-desc-content">
+                                        <h3 class="service-desc-title">스트리밍 솔루션</h3>
+                                        <p class="service-desc-desc">
+                                            <span class="text-blue font-600">월 구독 시 30% 할인</span>된 비용으로 이용하실 수 있으며,언제든지 요금제 및 옵션을 변경하실 수 있습니다.
+                                        </p>
                                     </div>
                                 </div>
-                                <p class="error-massage">유효성 메세지 영역</p>
+                                <div class="line-box-black">
+                                    <div class="service-order-type">
+                                        <div class="table-list-head" data-flex="table-service-type-title">
+                                            <div class="table-list-th">영상 구분</div>
+                                            <div class="table-list-th">영상당 평균시간(분)</div>
+                                            <div class="table-list-th">월 평균 업로드 수</div>
+                                            <div class="table-list-th">옵션선택</div>
+                                        </div>
+                                        <div class="service-type-body table-list-body">
+                                            <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">영상 구분</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type1-1" class="form-checkbox" />
+                                                        <label for="service-type1-1">VOD</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type1-2" class="form-checkbox" />
+                                                        <label for="service-type1-2">AOD</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type1-3" class="form-checkbox" />
+                                                        <label for="service-type1-3">VOD & AOD</label>
+                                                    </span>
+                                                </div>
 
-                                <div class="member-form-item">
-                                    <span class="member-form-item-title requisite">문의제목</span>
-                                    <input type="text" class="input-size-48-transparent" placeholder="문의제목 입력" />
-                                    <button type="button" class="input-value-del">
-                                        <i class="icon-del"></i>
-                                    </button>
-                                </div>
-                                <p class="error-massage">유효성 메세지 영역</p>
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">영상당 평균시간(분)</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type2-1" class="form-checkbox" />
+                                                        <label for="service-type2-1">5분~30분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type2-2" class="form-checkbox" />
+                                                        <label for="service-type2-2">31분~60분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type2-3" class="form-checkbox" />
+                                                        <label for="service-type2-3">61분~90분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type2-4" class="form-checkbox" />
+                                                        <label for="service-type2-4">미정</label>
+                                                    </span>
+                                                </div>
 
-                                <div class="member-form-item" data-dir="column">
-                                    <span class="member-form-item-title requisite">문의내용</span>
-                                    <textarea placeholder="내용을 입력하세요" class="input-size-48-transparent"></textarea>
-                                    <p class="write-data">0/3000자</p>
-                                </div>
-                                <p class="error-massage">유효성 메세지 영역</p>
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">월 평균 업로드 수</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type3-1" class="form-checkbox" />
+                                                        <label for="service-type3-1">최대 30개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type3-2" class="form-checkbox" />
+                                                        <label for="service-type3-2">최대 60개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type3-3" class="form-checkbox" />
+                                                        <label for="service-type3-3">최대 90개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type3-4" class="form-checkbox" />
+                                                        <label for="service-type3-4">미정</label>
+                                                    </span>
+                                                </div>
 
-                                <div class="member-form-item" data-type="line" data-dir="column">
-                                    <div class="file-area">
-                                        파일 업로드 (최대5개)<br>
-                                        클릭하여 파일을 추가하거나 파일을 끌어서 첨부하세요
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">옵션선택</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type4-1" class="form-checkbox" />
+                                                        <label for="service-type4-1">전체선택</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type4-2" class="form-checkbox" />
+                                                        <label for="service-type4-2">CDN</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type4-3" class="form-checkbox" />
+                                                        <label for="service-type4-3">MP3 파일 생성</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type4-4" class="form-checkbox" />
+                                                        <label for="service-type4-4">자막 사용</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type4-5" class="form-checkbox" />
+                                                        <label for="service-type4-5">번역 사용(1개 언어)</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="file-btn-wrap">
-                                        <button type="button" class="btn-txt" data-ico="file">
-                                            파일선택
-                                        </button>
-                                        <button type="button" class="btn-txt" data-ico="library">
-                                            라이브러리에서 선택
-                                        </button>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-list">
+                                        <div class="table-list-head" data-flex="table-service-order-title">
+                                            <div class="table-list-th" data-flex-col="choice"></div>
+                                            <div class="table-list-th" data-flex-col="price">요금제</div>
+                                            <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                        </div>
+                                        <div class="service-streaming-body table-list-body">
+                                        </div>
+                                        <script>
+                                            const serviceStreaming = [
+                                                { id: "check1"},
+                                                { id: "check2"},
+                                                { id: "check3"},
+                                                { id: "check4"},
+                                                { id: "check5"},
+                                            ];
+                                            serviceStreaming.forEach(function (data, i) {
+                                                const template = `
+                                                    <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                        <div class="service-order-item" data-flex-col="choice">
+                                                            <div class="service-order-item-value">
+                                                                <span class="box-checkbox-a box-checkbox-size-24">
+                                                                    <input type="checkbox" id="${serviceStreaming[i].id}" class="form-checkbox" />
+                                                                    <label for="${serviceStreaming[i].id}"></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="price">
+                                                            <div class="mobile-show table-list-td-title">요금제</div>
+                                                            <div class="service-order-item-value">80,000</div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="history">
+                                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                            <div class="service-order-item-value">고화질 영상 30개(25분) 사용분 & CDN700GB</div>
+                                                        </div>
+
+                                                    </div>
+                                                `;
+                                                document.querySelector(".service-streaming-body").insertAdjacentHTML("beforeend", template);
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
-                            <div class="member-agree-list">
-                                <div class="member-agree-item">
-                                    <span class="box-checkbox-a box-checkbox-size-24">
-                                        <input type="checkbox" id="agree1" class="form-checkbox" />
-                                        <label for="agree1">개인정보 수집 및 이용 동의</label>
-                                    </span>
+                            <div class="side-bar-box">
+                                <h4 class="side-bar-title">주문내역</h4>
+                                <div class="side-bar-content w-size-10">
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상구분</p>
+                                        <div class="side-bar-item-content">
+                                            VOD
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상당 평균시간(분)</p>
+                                        <div class="side-bar-item-content">
+                                            31분~60분
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">월 평균 업로드 수</p>
+                                        <div class="side-bar-item-content">
+                                            최대 60개
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">옵션</p>
+                                        <div class="side-bar-item-content">
+                                            CDN, MP3파일생성,자막 사용,번역 사용(1개언어)
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                            <div class="mdl-acco-item">
+                                                <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree1" class="form-checkbox" />
+                                                        <label for="agree1">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="mdl-acco-body">
+                                                    <div class="balance-agree-content-box">
+                                                        <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                        <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                        <div class="scrollbar-4">
+                                                            <p class="agree-desc font-600">제1조(목적)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="btn-wrap mt-16">
-                                <button type="button" class="btn-base btn-color-gray btn-size-64">취소</button>
-                                <button type="button" class="btn-base btn-color-blue btn-size-64">문의하기</button>
+                                <div class="side-bar-total-price">
+                                    <p class="side-bar-total-price-title">합계금액</p>
+                                    <span class="side-bar-total-price-value">123,456,789원</span>
+                                </div>
+                                <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">결제하기</button>
                             </div>
                         </div>
                     </div>
@@ -141,147 +280,535 @@
 
                 <section class="mdl-tab-item" data-tab="service2">
                     <div class="tab-content-box">
-                        
-                        <div class="table-head">
-                            <div class="mdl-selection-wrap">
-                                <input type="radio" id="radio_ctg1" name="radio_ctg" checked>
-                                <label for="radio_ctg1" class="mdl-selection" data-type="button">
-                                    <span>전체</span>
-                                </label>
+                        <div class="with-side-area mt-72">
+                            <div class="with-side-content">
+                                <div class="service-desc-box">
+                                    <div class="blue-box-80">
+                                        <i class="icon-service-2"></i>
+                                    </div>
+                                    <div class="service-desc-content">
+                                        <h3 class="service-desc-title">실시간 라이브 편성</h3>
+                                        <p class="service-desc-desc">
+                                            <span class="text-blue font-600">월 구독 시 30% 할인</span>된 비용으로 이용하실 수 있으며,언제든지 요금제 및 옵션을 변경하실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-type">
+                                        <div class="table-list-head" data-flex="table-service-type-title">
+                                            <div class="table-list-th">영상 구분</div>
+                                            <div class="table-list-th">영상당 평균시간(분)</div>
+                                            <div class="table-list-th">월 평균 업로드 수</div>
+                                            <div class="table-list-th">옵션선택</div>
+                                        </div>
+                                        <div class="service-type-body table-list-body">
+                                            <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">영상 구분</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type11-1" class="form-checkbox" />
+                                                        <label for="service-type11-1">VOD</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type11-2" class="form-checkbox" />
+                                                        <label for="service-type11-2">AOD</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type11-3" class="form-checkbox" />
+                                                        <label for="service-type11-3">VOD & AOD</label>
+                                                    </span>
+                                                </div>
 
-                                <input type="radio" id="radio_ctg2" name="radio_ctg">
-                                <label for="radio_ctg2" class="mdl-selection" data-type="button">
-                                    <span>답변대기</span>
-                                </label>
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">영상당 평균시간(분)</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type12-1" class="form-checkbox" />
+                                                        <label for="service-type12-1">5분~30분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type12-2" class="form-checkbox" />
+                                                        <label for="service-type12-2">31분~60분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type12-3" class="form-checkbox" />
+                                                        <label for="service-type12-3">61분~90분</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type12-4" class="form-checkbox" />
+                                                        <label for="service-type12-4">미정</label>
+                                                    </span>
+                                                </div>
 
-                                <input type="radio" id="radio_ctg3" name="radio_ctg">
-                                <label for="radio_ctg3" class="mdl-selection" data-type="button">
-                                    <span>답변완료</span>
-                                </label>
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">월 평균 업로드 수</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type13-1" class="form-checkbox" />
+                                                        <label for="service-type13-1">최대 30개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type13-2" class="form-checkbox" />
+                                                        <label for="service-type13-2">최대 60개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type13-3" class="form-checkbox" />
+                                                        <label for="service-type13-3">최대 90개</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type13-4" class="form-checkbox" />
+                                                        <label for="service-type13-4">미정</label>
+                                                    </span>
+                                                </div>
+
+                                                <div class="service-type-item">
+                                                    <div class="mobile-show table-list-td-title">옵션선택</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type14-1" class="form-checkbox" />
+                                                        <label for="service-type14-1">전체선택</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type14-2" class="form-checkbox" />
+                                                        <label for="service-type14-2">CDN</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type14-3" class="form-checkbox" />
+                                                        <label for="service-type14-3">AOD 편성채널+1</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-list">
+                                        <div class="table-list-head" data-flex="table-service-order-title">
+                                            <div class="table-list-th" data-flex-col="choice"></div>
+                                            <div class="table-list-th" data-flex-col="price">요금제</div>
+                                            <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                        </div>
+                                        <div class="service-live-body table-list-body">
+                                        </div>
+                                        <script>
+                                            const serviceLive = [
+                                                { id: "check1-1"},
+                                                { id: "check1-2"},
+                                                { id: "check1-3"},
+                                                { id: "check1-4"},
+                                                { id: "check1-5"},
+                                            ];
+                                            serviceLive.forEach(function (data, i) {
+                                                const template = `
+                                                    <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                        <div class="service-order-item" data-flex-col="choice">
+                                                            <div class="service-order-item-value">
+                                                                <span class="box-checkbox-a box-checkbox-size-24">
+                                                                    <input type="checkbox" id="${serviceLive[i].id}" class="form-checkbox" />
+                                                                    <label for="${serviceLive[i].id}"></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="price">
+                                                            <div class="mobile-show table-list-td-title">요금제</div>
+                                                            <div class="service-order-item-value">80,000</div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="history">
+                                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                            <div class="service-order-item-value">고화질 영상 30개(25분) 사용분 & CDN700GB</div>
+                                                        </div>
+
+                                                    </div>
+                                                `;
+                                                document.querySelector(".service-live-body").insertAdjacentHTML("beforeend", template);
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mdl-input-wrap">
-                                 <div class="mdl-select select-size-48" data-id="select_date1">
-                                    <select title="문의유형 선택" id="select_date1_1">
-                                        <option value="1" selected="">등록일자</option>
-                                    </select>
+                            <div class="side-bar-box">
+                                <h4 class="side-bar-title">주문내역</h4>
+                                <div class="side-bar-content w-size-10">
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상구분</p>
+                                        <div class="side-bar-item-content">
+                                            VOD
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상당 평균시간(분)</p>
+                                        <div class="side-bar-item-content">
+                                            31분~60분
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">월 평균 업로드 수</p>
+                                        <div class="side-bar-item-content">
+                                            최대 60개
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">옵션</p>
+                                        <div class="side-bar-item-content">
+                                            CDN, MP3파일생성,자막 사용,번역 사용(1개언어)
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                            <div class="mdl-acco-item">
+                                                <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree2" class="form-checkbox" />
+                                                        <label for="agree2">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="mdl-acco-body">
+                                                    <div class="balance-agree-content-box">
+                                                        <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                        <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                        <div class="scrollbar-4">
+                                                            <p class="agree-desc font-600">제1조(목적)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="mdl-input" data-type="period">
-                                    <input type="date" value="2024-12-31">
-                                    ~
-                                    <input type="date" value="2024-12-31">
+                                <div class="side-bar-total-price">
+                                    <p class="side-bar-total-price-title">합계금액</p>
+                                    <span class="side-bar-total-price-value">123,456,789원</span>
                                 </div>
-                                <div class="mdl-input input-sh">
-                                    <input type="text" placeholder="검색어를 입력해주세요">
-                                    <button type="button" class="btn-search" aria-label="검색"></button>
-                                </div>
+                                <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">결제하기</button>
                             </div>
                         </div>
-                        <div class="table-acco">
-                            <div class="table-acco-head" data-grid="faq-title">
-                                <div class="table-acco-th" data-grid-col="title">제목</div>
-                                <div class="table-acco-th" data-grid-col="usedate">사용기간</div>
-                                <div class="table-acco-th" data-grid-col="date">신청일시</div>
-                                <div class="table-acco-th" data-grid-col="state">상태</div>
-                                <div class="table-acco-th" data-grid-col="arrow"></div>
-                            </div>
-
-                            <div class="table-acco-body mdl-acco" data-id="testAcco">
-                                <div class="mdl-acco-item">
-                                    <div class="mdl-acco-head faq-acco-tit">
-                                        <div class="mdl-acco-head-wrap" data-grid="faq-title">
-                                            <div class="table-acco-td" data-grid-col="title">
-                                                결제계좌변경은 어떻게 하나요?
-                                            </div>
-                                            <div class="table-acco-td" data-grid-col="usedate">2024.02.05</div>
-                                            <div class="table-acco-td" data-grid-col="date">2024.02.05</div>
-                                            <div class="table-acco-td" data-grid-col="state">답변완료</div>
-                                        </div>
-                                        <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
-                                    </div>
-                                    <div class="mdl-acco-body">
-                                        <div class="mdl-acco-wrap">
-                                            <!-- 내용 --->
-                                            <div class="faq-wrap">
-                                                <div class="faq-wrap-box">
-                                                    <p>
-                                                    결제일자 :<br>
-                                                    결제금액 :<br>
-                                                    결제수단 :<br>
-                                                    문의내용 :결제계좌 변경이 안되는데 유선상으로 해도 되는건가요?결제계좌 변경이 안되는데 유선상으로 해도 되는건가요?<br>
-                                                    문의 유형:<br>
-                                                    계좌 정보 확인: 계좌번호, 예금주, 잔액 등<br>
-                                                    거래 내역 확인: 입출금내역, 결제 내역등<br>
-                                                    이체/결제 오류: 이체/결제 실패, 금액 오류등<br>
-                                                    기타: 계좌 관리, 해지 등<br>
-                                                    준비물:<br>
-                                                    계좌 정보: 은행명, 계좌번호, 예금주<br>
-                                                    거래 정보: 거래 날짜, 금액, 거래처 등<br>
-                                                    기타 정보: 본인 확인 정보
-                                                    </p>
-                                                </div>
-                                                <div class="faq-wrap-box">
-                                                    <strong>[답변] 답변드립니다</strong>
-                                                    <p>
-                                                    일부 서비스는 앱에서도 이용 해지가가능합니다.
-                                                    로그인 후 '설정', '회원정보', '서비스관리' 등의메뉴에서 ＇결제계좌변경＇ 메뉴를선택하여 진행하세요.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="mdl-acco-item">
-                                    <div class="mdl-acco-head faq-acco-tit">
-                                        <div class="mdl-acco-head-wrap" data-grid="faq-title">
-                                            <div class="table-acco-td" data-grid-col="title">
-                                                결제계좌변경은 어떻게 하나요?
-                                            </div>
-                                            <div class="table-acco-td" data-grid-col="usedate">2024.02.05</div>
-                                            <div class="table-acco-td" data-grid-col="date">2024.02.05</div>
-                                            <div class="table-acco-td" data-grid-col="state">답변완료</div>
-                                        </div>
-                                        <button type="button" class="mdl-acco-btn" aria-label="title open"></button>
-                                    </div>
-                                    <div class="mdl-acco-body">
-                                        <div class="mdl-acco-wrap">
-                                            <!-- 내용 --->
-                                            <div class="faq-wrap">
-                                                <div class="faq-wrap-box">
-                                                    .1111111..
-                                                </div>
-                                                <div class="faq-wrap-box">
-                                                    ...1111111
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pagination">
-                            <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
-                            <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
-                            <a href="" class="paging-num" data-selected="true">1</a>
-                            <a href="" class="paging-num">2</a>
-                            <a href="" class="paging-num">3</a>
-                            <a href="" class="paging-num">4</a>
-                            <a href="" class="paging-num">5</a>
-                            <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
-                            <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
-                        </div>
-                        
                     </div>
                 </section>
 
                 <section class="mdl-tab-item" data-tab="service3">
                     <div class="tab-content-box">
+                        <div class="with-side-area mt-72">
+                            <div class="with-side-content">
+                                <div class="service-desc-box">
+                                    <div class="blue-box-80">
+                                        <i class="icon-service-3"></i>
+                                    </div>
+                                    <div class="service-desc-content">
+                                        <h3 class="service-desc-title">라이브 송출 대행</h3>
+                                        <p class="service-desc-desc">
+                                            <span class="text-blue font-600">월 구독 시 30% 할인</span>된 비용으로 이용하실 수 있으며,언제든지 요금제 및 옵션을 변경하실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-type">
+                                        <div class="table-list-head" data-flex="table-service-type-title">
+                                            <div class="table-list-th">사용 용량</div>
+                                        </div>
+                                        <div class="service-type-body table-list-body">
+                                            <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                <div class="service-type-item" data-dir="row">
+                                                    <div class="mobile-show table-list-td-title">사용 용량</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type21-1" class="form-checkbox" />
+                                                        <label for="service-type21-1">100G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type21-2" class="form-checkbox" />
+                                                        <label for="service-type21-2">300G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type21-3" class="form-checkbox" />
+                                                        <label for="service-type21-3">500G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type21-4" class="form-checkbox" />
+                                                        <label for="service-type21-4">1TB</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-list">
+                                        <div class="table-list-head" data-flex="table-service-order-title">
+                                            <div class="table-list-th" data-flex-col="choice"></div>
+                                            <div class="table-list-th" data-flex-col="price">요금제</div>
+                                            <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                        </div>
+                                        <div class="service-live-body2 table-list-body">
+                                        </div>
+                                        <script>
+                                            const serviceLive2 = [
+                                                { id: "check2-1"},
+                                                { id: "check2-2"},
+                                                { id: "check2-3"},
+                                                { id: "check2-4"},
+                                                { id: "check2-5"},
+                                            ];
+                                            serviceLive2.forEach(function (data, i) {
+                                                const template = `
+                                                    <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                        <div class="service-order-item" data-flex-col="choice">
+                                                            <div class="service-order-item-value">
+                                                                <span class="box-checkbox-a box-checkbox-size-24">
+                                                                    <input type="checkbox" id="${serviceLive2[i].id}" class="form-checkbox" />
+                                                                    <label for="${serviceLive2[i].id}"></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="price">
+                                                            <div class="mobile-show table-list-td-title">요금제</div>
+                                                            <div class="service-order-item-value">80,000</div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="history">
+                                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                            <div class="service-order-item-value">고화질 영상 30개(25분) 사용분 & CDN700GB</div>
+                                                        </div>
+
+                                                    </div>
+                                                `;
+                                                document.querySelector(".service-live-body2").insertAdjacentHTML("beforeend", template);
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-bar-box">
+                                <h4 class="side-bar-title">주문내역</h4>
+                                <div class="side-bar-content w-size-10">
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상구분</p>
+                                        <div class="side-bar-item-content">
+                                            VOD
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상당 평균시간(분)</p>
+                                        <div class="side-bar-item-content">
+                                            31분~60분
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">월 평균 업로드 수</p>
+                                        <div class="side-bar-item-content">
+                                            최대 60개
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">옵션</p>
+                                        <div class="side-bar-item-content">
+                                            CDN, MP3파일생성,자막 사용,번역 사용(1개언어)
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                            <div class="mdl-acco-item">
+                                                <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree3" class="form-checkbox" />
+                                                        <label for="agree3">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="mdl-acco-body">
+                                                    <div class="balance-agree-content-box">
+                                                        <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                        <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                        <div class="scrollbar-4">
+                                                            <p class="agree-desc font-600">제1조(목적)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-bar-total-price">
+                                    <p class="side-bar-total-price-title">합계금액</p>
+                                    <span class="side-bar-total-price-value">123,456,789원</span>
+                                </div>
+                                <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">결제하기</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="mdl-tab-item" data-tab="service4">
                     <div class="tab-content-box">
+                        <div class="with-side-area mt-72">
+                            <div class="with-side-content">
+                                <div class="service-desc-box">
+                                    <div class="blue-box-80">
+                                        <i class="icon-service-4"></i>
+                                    </div>
+                                    <div class="service-desc-content">
+                                        <h3 class="service-desc-title">CDN</h3>
+                                        <p class="service-desc-desc">
+                                            <span class="text-blue font-600">월 구독 시 30% 할인</span>된 비용으로 이용하실 수 있으며,언제든지 요금제 및 옵션을 변경하실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-type">
+                                        <div class="table-list-head" data-flex="table-service-type-title">
+                                            <div class="table-list-th">사용 용량</div>
+                                        </div>
+                                        <div class="service-type-body table-list-body">
+                                            <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                <div class="service-type-item" data-dir="row">
+                                                    <div class="mobile-show table-list-td-title">사용 용량</div>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type31-1" class="form-checkbox" />
+                                                        <label for="service-type31-1">100G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type31-2" class="form-checkbox" />
+                                                        <label for="service-type31-2">300G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type31-3" class="form-checkbox" />
+                                                        <label for="service-type31-3">500G</label>
+                                                    </span>
+                                                    <span class="box-checkbox-a box-checkbox-size-24">
+                                                        <input type="checkbox" id="service-type31-4" class="form-checkbox" />
+                                                        <label for="service-type31-4">1TB</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="line-box-black">
+                                    <div class="service-order-list">
+                                        <div class="table-list-head" data-flex="table-service-order-title">
+                                            <div class="table-list-th" data-flex-col="choice"></div>
+                                            <div class="table-list-th" data-flex-col="price">요금제</div>
+                                            <div class="table-list-th" data-flex-col="history">서비스 내역</div>
+                                        </div>
+                                        <div class="service-cdn-body table-list-body">
+                                        </div>
+                                        <script>
+                                            const serviceCdn = [
+                                                { id: "check3-1"},
+                                                { id: "check3-2"},
+                                                { id: "check3-3"},
+                                                { id: "check3-4"},
+                                                { id: "check3-5"},
+                                            ];
+                                            serviceCdn.forEach(function (data, i) {
+                                                const template = `
+                                                    <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                        <div class="service-order-item" data-flex-col="choice">
+                                                            <div class="service-order-item-value">
+                                                                <span class="box-checkbox-a box-checkbox-size-24">
+                                                                    <input type="checkbox" id="${serviceCdn[i].id}" class="form-checkbox" />
+                                                                    <label for="${serviceCdn[i].id}"></label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="price">
+                                                            <div class="mobile-show table-list-td-title">요금제</div>
+                                                            <div class="service-order-item-value">80,000</div>
+                                                        </div>
+                                                        <div class="service-order-item" data-flex-col="history">
+                                                            <div class="mobile-show table-list-td-title">서비스 내역</div>
+                                                            <div class="service-order-item-value">1G(0.084$) *환율(1,330원) * 5T(5G*1024G)</div>
+                                                        </div>
+
+                                                    </div>
+                                                `;
+                                                document.querySelector(".service-cdn-body").insertAdjacentHTML("beforeend", template);
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-bar-box">
+                                <h4 class="side-bar-title">주문내역</h4>
+                                <div class="side-bar-content w-size-10">
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상구분</p>
+                                        <div class="side-bar-item-content">
+                                            VOD
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">영상당 평균시간(분)</p>
+                                        <div class="side-bar-item-content">
+                                            31분~60분
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">월 평균 업로드 수</p>
+                                        <div class="side-bar-item-content">
+                                            최대 60개
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-title">옵션</p>
+                                        <div class="side-bar-item-content">
+                                            CDN, MP3파일생성,자막 사용,번역 사용(1개언어)
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                    </div>
+                                    <div class="side-bar-item">
+                                        <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                            <div class="mdl-acco-item">
+                                                <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree4" class="form-checkbox" />
+                                                        <label for="agree4">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="mdl-acco-body">
+                                                    <div class="balance-agree-content-box">
+                                                        <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                        <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                        <div class="scrollbar-4">
+                                                            <p class="agree-desc font-600">제1조(목적)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                            <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-bar-total-price">
+                                    <p class="side-bar-total-price-title">합계금액</p>
+                                    <span class="side-bar-total-price-value">123,456,789원</span>
+                                </div>
+                                <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">결제하기</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="mdl-tab-item" data-tab="service5">
@@ -296,6 +823,107 @@
                 </section>
                 <section class="mdl-tab-item" data-tab="service6">
                     <div class="tab-content-box">
+                        <div class="tab-content-box">
+                            <div class="with-side-area mt-72">
+                                <div class="with-side-content">
+                                    <div class="service-desc-box">
+                                        <div class="blue-box-80">
+                                            <i class="icon-service-6"></i>
+                                        </div>
+                                        <div class="service-desc-content">
+                                            <h3 class="service-desc-title">Form</h3>
+                                            <p class="service-desc-desc">
+                                                Form 서비스는 무료로 사용 가능합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="line-box-black">
+                                        <div class="service-order-type">
+                                            <div class="table-list-head" data-flex="table-service-type-title">
+                                                <div class="table-list-th">서비스 이용 여부</div>
+                                            </div>
+                                            <div class="service-type-body table-list-body">
+                                                <div class="table-list-body-item" data-flex="table-service-order-title">
+                                                    <div class="service-type-item" data-dir="row">
+                                                        <div class="mobile-show table-list-td-title">서비스 이용 여부</div>
+                                                        <span class="box-checkbox-a box-checkbox-size-24">
+                                                            <input type="checkbox" id="service-type51-1" class="form-checkbox" />
+                                                            <label for="service-type51-1">사용</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-bar-box">
+                                    <h4 class="side-bar-title">주문내역</h4>
+                                    <div class="side-bar-content w-size-10">
+                                        <div class="side-bar-item">
+                                            <p class="side-bar-item-title">영상구분</p>
+                                            <div class="side-bar-item-content">
+                                                VOD
+                                            </div>
+                                        </div>
+                                        <div class="side-bar-item">
+                                            <p class="side-bar-item-title">영상당 평균시간(분)</p>
+                                            <div class="side-bar-item-content">
+                                                31분~60분
+                                            </div>
+                                        </div>
+                                        <div class="side-bar-item">
+                                            <p class="side-bar-item-title">월 평균 업로드 수</p>
+                                            <div class="side-bar-item-content">
+                                                최대 60개
+                                            </div>
+                                        </div>
+                                        <div class="side-bar-item">
+                                            <p class="side-bar-item-title">옵션</p>
+                                            <div class="side-bar-item-content">
+                                                CDN, MP3파일생성,자막 사용,번역 사용(1개언어)
+                                            </div>
+                                        </div>
+                                        <div class="side-bar-item">
+                                            <p class="side-bar-item-desc">텍스트 리스트 영역 샘플 텍스트 준비중 샘플 텍스트 준비중</p>
+                                        </div>
+                                        <div class="side-bar-item">
+                                            <div class="balance-charge-agree mdl-acco" data-id="agreeAcco">
+                                                <div class="mdl-acco-item">
+                                                    <div class="member-agree-item mdl-acco-head">
+                                                    <span class="box-checkbox-a box-checkbox-size-16">
+                                                        <input type="checkbox" id="agree6" class="form-checkbox" />
+                                                        <label for="agree6">
+                                                            <button type="button" class="agree-link mdl-acco-btn" aria-label="title open">
+                                                                <span class="font-600">구매조건확인 및 결제 서비스 약관 동의</span>
+                                                                <i class="arrow-bullet"></i>
+                                                            </button>
+                                                        </label>
+                                                    </span>
+                                                    </div>
+                                                    <div class="mdl-acco-body">
+                                                        <div class="balance-agree-content-box">
+                                                            <p class="balance-agree-content-sub">서비스 이용 약관 동의 [보기]</p>
+                                                            <p class="balance-agree-content-sub">개인정보 수집 및 이용 동의 [보기]</p>
+                                                            <div class="scrollbar-4">
+                                                                <p class="agree-desc font-600">제1조(목적)</p>
+                                                                <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                                <p class="agree-desc font-600">제2조(용어의정의)</p>
+                                                                <p class="agree-desc">이약관은 (주)티몬(이하"회사"라함)이운영하는 인터넷사이트(이하"사이트"라함)를통하여 제공하는 전자상거래 서비스(이하"서비스"라함)와관련하여 "회사"와"회원"(제2조에정합니다)의권리와 의무,책임사항 및 "회원"의"서비스"이용절차에 관한 사항을 규정함을 목적으로 합니다.이 약관은 PC통신,스마트폰(안드로이드폰,아이폰 등)앱,무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는한 준용됩니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="side-bar-total-price">
+                                        <p class="side-bar-total-price-title">합계금액</p>
+                                        <span class="side-bar-total-price-value">123,456,789원</span>
+                                    </div>
+                                    <button type="button" class="btn-base btn-size-58 btn-color-blue" data-position="mobile-fix">결제하기</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="mdl-tab-item" data-tab="service7">
@@ -339,7 +967,13 @@
                     }
                 }
             });
-            UI.exe.autoSelect();
+            UI.exe.agreeAcco = new Accordion({
+                id :'agreeAcco',
+                current: null,
+                callback: (v) => {
+                    console.log('callback:', v);
+                }
+            });
         });
     </script>
 </div>
