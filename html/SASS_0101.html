@@ -50,354 +50,347 @@
             <div class="mdl-tab-pnl" data-tab-id="serviceTab">
                 <!--동영상-->
                 <section class="mdl-tab-item" data-tab="service1">
-                    <div class="max-w-128">
-                        <div class="tab-content-box">
-
-                            <div class="table-head" data-flex-align="right">
-                                <div class="mdl-input-wrap">
-                                    <div class="mdl-selection-wrap">
-                                        <div class="mdl-select select-size-48" data-id="select_date1">
-                                            <select title="등록일자" id="select_date1_2">
-                                                <option value="1" selected="">등록일자</option>
-                                            </select>
-                                        </div>
+                    <div class="tab-content-box">
+                        <div class="table-head" data-flex-align="right">
+                            <div class="mdl-input-wrap">
+                                <div class="mdl-selection-wrap">
+                                    <div class="mdl-select select-size-48" data-id="select_date1">
+                                        <select title="등록일자" id="select_date1_2">
+                                            <option value="1" selected="">등록일자</option>
+                                        </select>
                                     </div>
-                                    <div class="mdl-input" data-type="period">
-                                        <input type="date" value="2024-12-31">
-                                        ~
-                                        <input type="date" value="2024-12-31">
-                                    </div>
-                                    <div class="mdl-input input-sh">
-                                        <input type="text" placeholder="검색어를 입력해주세요">
-                                        <button type="button" class="btn-search" aria-label="검색"></button>
-                                    </div>
+                                </div>
+                                <div class="mdl-input" data-type="period">
+                                    <input type="date" value="2024-12-31">
+                                    ~
+                                    <input type="date" value="2024-12-31">
+                                </div>
+                                <div class="mdl-input input-sh">
+                                    <input type="text" placeholder="검색어를 입력해주세요">
+                                    <button type="button" class="btn-search" aria-label="검색"></button>
                                 </div>
                             </div>
-
-                            <div class="mdl-section mt-56">
-                                <div class="srv-head">
-                                    <div class="btn-wrap">
-                                        <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                            <input type="checkbox" id="library1-1" class="form-checkbox">
-                                            <label for="library1-1" class="font-600">전체</label>
-                                        </span>
-
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
-                                            라이브러리로 이동
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-del">
-                                            삭제
-                                            <i class="icon-x-8"></i>
-                                        </button>
-                                        <span class="sum">100개</span>
-                                    </div>
-                                    <div class="btn-wrap">
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
-                                            등록
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
-                                            라이브러리 추가
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="srv-list pub-tab1-1">
-                                </div>
-                                <script>
-                                    const mainVod = [
-                                        { thumb: "https://picsum.photos/id/23/305/168"},
-                                        { thumb: "https://picsum.photos/id/57/305/168"},
-                                        { thumb: "https://picsum.photos/id/83/305/168"},
-                                        { thumb: "https://picsum.photos/id/84/305/168"},
-                                    ];
-                                    mainVod.forEach(function (data, i) {
-                                        const template = `
-                                        <div class="srv-item">
-                                            <div class="srv-item-head">
-                                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                    <label for="voditem_checkbox_${i}"></label>
-                                                </span>
-                
-                                                <div class="srv-more" data-toggle-state="false">
-                                                    <div class="srv-more-wrap">
-                                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
-                                                        
-                                                        <div class="srv-more-select">
-                                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
-                                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                            <div class="srv-thumb-images" data-type="vod"><img src="${mainVod[i].thumb}" /></div>
-                                            
-                                            <div class="srv-item-data">
-                                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
-                                                <p class="srv-item-date">
-                                                <b>1시간전 활성화</b> 2024.12.31  홍길동
-                                                </p>
-                                            </div>
-                                            <a href="" class="link-full"></a>
-                                            <div class="srv-list-util">
-                                                <button type="button" class="sns-download" aria-label="다운로드"></button>
-                                                <button type="button" class="sns-link" aria-label="링크"></button>
-                                                <button type="button" class="sns-insta" aria-label="인스타"></button>
-                                                <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
-                                                <button type="button" class="sns-source" aria-label="소스코드"></button>
-                                            </div>
-                                        </div>
-                                        `;
-                                        
-                                        document.querySelector(".srv-list.pub-tab1-1").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
-                            </div>
-
-                            <div class="mdl-section mt-72">
-                                <div class="srv-head">
-                                    <div class="btn-wrap">
-                                        <strong class="srv-head-tit">내가 만든 라이브러리가 나옴</strong>
-
-                                        <button type="button" class="btn-base btn-size-40 btn-del">
-                                            라이브러리명 수정
-                                            <i class="icon-modify-s"></i>
-                                        </button>
-                                    </div>
-                                   
-                                </div>
-                                <div class="srv-list pub-tab1-2">
-                                </div>
-                                <script>
-                                    const mainVodLibrary = [
-                                        { thumb: "https://picsum.photos/id/23/305/168"},
-                                        { thumb: "https://picsum.photos/id/57/305/168"},
-                                        { thumb: "https://picsum.photos/id/83/305/168"},
-                                        { thumb: "https://picsum.photos/id/84/305/168"},
-                                    ];
-                                    mainVodLibrary.forEach(function (data, i) {
-                                        const template = `
-                                        <div class="srv-item">
-                                            <div class="srv-item-head">
-                                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                    <label for="voditem_checkbox_${i}"></label>
-                                                </span>
-                
-                                                <div class="srv-more" data-toggle-state="false">
-                                                    <div class="srv-more-wrap">
-                                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
-                                                        
-                                                        <div class="srv-more-select">
-                                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
-                                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                            <div class="srv-thumb-images" data-type="vod"><img src="${mainVodLibrary[i].thumb}" /></div>
-                                            
-                                            <div class="srv-item-data">
-                                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
-                                                <p class="srv-item-date">
-                                                <b>1시간전 활성화</b> 2024.12.31  홍길동
-                                                </p>
-                                            </div>
-                                            <a href="" class="link-full"></a>
-                                            <div class="srv-list-util">
-                                                <button type="button" class="sns-download" aria-label="다운로드"></button>
-                                                <button type="button" class="sns-link" aria-label="링크"></button>
-                                                <button type="button" class="sns-insta" aria-label="인스타"></button>
-                                                <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
-                                                <button type="button" class="sns-source" aria-label="소스코드"></button>
-                                            </div>
-                                        </div>
-                                        `;
-                                        
-                                        document.querySelector(".srv-list.pub-tab1-2").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
-                            </div>
-                            
                         </div>
+
+                        <div class="mdl-section mt-56">
+                            <div class="srv-head">
+                                <div class="btn-wrap">
+                                    <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                        <input type="checkbox" id="library1-1" class="form-checkbox">
+                                        <label for="library1-1" class="font-600">전체</label>
+                                    </span>
+
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
+                                        라이브러리로 이동
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-del">
+                                        삭제
+                                        <i class="icon-x-8"></i>
+                                    </button>
+                                    <span class="sum">100개</span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
+                                        등록
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
+                                        라이브러리 추가
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="srv-list pub-tab1-1">
+                            </div>
+                            <script>
+                                const mainVod = [
+                                    { thumb: "https://picsum.photos/id/23/305/168"},
+                                    { thumb: "https://picsum.photos/id/57/305/168"},
+                                    { thumb: "https://picsum.photos/id/83/305/168"},
+                                    { thumb: "https://picsum.photos/id/84/305/168"},
+                                ];
+                                mainVod.forEach(function (data, i) {
+                                    const template = `
+                                    <div class="srv-item">
+                                        <div class="srv-item-head">
+                                            <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox_${i}"></label>
+                                            </span>
+            
+                                            <div class="srv-more" data-toggle-state="false">
+                                                <div class="srv-more-wrap">
+                                                    <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                                    
+                                                    <div class="srv-more-select">
+                                                        <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                                        <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="srv-thumb-images" data-type="vod"><img src="${mainVod[i].thumb}" /></div>
+                                        
+                                        <div class="srv-item-data">
+                                            <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                                            <p class="srv-item-date">
+                                            <b>1시간전 활성화</b> 2024.12.31  홍길동
+                                            </p>
+                                        </div>
+                                        <a href="" class="link-full"></a>
+                                        <div class="srv-list-util">
+                                            <button type="button" class="sns-download" aria-label="다운로드"></button>
+                                            <button type="button" class="sns-link" aria-label="링크"></button>
+                                            <button type="button" class="sns-insta" aria-label="인스타"></button>
+                                            <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
+                                            <button type="button" class="sns-source" aria-label="소스코드"></button>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    document.querySelector(".srv-list.pub-tab1-1").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
+                        </div>
+
+                        <div class="mdl-section mt-72">
+                            <div class="srv-head">
+                                <div class="btn-wrap">
+                                    <strong class="srv-head-tit">내가 만든 라이브러리가 나옴</strong>
+
+                                    <button type="button" class="btn-base btn-size-40 btn-del">
+                                        라이브러리명 수정
+                                        <i class="icon-modify-s"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="srv-list pub-tab1-2">
+                            </div>
+                            <script>
+                                const mainVodLibrary = [
+                                    { thumb: "https://picsum.photos/id/23/305/168"},
+                                    { thumb: "https://picsum.photos/id/57/305/168"},
+                                    { thumb: "https://picsum.photos/id/83/305/168"},
+                                    { thumb: "https://picsum.photos/id/84/305/168"},
+                                ];
+                                mainVodLibrary.forEach(function (data, i) {
+                                    const template = `
+                                    <div class="srv-item">
+                                        <div class="srv-item-head">
+                                            <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox_${i}"></label>
+                                            </span>
+            
+                                            <div class="srv-more" data-toggle-state="false">
+                                                <div class="srv-more-wrap">
+                                                    <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                                    
+                                                    <div class="srv-more-select">
+                                                        <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                                        <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="srv-thumb-images" data-type="vod"><img src="${mainVodLibrary[i].thumb}" /></div>
+                                        
+                                        <div class="srv-item-data">
+                                            <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                                            <p class="srv-item-date">
+                                            <b>1시간전 활성화</b> 2024.12.31  홍길동
+                                            </p>
+                                        </div>
+                                        <a href="" class="link-full"></a>
+                                        <div class="srv-list-util">
+                                            <button type="button" class="sns-download" aria-label="다운로드"></button>
+                                            <button type="button" class="sns-link" aria-label="링크"></button>
+                                            <button type="button" class="sns-insta" aria-label="인스타"></button>
+                                            <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
+                                            <button type="button" class="sns-source" aria-label="소스코드"></button>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    document.querySelector(".srv-list.pub-tab1-2").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
+                        </div>
+                        
                     </div>
                 </section>
 
                 <!--[SASS_0107] 오디오 -->
                 <section class="mdl-tab-item" data-tab="service2">
-                     <div class="max-w-128">
-                        <div class="tab-content-box">
-
-                            <div class="table-head" data-flex-align="right">
-                                <div></div>
-                                <div class="mdl-input-wrap">
-                                    <div class="mdl-selection-wrap">
-                                        <div class="mdl-select select-size-48" data-id="select_date2">
-                                            <select title="등록일자" id="select_date2_2">
-                                                <option value="1" selected="">등록일자</option>
-                                            </select>
-                                        </div>
+                    <div class="tab-content-box">
+                        <div class="table-head" data-flex-align="right">
+                            <div class="mdl-input-wrap">
+                                <div class="mdl-selection-wrap">
+                                    <div class="mdl-select select-size-48" data-id="select_date2">
+                                        <select title="등록일자" id="select_date2_2">
+                                            <option value="1" selected="">등록일자</option>
+                                        </select>
                                     </div>
-                                    <div class="mdl-input" data-type="period">
-                                        <input type="date" value="2024-12-31">
-                                        ~
-                                        <input type="date" value="2024-12-31">
-                                    </div>
-                                    <div class="mdl-input input-sh">
-                                        <input type="text" placeholder="검색어를 입력해주세요">
-                                        <button type="button" class="btn-search" aria-label="검색"></button>
-                                    </div>
+                                </div>
+                                <div class="mdl-input" data-type="period">
+                                    <input type="date" value="2024-12-31">
+                                    ~
+                                    <input type="date" value="2024-12-31">
+                                </div>
+                                <div class="mdl-input input-sh">
+                                    <input type="text" placeholder="검색어를 입력해주세요">
+                                    <button type="button" class="btn-search" aria-label="검색"></button>
                                 </div>
                             </div>
-
-                            <div class="mdl-section mt-56">
-                                <div class="srv-head">
-                                    <div class="btn-wrap">
-                                        <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                            <input type="checkbox" id="library2-1" class="form-checkbox">
-                                            <label for="library2-1" class="font-600">전체</label>
-                                        </span>
-
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
-                                            라이브러리로 이동
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-del">
-                                            삭제
-                                            <i class="icon-x-8"></i>
-                                        </button>
-                                        <span class="sum">100개</span>
-                                    </div>
-                                    <div class="btn-wrap">
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
-                                            등록
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
-                                            라이브러리 추가
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="srv-list pub-tab2-1">
-                                </div>
-                                <script>
-                                    const mainVod2 = [
-                                        { thumb: "https://picsum.photos/id/23/305/168"},
-                                        { thumb: "https://picsum.photos/id/57/305/168"},
-                                        { thumb: "https://picsum.photos/id/83/305/168"},
-                                        { thumb: "https://picsum.photos/id/84/305/168"},
-                                    ];
-                                    mainVod2.forEach(function (data, i) {
-                                        const template = `
-                                        <div class="srv-item">
-                                            <div class="srv-item-head">
-                                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                    <label for="voditem_checkbox_${i}"></label>
-                                                </span>
-                
-                                                <div class="srv-more" data-toggle-state="false">
-                                                    <div class="srv-more-wrap">
-                                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
-                                                        
-                                                        <div class="srv-more-select">
-                                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
-                                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                            <div class="srv-thumb-images" data-type="vod"><img src="${mainVod2[i].thumb}" /></div>
-                                            
-                                            <div class="srv-item-data">
-                                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
-                                                <p class="srv-item-date">
-                                                <b>1시간전 활성화</b> 2024.12.31  홍길동
-                                                </p>
-                                            </div>
-                                            <a href="" class="link-full"></a>
-                                            <div class="srv-list-util">
-                                                <button type="button" class="sns-download" aria-label="다운로드"></button>
-                                                <button type="button" class="sns-link" aria-label="링크"></button>
-                                                <button type="button" class="sns-insta" aria-label="인스타"></button>
-                                                <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
-                                                <button type="button" class="sns-source" aria-label="소스코드"></button>
-                                            </div>
-                                        </div>
-                                        `;
-                                        
-                                        document.querySelector(".srv-list.pub-tab2-1").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
-                            </div>
-
-                            <div class="mdl-section mt-72">
-                                <div class="srv-head">
-                                    <div class="btn-wrap">
-                                        <strong class="srv-head-tit">내가 만든 라이브러리가 나옴</strong>
-
-                                        <button type="button" class="btn-base btn-size-40 btn-del">
-                                            라이브러리명 수정
-                                            <i class="icon-modify-s"></i>
-                                        </button>
-                                    </div>
-                                   
-                                </div>
-                                <div class="srv-list pub-tab2-2">
-                                </div>
-                                <script>
-                                    const mainVodLibrary2 = [
-                                        { thumb: "https://picsum.photos/id/23/305/168"},
-                                        { thumb: "https://picsum.photos/id/57/305/168"},
-                                        { thumb: "https://picsum.photos/id/83/305/168"},
-                                        { thumb: "https://picsum.photos/id/84/305/168"},
-                                    ];
-                                    mainVodLibrary2.forEach(function (data, i) {
-                                        const template = `
-                                        <div class="srv-item">
-                                            <div class="srv-item-head">
-                                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                    <label for="voditem_checkbox_${i}"></label>
-                                                </span>
-                
-                                                <div class="srv-more" data-toggle-state="false">
-                                                    <div class="srv-more-wrap">
-                                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
-                                                        
-                                                        <div class="srv-more-select">
-                                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
-                                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                            <div class="srv-thumb-images" data-type="vod"><img src="${mainVodLibrary2[i].thumb}" /></div>
-                                            
-                                            <div class="srv-item-data">
-                                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
-                                                <p class="srv-item-date">
-                                                <b>1시간전 활성화</b> 2024.12.31  홍길동
-                                                </p>
-                                            </div>
-                                            <a href="" class="link-full"></a>
-                                            <div class="srv-list-util">
-                                                <button type="button" class="sns-download" aria-label="다운로드"></button>
-                                                <button type="button" class="sns-link" aria-label="링크"></button>
-                                                <button type="button" class="sns-insta" aria-label="인스타"></button>
-                                                <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
-                                                <button type="button" class="sns-source" aria-label="소스코드"></button>
-                                            </div>
-                                        </div>
-                                        `;
-                                        
-                                        document.querySelector(".srv-list.pub-tab2-2").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
-                            </div>
-                            
                         </div>
+
+                        <div class="mdl-section mt-56">
+                            <div class="srv-head">
+                                <div class="btn-wrap">
+                                    <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                        <input type="checkbox" id="library2-1" class="form-checkbox">
+                                        <label for="library2-1" class="font-600">전체</label>
+                                    </span>
+
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
+                                        라이브러리로 이동
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-del">
+                                        삭제
+                                        <i class="icon-x-8"></i>
+                                    </button>
+                                    <span class="sum">100개</span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
+                                        등록
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
+                                        라이브러리 추가
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="srv-list pub-tab2-1">
+                            </div>
+                            <script>
+                                const mainVod2 = [
+                                    { thumb: "https://picsum.photos/id/23/305/168"},
+                                    { thumb: "https://picsum.photos/id/57/305/168"},
+                                    { thumb: "https://picsum.photos/id/83/305/168"},
+                                    { thumb: "https://picsum.photos/id/84/305/168"},
+                                ];
+                                mainVod2.forEach(function (data, i) {
+                                    const template = `
+                                    <div class="srv-item">
+                                        <div class="srv-item-head">
+                                            <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox_${i}"></label>
+                                            </span>
+            
+                                            <div class="srv-more" data-toggle-state="false">
+                                                <div class="srv-more-wrap">
+                                                    <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                                    
+                                                    <div class="srv-more-select">
+                                                        <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                                        <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="srv-thumb-images" data-type="vod"><img src="${mainVod2[i].thumb}" /></div>
+                                        
+                                        <div class="srv-item-data">
+                                            <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                                            <p class="srv-item-date">
+                                            <b>1시간전 활성화</b> 2024.12.31  홍길동
+                                            </p>
+                                        </div>
+                                        <a href="" class="link-full"></a>
+                                        <div class="srv-list-util">
+                                            <button type="button" class="sns-download" aria-label="다운로드"></button>
+                                            <button type="button" class="sns-link" aria-label="링크"></button>
+                                            <button type="button" class="sns-insta" aria-label="인스타"></button>
+                                            <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
+                                            <button type="button" class="sns-source" aria-label="소스코드"></button>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    document.querySelector(".srv-list.pub-tab2-1").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
+                        </div>
+
+                        <div class="mdl-section mt-72">
+                            <div class="srv-head">
+                                <div class="btn-wrap">
+                                    <strong class="srv-head-tit">내가 만든 라이브러리가 나옴</strong>
+
+                                    <button type="button" class="btn-base btn-size-40 btn-del">
+                                        라이브러리명 수정
+                                        <i class="icon-modify-s"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="srv-list pub-tab2-2">
+                            </div>
+                            <script>
+                                const mainVodLibrary2 = [
+                                    { thumb: "https://picsum.photos/id/23/305/168"},
+                                    { thumb: "https://picsum.photos/id/57/305/168"},
+                                    { thumb: "https://picsum.photos/id/83/305/168"},
+                                    { thumb: "https://picsum.photos/id/84/305/168"},
+                                ];
+                                mainVodLibrary2.forEach(function (data, i) {
+                                    const template = `
+                                    <div class="srv-item">
+                                        <div class="srv-item-head">
+                                            <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox_${i}"></label>
+                                            </span>
+            
+                                            <div class="srv-more" data-toggle-state="false">
+                                                <div class="srv-more-wrap">
+                                                    <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                                    
+                                                    <div class="srv-more-select">
+                                                        <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                                        <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div class="srv-thumb-images" data-type="vod"><img src="${mainVodLibrary2[i].thumb}" /></div>
+                                        
+                                        <div class="srv-item-data">
+                                            <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                                            <p class="srv-item-date">
+                                            <b>1시간전 활성화</b> 2024.12.31  홍길동
+                                            </p>
+                                        </div>
+                                        <a href="" class="link-full"></a>
+                                        <div class="srv-list-util">
+                                            <button type="button" class="sns-download" aria-label="다운로드"></button>
+                                            <button type="button" class="sns-link" aria-label="링크"></button>
+                                            <button type="button" class="sns-insta" aria-label="인스타"></button>
+                                            <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
+                                            <button type="button" class="sns-source" aria-label="소스코드"></button>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    document.querySelector(".srv-list.pub-tab2-2").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
+                        </div>
+                        
                     </div>
                 </section>
 
@@ -408,112 +401,109 @@
                 
                 <!--[SASS_0108] Form -->
                 <section class="mdl-tab-item" data-tab="service4">
-                     <div class="max-w-128">
-                        <div class="tab-content-box">
+                    <div class="tab-content-box">
 
-                            <div class="table-head" data-flex-align="right">
-                                <div></div>
-                                <div class="mdl-input-wrap">
-                                    <div class="mdl-selection-wrap">
-                                        <div class="mdl-select select-size-48" data-id="select_date4">
-                                            <select title="등록일자" id="select_date4_2">
-                                                <option value="1" selected="">등록일자</option>
-                                            </select>
-                                        </div>
+                        <div class="table-head" data-flex-align="right">
+                            <div class="mdl-input-wrap">
+                                <div class="mdl-selection-wrap">
+                                    <div class="mdl-select select-size-48" data-id="select_date4">
+                                        <select title="등록일자" id="select_date4_2">
+                                            <option value="1" selected="">등록일자</option>
+                                        </select>
                                     </div>
-                                    <div class="mdl-input" data-type="period">
-                                        <input type="date" value="2024-12-31">
-                                        ~
-                                        <input type="date" value="2024-12-31">
-                                    </div>
-                                    <div class="mdl-input input-sh">
-                                        <input type="text" placeholder="검색어를 입력해주세요">
-                                        <button type="button" class="btn-search" aria-label="검색"></button>
-                                    </div>
+                                </div>
+                                <div class="mdl-input" data-type="period">
+                                    <input type="date" value="2024-12-31">
+                                    ~
+                                    <input type="date" value="2024-12-31">
+                                </div>
+                                <div class="mdl-input input-sh">
+                                    <input type="text" placeholder="검색어를 입력해주세요">
+                                    <button type="button" class="btn-search" aria-label="검색"></button>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="mdl-section mt-56">
-                                <div class="srv-head">
-                                    <div class="btn-wrap">
-                                        <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                            <input type="checkbox" id="library4-1" class="form-checkbox">
-                                            <label for="library4-1" class="font-600">전체</label>
-                                        </span>
+                        <div class="mdl-section mt-56">
+                            <div class="srv-head">
+                                <div class="btn-wrap">
+                                    <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                        <input type="checkbox" id="library4-1" class="form-checkbox">
+                                        <label for="library4-1" class="font-600">전체</label>
+                                    </span>
 
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
-                                            라이브러리로 이동
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-del">
-                                            삭제
-                                            <i class="icon-x-8"></i>
-                                        </button>
-                                        <span class="sum">100개</span>
-                                    </div>
-                                    <div class="btn-wrap">
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
-                                            등록
-                                        </button>
-                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
-                                            라이브러리 추가
-                                        </button>
-                                    </div>
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-line-dark">
+                                        라이브러리로 이동
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-del">
+                                        삭제
+                                        <i class="icon-x-8"></i>
+                                    </button>
+                                    <span class="sum">100개</span>
                                 </div>
-                                <div class="srv-list pub-tab4-1">
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
+                                        등록
+                                    </button>
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-sky">
+                                        라이브러리 추가
+                                    </button>
                                 </div>
-                                <script>
-                                    const mainVod4 = [
-                                        { thumb: "https://picsum.photos/id/23/305/168"},
-                                        { thumb: "https://picsum.photos/id/57/305/168"},
-                                        { thumb: "https://picsum.photos/id/83/305/168"},
-                                        { thumb: "https://picsum.photos/id/84/305/168"},
-                                    ];
-                                    mainVod4.forEach(function (data, i) {
-                                        const template = `
-                                        <div class="srv-item">
-                                            <div class="srv-item-head">
-                                                <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                    <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                    <label for="voditem_checkbox_${i}"></label>
-                                                </span>
-                
-                                                <div class="srv-more" data-toggle-state="false">
-                                                    <div class="srv-more-wrap">
-                                                        <button type="button" class="btn-more"  data-toggle-state="false"></button>
-                                                        
-                                                        <div class="srv-more-select">
-                                                            <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
-                                                            <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
-                                                        </div>
+                            </div>
+                            <div class="srv-list pub-tab4-1">
+                            </div>
+                            <script>
+                                const mainVod4 = [
+                                    { thumb: "https://picsum.photos/id/23/305/168"},
+                                    { thumb: "https://picsum.photos/id/57/305/168"},
+                                    { thumb: "https://picsum.photos/id/83/305/168"},
+                                    { thumb: "https://picsum.photos/id/84/305/168"},
+                                ];
+                                mainVod4.forEach(function (data, i) {
+                                    const template = `
+                                    <div class="srv-item">
+                                        <div class="srv-item-head">
+                                            <span class="box-checkbox-a box-checkbox-size-24 mr-24">
+                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox_${i}"></label>
+                                            </span>
+            
+                                            <div class="srv-more" data-toggle-state="false">
+                                                <div class="srv-more-wrap">
+                                                    <button type="button" class="btn-more"  data-toggle-state="false"></button>
+                                                    
+                                                    <div class="srv-more-select">
+                                                        <button type="button" class="btn-base  btn-del">삭제<i class="icon-x-8"></i></button>
+                                                        <button type="button" class="btn-base  btn-del">수정<i class="icon-modify-s"></i></button>
                                                     </div>
                                                 </div>
-                                            
                                             </div>
-                                            <div class="srv-thumb-images"><img src="${mainVod4[i].thumb}" /></div>
-                                            
-                                            <div class="srv-item-data">
-                                                <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
-                                                <p class="srv-item-date">
-                                                <b>1시간전 활성화</b> 2024.12.31  홍길동
-                                                </p>
-                                            </div>
-                                            <a href="" class="link-full"></a>
-                                            <div class="srv-list-util">
-                                                <button type="button" class="sns-download" aria-label="다운로드"></button>
-                                                <button type="button" class="sns-link" aria-label="링크"></button>
-                                                <button type="button" class="sns-insta" aria-label="인스타"></button>
-                                                <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
-                                                <button type="button" class="sns-source" aria-label="소스코드"></button>
-                                            </div>
-                                        </div>
-                                        `;
                                         
-                                        document.querySelector(".srv-list.pub-tab4-1").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
-                            </div>
-
+                                        </div>
+                                        <div class="srv-thumb-images"><img src="${mainVod4[i].thumb}" /></div>
+                                        
+                                        <div class="srv-item-data">
+                                            <p class="srv-item-title clamp-base" data-ellipsis="2">동영상입니다. 샘플 등록해주세요. 10분 정도예요. 동영상입니다. 샘플 등록해주세요. 10분 정도예요.</p>
+                                            <p class="srv-item-date">
+                                            <b>1시간전 활성화</b> 2024.12.31  홍길동
+                                            </p>
+                                        </div>
+                                        <a href="" class="link-full"></a>
+                                        <div class="srv-list-util">
+                                            <button type="button" class="sns-download" aria-label="다운로드"></button>
+                                            <button type="button" class="sns-link" aria-label="링크"></button>
+                                            <button type="button" class="sns-insta" aria-label="인스타"></button>
+                                            <button type="button" class="sns-kakao" aria-label="카카오톡"></button>
+                                            <button type="button" class="sns-source" aria-label="소스코드"></button>
+                                        </div>
+                                    </div>
+                                    `;
+                                    
+                                    document.querySelector(".srv-list.pub-tab4-1").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
                         </div>
+
                     </div>
                 </section>
 
