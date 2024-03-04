@@ -1653,7 +1653,7 @@ UI.exe.infiniteMotion = () => {
         }, 1000);
         setTimeout(() => {
             infiniteMotion();
-        }, 3000);
+        }, 6000);
     }
         infiniteMotion();
 }
