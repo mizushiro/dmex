@@ -1642,3 +1642,18 @@ UI.exe.autoSelect = () => {
     }
 }
 UI.exe.autoSelect();
+
+UI.exe.infiniteMotion = () => {
+    const el_motion = document.querySelector('[data-scroll-play="off"]');
+    let onoff = 'on';
+    const infiniteMotion = () => {
+        setTimeout(() => {
+            el_motion.dataset.scrollPlay = onoff;
+            onoff = onoff === 'off' ? 'on' : 'off';
+        }, 1000);
+        setTimeout(() => {
+            infiniteMotion();
+        }, 3000);
+    }
+        infiniteMotion();
+}
