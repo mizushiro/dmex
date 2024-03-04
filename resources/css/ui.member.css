@@ -471,6 +471,6 @@
     .dashboard-top-box-desc-2 {font-size:1.6rem;line-height:2.4rem;}
     .dashboard-box-item {width:100%;}
     .dashboard-service-application-title {font-size:1.4rem;}
-    .dashboard-service-application-item {width:calc((100% - 1rem) / 2);}
+    .dashboard-service-application-item {width:calc((100% - 2rem) / 3);}
 }
 /* E : 대시보드 */
