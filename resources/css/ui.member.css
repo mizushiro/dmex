@@ -399,7 +399,6 @@
 [data-flex="table-service-banner-title"] [data-flex-col="write"] {width:12rem;flex-shrink:0;}
 .table-list-body-item [data-flex-col="title"] {justify-content:flex-start;}
 .service-banner-img-box {aspect-ratio:64/40;width:6.4rem;border-radius:.8rem;overflow:hidden;}
-/* E : 웹플레이어 배너 */
 @media (max-width:1024px) {
     .service-banner-list .table-list-head {display:none;}
     .service-banner-list .table-list-body {border-top:none;display:flex;flex-wrap:wrap;gap:1.6rem;}
@@ -418,3 +417,60 @@
     .service-banner-list .table-list-body {gap:.8rem;}
     .service-banner-list .table-list-body-item {width:100%;}
 }
+/* E : 웹플레이어 배너 */
+/* S : 대시보드 */
+.dashboard-top-box {margin-top:4.4rem;border-radius:2.4rem;position:relative;border:1px solid transparent;background-image:linear-gradient(#fff, #fff), linear-gradient(0deg, var(--Gradient-Blue) 0%, var(--Gradient-Purple) 100%);background-origin:border-box;background-clip:content-box,border-box;}
+.dashboard-top-box-content {padding:3.2rem 2rem;}
+.dashboard-top-box-desc-1 {font-size:2rem;color:#E90F6B;line-height:3.2rem;font-weight:600;text-align:center;word-break:keep-all}
+.dashboard-top-box-desc-2 {font-size:2rem;color:#000;line-height:3.2rem;font-weight:400;text-align:center;word-break:keep-all}
+.dashboard-box-list {margin-top:2.8rem;display:flex;gap:1.6rem;flex-wrap:wrap;}
+.dashboard-box-item {border-radius:2.4rem;padding:3.2rem 2.4rem;display:flex;flex-direction:column;justify-content:space-between;background-color:#F3F6FF;width:calc((100% - 4.8rem) / 4);align-items:center;gap:1.2rem;}
+.dashboard-box-item-title {color:#000;font-weight:600;font-size:1.6rem;line-height:1;}
+.dashboard-box-item-value {color:#5D5FEF;font-size:2.8rem;font-weight:800;line-height:3.2rem;}
+.dashboard-box-item-desc {display:flex;gap:.8rem;font-size:1.2rem;font-weight:400;line-height:1.6rem;}
+.dashboard-box-item .payment-item {border:none;background-color:#fff;padding:.8rem;border-radius:.8rem;min-height:0;width:100%;}
+.dashboard-box-item .payment-item-content {gap:.8rem;}
+.dashboard-box-item .payment-item-img {border-radius:.6rem;width:4.8rem;height:3.6rem;}
+.dashboard-box-item .payment-item-img img {width:3.2rem;}
+.dashboard-box-item .payment-item-name {font-size:1.2rem;line-height:1.8rem;}
+.dashboard-box-item .payment-item-number {font-size:1.2rem;line-height:1.8rem;}
+.dashboard-service-application-list {margin-top:5.6rem;gap:2rem 1rem;display:flex;flex-wrap:wrap}
+.dashboard-service-application-item {width:calc((100% - 7rem) / 8);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:2rem;}
+[class^="service-application-box-"] {aspect-ratio:1/1;width:8.8rem;border-radius:2.8rem;box-shadow:.4rem .4rem 1.6rem 0 rgba(255, 255, 255, 0.25), 1.2rem 1.2rem 2.6rem 0 rgba(82, 62, 235, 0.13);display:flex;align-items:center;justify-content:center;}
+.service-application-box-1 {background:linear-gradient(137deg, #60C6FF 8.17%, #9558FF 90.78%);}
+.service-application-box-2 {background:linear-gradient(314deg, #FF9847 3.11%, #985DFF 52.49%);}
+[class^="icon-service-34-"] {aspect-ratio:1/1;width:3.4rem;display:flex;background-position:50% 50%;background-repeat:no-repeat;background-size:contain;transition:transform .3s ease-in;}
+.icon-service-34-1 {background-image:url("../images/common/icon-service-34-1.svg");}
+.icon-service-34-2 {background-image:url("../images/common/icon-service-34-2.svg");}
+.icon-service-34-3 {background-image:url("../images/common/icon-service-34-3.svg");}
+.icon-service-34-4 {background-image:url("../images/common/icon-service-34-4.svg");}
+.icon-service-34-5 {background-image:url("../images/common/icon-service-34-5.svg");}
+.icon-service-34-6 {background-image:url("../images/common/icon-service-34-6.svg");}
+.icon-service-34-7 {background-image:url("../images/common/icon-service-34-7.svg");}
+.icon-service-34-8 {background-image:url("../images/common/icon-service-34-8.svg");}
+.dashboard-service-application-title {font-size:1.8rem;color:#000;font-weight:600;line-height:2.4rem;word-break:keep-all;text-align:center;}
+.dashboard-service-application-item:hover [class^="icon-service-34-"] {
+    animation:shoung;
+    animation-duration:.6s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:1;
+    animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.subscription-list {margin-top:8rem;}
+@media (max-width:1280px) {
+    .dashboard-service-application-title {font-size:1.6rem;}
+}
+@media (max-width:1024px) {
+    .dashboard-box-item {width:calc((100% - 1.6rem) / 2);}
+    .dashboard-service-application-list {margin-top:4rem;}
+    .dashboard-service-application-item {width:calc((100% - 3rem) / 4);gap:1.2rem;}
+}
+@media (max-width:700px) {
+    .dashboard-top-box-content {padding:2.4rem 2rem;}
+    .dashboard-top-box-desc-1,
+    .dashboard-top-box-desc-2 {font-size:1.6rem;line-height:2.4rem;}
+    .dashboard-box-item {width:100%;}
+    .dashboard-service-application-title {font-size:1.4rem;}
+    .dashboard-service-application-item {width:calc((100% - 1rem) / 2);}
+}
+/* E : 대시보드 */

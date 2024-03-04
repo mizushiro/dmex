@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <h2 class="title-size-40-700 text-center">마이 대시보드</h2>
+            <div class="dashboard-top-box">
+                <div class="dashboard-top-box-content">
+                    <p class="dashboard-top-box-desc-1"> 현재 예치금 소진으로 총 00개의 서비스가 중지되었습니다.</p>
+                    <p class="dashboard-top-box-desc-2">구독요금을 업데이트 또는 충전해서 사용하실 수 있습니다. 충전포인트는 할당량 소진 후 사용 됩니다.</p>
+                </div>
+            </div>
+
+            <div class="dashboard-box-list">
+                <div class="dashboard-box-item">
+                    <p class="dashboard-box-item-title">사용중인 서비스</p>
+                    <p class="dashboard-box-item-value">5개</p>
+                    <p class="dashboard-box-item-desc">
+                        <span class="dashboard-box-item-desc-unit">구독3개</span>
+                        <span class="dashboard-box-item-desc-unit">데모2개</span>
+                    </p>
+                    <button type="button" class="btn-base btn-size-36 btn-line-sora">서비스 신청 내역</button>
+                </div>
+                <div class="dashboard-box-item">
+                    <p class="dashboard-box-item-title">예치금 현황</p>
+                    <p class="dashboard-box-item-value">90,000,000P</p>
+                    <p class="dashboard-box-item-desc">
+                        <span class="dashboard-box-item-desc-unit">사용내역 보기</span>
+                    </p>
+                    <button type="button" class="btn-base btn-size-36 btn-line-sora">서비스 신청 내역</button>
+                </div>
+                <div class="dashboard-box-item">
+                    <p class="dashboard-box-item-title">결제정보</p>
+                    <div class="payment-item">
+                        <div class="payment-item-content">
+                            <div class="payment-item-img" style="background-color:#FFE500">
+                                <img src="../resources/images/common/kakao-pay.svg" alt="">
+                            </div>
+                            <div class="payment-item-info">
+                                <p class="payment-item-name">카카오페이</p>
+                                <p class="payment-item-number">349293****2****382*</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-base btn-size-36 btn-line-sora">결제 정보 변경</button>
+                </div>
+                <div class="dashboard-box-item">
+                    <p class="dashboard-box-item-title">기준환율</p>
+                    <p class="dashboard-box-item-value">1,350 USD</p>
+                    <p class="dashboard-box-item-desc">
+                        <span class="dashboard-box-item-desc-unit">전일기준</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="dashboard-service-application-list">
+                <div class="dashboard-service-application-item">
+                    <div class="service-application-box-1">
+                        <i class="icon-service-34-1"></i>
+                    </div>
+                    <p class="dashboard-service-application-title">스트리밍 솔루션</p>
+                    <button type="button" class="btn-base btn-line-gradient btn-round btn-size-34">
+                        <span class="btn-base-text">구독중</span>
+                    </button>
+                </div>
+                <div class="dashboard-service-application-item">
+                    <div class="service-application-box-2">
+                        <i class="icon-service-34-2"></i>
+                    </div>
+                    <p class="dashboard-service-application-title">실시간 라이브 편성</p>
+                    <button type="button" class="btn-base btn-color-depp-blue btn-round btn-size-34">
+                        <span class="btn-base-text">서비스 신청</span>
+                    </button>
+                </div>
+            </div>
+            <script>
+                const serviceApplicationItem = [
+                    { icon: "icon-service-34-3", class: "service-application-box-1", name:"라이브 송출 대행"},
+                    { icon: "icon-service-34-4", class: "service-application-box-2", name:"CDN"},
+                    { icon: "icon-service-34-5", class: "service-application-box-1", name:"AI 챗봇"},
+                    { icon: "icon-service-34-6", class: "service-application-box-2", name:"Form"},
+                    { icon: "icon-service-34-7", class: "service-application-box-1", name:"웹플레이어"},
+                    { icon: "icon-service-34-8", class: "service-application-box-2", name:"유튜브 자동 업로드"},
+                ];
+                serviceApplicationItem.forEach(function (data, i) {
+                    const template = `
+                        <div class="dashboard-service-application-item">
+                            <div class="${serviceApplicationItem[i].class}">
+                                <i class="${serviceApplicationItem[i].icon}"></i>
+                            </div>
+                            <p class="dashboard-service-application-title">${serviceApplicationItem[i].name}</p>
+                            <button type="button" class="btn-base btn-line-gradient btn-round btn-size-34">
+                                <span class="btn-base-text">구독중</span>
+                            </button>
+                        </div>
+                        `;
+                    document.querySelector(".dashboard-service-application-list").insertAdjacentHTML("beforeend", template);
+                });
+            </script>
+
+            <div class="subscription-list">
+                <h3 class="title-size-28">구독중인 서비스</h3>
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+    </script>
+</div>
+</body>
+</html>
