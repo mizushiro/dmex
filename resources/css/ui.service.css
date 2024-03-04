@@ -87,7 +87,8 @@
     .service-demo-list .table-list-head {display:none;}
     .line-box-black {padding:0;}
     .service-demo-list {padding-bottom:0;}
-    .service-order-list .table-list-body {border-top:none;}
+    .service-order-list .table-list-body,
+    .service-demo-list .table-list-body {border-top:none;}
     .service-demo-list .table-list-body-item {padding:2rem;flex-direction:column;gap:.8rem;}
     .demo-request-item {font-size:1.4rem;}
     .service-demo-list .table-list-td-title {display:block;flex-shrink:0;width:8rem;}

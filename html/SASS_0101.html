@@ -177,8 +177,8 @@
                                     <div class="srv-item">
                                         <div class="srv-item-head">
                                             <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                <label for="voditem_checkbox_${i}"></label>
+                                                <input type="checkbox" id="voditem_checkbox2_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox2_${i}"></label>
                                             </span>
             
                                             <div class="srv-more" data-toggle-state="false">
@@ -285,8 +285,8 @@
                                     <div class="srv-item">
                                         <div class="srv-item-head">
                                             <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                <label for="voditem_checkbox_${i}"></label>
+                                                <input type="checkbox" id="voditem_checkbox3_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox3_${i}"></label>
                                             </span>
             
                                             <div class="srv-more" data-toggle-state="false">
@@ -349,8 +349,8 @@
                                     <div class="srv-item">
                                         <div class="srv-item-head">
                                             <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                <label for="voditem_checkbox_${i}"></label>
+                                                <input type="checkbox" id="voditem_checkbox4_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox4_${i}"></label>
                                             </span>
             
                                             <div class="srv-more" data-toggle-state="false">
@@ -463,8 +463,8 @@
                                     <div class="srv-item">
                                         <div class="srv-item-head">
                                             <span class="box-checkbox-a box-checkbox-size-24 mr-24">
-                                                <input type="checkbox" id="voditem_checkbox_${i}" class="form-checkbox">
-                                                <label for="voditem_checkbox_${i}"></label>
+                                                <input type="checkbox" id="voditem_checkbox5_${i}" class="form-checkbox">
+                                                <label for="voditem_checkbox5_${i}"></label>
                                             </span>
             
                                             <div class="srv-more" data-toggle-state="false">
@@ -521,16 +521,78 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="pagination">
-                            <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
-                            <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
-                            <a href="" class="paging-num" data-selected="true">1</a>
-                            <a href="" class="paging-num">2</a>
-                            <a href="" class="paging-num">3</a>
-                            <a href="" class="paging-num">4</a>
-                            <a href="" class="paging-num">5</a>
-                            <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
-                            <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
+
+                        <div class="mdl-section mt-56">
+                            <div class="srv-head ver-2">
+                                <div class="srv-head-col-1">
+                                    <div class="srv-head-col-1-group">
+                                        <span class="sum">100개</span>
+                                    </div>
+                                </div>
+                                <div class="srv-head-col-2">
+                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
+                                        등록
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="service-banner-list">
+                                <div class="table-list-head" data-flex="table-service-banner-title">
+                                    <div class="table-list-th" data-flex-col="number">번호</div>
+                                    <div class="table-list-th" data-flex-col="title">제목</div>
+                                    <div class="table-list-th" data-flex-col="img">이미지</div>
+                                    <div class="table-list-th" data-flex-col="date">등록일자</div>
+                                    <div class="table-list-th" data-flex-col="write">등록자</div>
+                                </div>
+                                <div class="service-banner-list-body table-list-body">
+                                </div>
+                                <script>
+                                    const serviceBanner = [
+                                        { thumb: "https://picsum.photos/id/23/200/300"},
+                                        { thumb: "https://picsum.photos/id/57/200/300"},
+                                        { thumb: "https://picsum.photos/id/83/200/300"},
+                                        { thumb: "https://picsum.photos/id/84/200/300"},
+                                    ];
+                                    serviceBanner.forEach(function (data, i) {
+                                        const template = `
+                                            <div class="table-list-body-item" data-flex="table-service-banner-title">
+                                                <div class="service-banner-item" data-flex-col="number">
+                                                    <div class="service-banner-item-value">123</div>
+                                                </div>
+                                                <div class="service-banner-item" data-flex-col="title">
+                                                    <div class="service-banner-item-value">제목 샘플 텍스트 제목 샘플 텍스트 </div>
+                                                </div>
+                                                <div class="service-banner-item" data-flex-col="img">
+                                                    <div class="service-banner-item-value">
+                                                        <div class="service-banner-img-box">
+                                                            <img src="${serviceBanner[i].thumb}" class="thumb-images-full" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="service-banner-item" data-flex-col="date">
+                                                    <div class="service-banner-item-value">2024.02.05</div>
+                                                </div>
+                                                <div class="service-banner-item" data-flex-col="write">
+                                                    <div class="service-banner-item-value">홍길동</div>
+                                                </div>
+                                            </div>
+                                        `;
+                                        document.querySelector(".service-banner-list-body").insertAdjacentHTML("beforeend", template);
+                                    });
+                                </script>
+                            </div>
+
+                            <div class="pagination">
+                                <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
+                                <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
+                                <a href="" class="paging-num" data-selected="true">1</a>
+                                <a href="" class="paging-num">2</a>
+                                <a href="" class="paging-num">3</a>
+                                <a href="" class="paging-num">4</a>
+                                <a href="" class="paging-num">5</a>
+                                <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
+                                <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
+                            </div>
                         </div>
                     </div>
                 </section>
