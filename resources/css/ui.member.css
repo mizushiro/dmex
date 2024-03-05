@@ -457,13 +457,57 @@
     animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .subscription-list {margin-top:8rem;}
+.subscription-list-box {margin-top:3.2rem;display:flex;flex-wrap:wrap;gap:4rem;}
+.subscription-list-item {border-radius:2.4rem;border:1px solid #CCD4FF;padding:4rem;flex:1;}
+.subscription-list-item.full-type {flex:auto;width:100%;}
+.subscription-list-title-box {display:flex;flex-wrap:wrap;align-items:center;gap:1.6rem;margin-bottom:1.6rem;}
+.subscription-list-img-box {border-radius:1.6rem;background-color:#7BA0FF;height:5.2rem;width:5.2rem;display:flex;align-items:center;justify-content:center}
+.subscription-list-img-box i {width:2rem;}
+.subscription-list-title {font-size:2.8rem;color:#000;font-weight:600;line-height:1.2;}
+.subscription-list-type {font-size:2.8rem;color:#5D5FEF;font-weight:700;line-height:1.2;}
+.subscription-list-desc {font-size:2rem;color:#000;font-weight:400;line-height:1.2;}
+.subscription-small-list {margin-top:1.6rem;display:flex;gap:.6rem;}
+.subscription-small-item {flex:1;border:1px solid #DEE2F5;background-color:#F3F6FF;border-radius:1.6rem;padding:2.4rem;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:.8rem;}
+.subscription-small-title {font-size:1.6rem;color:#000;line-height:1.2;font-weight:600;text-align:center;word-break:keep-all;}
+.subscription-small-value {font-weight:600;font-size:2rem;color:#5D5FEF;line-height:1.2;}
+.subscription-chart-box {margin-top:2.4rem;display:flex;gap:2.4rem;}
+.subscription-chart-area {aspect-ratio:1/1;width:18rem;}
+.subscription-chart-content {flex:1;display:flex;flex-direction:column;gap:1.6rem;}
+.subscription-chart-data {padding:1.6rem 2.4rem;display:flex;align-items:center;justify-content:center;background-color:#F3F6FF;border-radius:2.4rem;flex:1;}
+.subscription-chart-value {display:flex;align-items:center;gap:.8rem;}
+.subscription-chart-title {font-size:2.4rem;line-height:1.2;color:#292929;font-weight:600;}
+.text-blue {font-size:2.4rem;line-height:1.2;color:#5D5FEF;font-weight:600;}
+.icon-point {aspect-ratio:1/1;width:2.5rem;background:url("../images/common/icon-point.svg") no-repeat 50% 50%;background-size:contain;display:block;}
+.subscription-list-group {display:flex;gap:4rem;}
+.subscription-list-col {width:51.66666666667%}
+.subscription-list-group .subscription-chart-box {margin-top:0;flex:1;}
 @media (max-width:1280px) {
+    .subscription-list-item {padding:2.8rem;}
     .dashboard-service-application-title {font-size:1.6rem;}
+    .subscription-list-title,
+    .subscription-list-type {font-size:2.2rem;}
+    .subscription-list-img-box {width:4.8rem;height:4.8rem;}
+    .subscription-list-desc {font-size:1.6rem;}
+    .subscription-small-list {margin-top:1.2rem;}
+    .subscription-small-item {padding:1.6rem;}
+    .subscription-chart-title,
+    .text-blue {font-size:1.8rem;}
+    .icon-point {width:2rem;}
+    .subscription-list-box {gap:2rem;}
+    .subscription-chart-area {width:16rem;}
+    .subscription-chart-data {padding:1.2rem;}
 }
 @media (max-width:1024px) {
     .dashboard-box-item {width:calc((100% - 1.6rem) / 2);}
     .dashboard-service-application-list {margin-top:4rem;}
     .dashboard-service-application-item {width:calc((100% - 3rem) / 4);gap:1.2rem;}
+    .subscription-list-item {flex:auto;width:100%;}
+    .subscription-list-group {flex-direction:column;gap:2.4rem;}
+    .subscription-list-col {width:100%;}
+    .subscription-small-title {font-size:1.4rem;}
+    .subscription-small-value {font-size:1.6rem;}
+    .subscription-chart-title,
+    .text-blue {font-size:1.6rem;}
 }
 @media (max-width:700px) {
     .dashboard-top-box-content {padding:2.4rem 2rem;}
@@ -472,5 +516,10 @@
     .dashboard-box-item {width:100%;}
     .dashboard-service-application-title {font-size:1.4rem;}
     .dashboard-service-application-item {width:calc((100% - 2rem) / 3);}
+    .subscription-list-group .subscription-small-list {flex-wrap:wrap;}
+    .subscription-list-group .subscription-small-item {width:calc((100% - 1.2rem) / 2);flex:auto;}
+    .subscription-chart-box {flex-direction:column;gap:1.6rem;}
+    .subscription-chart-data {padding:2.4rem 1.2rem;}
+    .subscription-chart-area {width:100%;}
 }
 /* E : 대시보드 */
