@@ -476,7 +476,7 @@
 .subscription-chart-data {padding:1.6rem 2.4rem;display:flex;align-items:center;justify-content:center;background-color:#F3F6FF;border-radius:2.4rem;flex:1;}
 .subscription-chart-value {display:flex;align-items:center;gap:.8rem;}
 .subscription-chart-title {font-size:2.4rem;line-height:1.2;color:#292929;font-weight:600;}
-.text-blue {font-size:2.4rem;line-height:1.2;color:#5D5FEF;font-weight:600;}
+.subscription-chart-value .text-blue {font-size:2.4rem;line-height:1.2;font-weight:600;}
 .icon-point {aspect-ratio:1/1;width:2.5rem;background:url("../images/common/icon-point.svg") no-repeat 50% 50%;background-size:contain;display:block;}
 .subscription-list-group {display:flex;gap:4rem;}
 .subscription-list-col {width:51.66666666667%}
@@ -491,7 +491,7 @@
     .subscription-small-list {margin-top:1.2rem;}
     .subscription-small-item {padding:1.6rem;}
     .subscription-chart-title,
-    .text-blue {font-size:1.8rem;}
+    .subscription-chart-value .text-blue {font-size:1.8rem;}
     .icon-point {width:2rem;}
     .subscription-list-box {gap:2rem;}
     .subscription-chart-area {width:16rem;}
