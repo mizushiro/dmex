@@ -523,3 +523,10 @@
     .subscription-chart-area {width:100%;}
 }
 /* E : 대시보드 */
+/* S : 약관 */
+.mdl-layer.size-m .mdl-layer-wrap {width:72rem;}
+.terms-content {padding:2.4rem 1.6rem;font-size:1.6rem;color:#000;line-height:2.4rem;}
+@media (max-width:700px) {
+    .terms-content {font-size:1.4rem;line-height:2rem;}
+}
+/* E : 약관 */
