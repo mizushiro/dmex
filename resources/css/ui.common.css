@@ -78,6 +78,7 @@ html.scroll_off {overflow:hidden}
 .clamp-base {display:-webkit-box;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden}
 .text-center {text-align:center}
 .font-600 {font-weight:600}
+.text-pink {color:#EB5C8D}
 /* scrollbar */
 .scrollbar-8 {overflow-y:auto;-webkit-overflow-scrolling:touch}
 .scrollbar-8::-webkit-scrollbar {height:.8rem;width:.8rem;}
@@ -213,6 +214,7 @@ select::-ms-expand {display:none}
 .btn-size-40.btn-del{font-size:1.4rem;}
 .btn-line-gradient {border:1px solid transparent;background-image:linear-gradient(#fff, #fff), linear-gradient(0deg, var(--Gradient-Blue) 0%, var(--Gradient-Purple) 100%);background-origin:border-box;background-clip:content-box,border-box;padding:0;}
 .btn-line-gradient .btn-base-text {padding:0 2rem;}
+.text-14 {font-size:1.4rem;}
 
 .btn-size-56 .arrow-round {margin-right:-1.2rem;}
 .arrow-round {width:2.8rem;height:2.8rem;display:flex;align-items:center;justify-content:center;border-radius:999rem;background-color:#fff;box-shadow:.2rem .3rem 1rem 0 rgba(0, 0, 0, 0.12);transition:all .2s;flex-shrink:0}
