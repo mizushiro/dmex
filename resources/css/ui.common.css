@@ -238,15 +238,26 @@ select::-ms-expand {display:none}
 .footer-address-data-item {padding-right:2rem;position:relative;display:inline-block;font-size:1.6rem;line-height:3.2rem;font-weight:500;color:#040404;}
 .footer-address-data-item:after {content:'';width:1px;height:1.2rem;background-color:#ccc;position:absolute;right:1rem;top:1.1rem;}
 .footer-address-data-item:last-child:after {display:none;}
+.fm-cs-center-btn {font-size:1.6rem;text-decoration:none;line-height:3.2rem;color:#040404;font-weight:500;position:relative;z-index:3;width:8.8rem;display:flex;align-items:center;justify-content:space-between;}
+.fm-cs-center-list {display:flex;flex-direction:column;gap:.4rem;height:0;overflow:hidden;position:absolute;top:-.8rem;left:0;width:12rem;background-color:#fff;}
+.fm-cs-center-list a {padding:0 1.6rem;font-size:1.4rem;font-weight:500;color:#040404;text-decoration:none;}
+.fm-cs-center[data-toggle-state="true"] .fm-cs-center-list {height:auto;padding-bottom:1.6rem;padding-top:4.4rem;border:1px solid #E3E2F2;border-radius:1.6rem;}
+.fm-cs-center {position:relative;padding:0 1.6rem;margin-left:-1.6rem;z-index:2;}
+.ico-arrow-10 {aspect-ratio:20/12;width:1.2rem;background:url("../images/common/ico-faq-arrow.svg") no-repeat 50% 50%;background-size:contain;}
+.fm-cs-center[data-toggle-state="true"] .ico-arrow-10 {transform:rotate(180deg);}
 @media (max-width:700px) {
     .footer-wrap {padding-top:4.8rem;padding-bottom:7.2rem;}
     .footer-group {flex-direction:column;gap:3.2rem;}
-    .footer-menu {gap:2.4rem;}
+    .footer-menu {gap:.4rem 2.4rem;flex-wrap:wrap;}
     .footer-menu-link {font-size:1.4rem;}
     .footer-address-data ~ .footer-address-data {margin-top:2.4rem;}
     .footer-address-data-item {line-height:2.4rem;font-size:1.4rem;}
     .footer-address-data-item {display:block;}
     .footer-address-data-item:after {display:none;}
+    .fm-cs-center-btn {font-size:1.4rem;width:8rem;}
+    .fm-cs-center[data-toggle-state="true"] .fm-cs-center-list {width:11.2rem;}
+    .fm-cs-center-list a {padding:0 1.2rem;}
+    .fm-cs-center {padding:0 1.2rem;margin-left:-1.2rem;}
 }
 
 main {position:relative;z-index:1;}
