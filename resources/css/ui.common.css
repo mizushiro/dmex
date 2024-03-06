@@ -79,6 +79,7 @@ html.scroll_off {overflow:hidden}
 .text-center {text-align:center}
 .font-600 {font-weight:600}
 .text-pink {color:#EB5C8D}
+.text-bg-fff6e5 {background-color:#FFF6E5}
 /* scrollbar */
 .scrollbar-8 {overflow-y:auto;-webkit-overflow-scrolling:touch}
 .scrollbar-8::-webkit-scrollbar {height:.8rem;width:.8rem;}
@@ -96,12 +97,17 @@ html.scroll_off {overflow:hidden}
 .title-size-24 {font-size:2.4rem;line-height:5.6rem;font-weight:700;color:#000}
 .title-desc-size-24 {font-size:2.4rem;line-height:2.4rem;font-weight:800;color:#000}
 .title-desc-size-20 {font-size:2rem;line-height:3rem;font-weight:300;color:#111}
+.text-desc-size-32 {font-size:3.2rem;line-height:1.5;font-weight:700;letter-spacing:-.025em;word-break:keep-all}
 .text-desc-size-24 {font-size:2.4rem;line-height:3.2rem;color:#000;font-weight:700;word-break:keep-all}
 .text-desc-size-16 {font-size:1.6rem;line-height:2.4rem;font-weight:400;color:#000;word-break:keep-all}
+.text-desc-size-16-600 {font-size:1.6rem;line-height:1.6;font-weight:600;color:#000;word-break:keep-all}
+.text-desc-size-14 {font-size:1.4rem;line-height:2.4rem;font-weight:400;color:#000;word-break:keep-all}
 .title-color-blue {color:#4369F6 !important;}
+.text-purple {color:#8A38F7;}
 @media (max-width:1024px) {
     .text-desc-size-24 {font-size:2rem;line-height:2.4rem;}
     .text-desc-size-16 {font-size:1.4rem;line-height:2.2rem;}
+    .text-desc-size-32 {font-size:2.6rem;}
 }
 @media (max-width:700px) {
     .title-size-40 {font-size:2.4rem;line-height:2.8rem}

@@ -507,7 +507,7 @@
     .subscription-small-title {font-size:1.4rem;}
     .subscription-small-value {font-size:1.6rem;}
     .subscription-chart-title,
-    .text-blue {font-size:1.6rem;}
+    .subscription-chart-value .text-blue {font-size:1.6rem;}
 }
 @media (max-width:700px) {
     .dashboard-top-box-content {padding:2.4rem 2rem;}
