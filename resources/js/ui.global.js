@@ -862,10 +862,11 @@ class ToggleUI {
     }
     init() {
         for (let item of this.objects) {
-            item.removeEventListener('click', this.actClick);
-            item.addEventListener('click', this.actClick);
-            // item.addEventListener('mouseover', this.act);
-            // item.addEventListener('mouseleave', this.act);
+            if (item.dataset.event !== 'on') {
+                item.dataset.event = 'on';
+                item.removeEventListener('click', this.actClick);
+                item.addEventListener('click', this.actClick);
+            }
         }
     }
     actClick = (e) => {
@@ -893,7 +894,6 @@ class ToggleUI {
         });
     }
     actHover = (e) => {
-        console.log(e);
         const el_object = e.currentTarget;
         const callbackName = el_object.dataset.callback;
         const is_name = el_object.dataset.toggleObject;

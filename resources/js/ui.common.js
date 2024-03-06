@@ -25,6 +25,8 @@
                     top: 0
                 })
             });
+
+            UI.exe.toggle = new ToggleUI();
             UI.exe.modal_sass_0213 = new Layer({
                 id :'modal_sass_0213',
                 type: 'modal',
