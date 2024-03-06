@@ -308,6 +308,8 @@
     .box-group-col-4 {width:calc((100% - 2.4rem) / 2);}
     .beige-color-content {flex-direction:column;gap:2rem;align-items:center;}
     .green-color-box-content {flex-direction:column;gap:2rem;align-items:center;}
+    .green-color-box[data-dir="start"] .green-color-box-content {align-items:center}
+    .green-color-box .green-color-box-content {text-align:center}
     .page-content .main-service-item:first-child {min-height:0;padding-bottom:0;}
     .table-list-body[data-dir="start"] .table-list-body-item  {padding:0;}
     .table-list-body[data-dir="start"] .table-list-body-item:first-child {padding:1.2rem 0;}
