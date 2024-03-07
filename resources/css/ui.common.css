@@ -116,6 +116,8 @@ html.scroll_off {overflow:hidden}
     .title-size-24 {font-size:2rem;font-weight:800;line-height:2.8rem}
     .title-desc-size-24 {font-size:1.6rem;line-height:2.8rem;font-weight:900}
     .title-desc-size-20 {font-size:1.6rem;}
+    .text-desc-size-32 {font-size:2rem;}
+    .text-desc-size-16-600 {font-size:1.4rem;}
 }
 /* input textarea */
 input::-webkit-input-placeholder,
