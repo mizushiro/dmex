@@ -163,7 +163,7 @@
 .w-full-type {width:100%;}
 .green-color-box {background-color:#EDFAF5;padding:6.2rem;border-radius:2.8rem;}
 .green-color-box[data-dir="start"] .green-color-box-content {align-items:flex-start}
-.green-color-box-content {display:flex;align-items:flex-end}
+.green-color-box-content {display:flex;align-items:flex-end;gap:4rem;}
 .green-color-box-data {flex:1;display:flex;flex-direction:column;gap:2rem;}
 .color-box-img {flex-shrink:0;display:flex;gap:4rem;}
 .round-136-item {aspect-ratio:1/1;width:13.6rem;border-radius:999em;background-color:#fff;box-shadow:.2rem .2rem 1rem 0 rgba(61, 59, 80, 0.10);display:flex;align-items:center;justify-content:center;}
