@@ -490,7 +490,7 @@ animation-name:dongdong;animation-duration:1.1s;animation-iteration-count:infini
 @media (max-width:800px) {
     .main-service-item:first-child{margin-top:-8rem;}
     .main-section-service {padding-bottom:6rem;}
-    .main-service-item {max-width:54rem;padding-top:1.2rem;height:auto;padding-bottom:8rem;min-height:0;}
+    .main-service-item {max-width:54rem;padding-top:1.2rem;height:auto;padding-bottom:8rem;min-height:0;margin-right:auto;margin-left:auto;}
     .main-service-title {font-size:2.4rem;line-height:2.4rem;}
     .main-service-desc {font-size:1.6rem;line-height:2.4rem;margin-top:.8rem;}
     .main-service-desc-small {margin-top:1.2rem;font-size:1.4rem;line-height:2rem;}
