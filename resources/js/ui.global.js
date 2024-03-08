@@ -79,8 +79,6 @@
                 Global.state.scroll.y = scroll_pos;
                 el_html.dataset.direction = Global.state.scroll.direction;
                 el_html.dataset.top = scroll_pos < 10 ? true : false;
-                console.log(scroll_pos)
-
             }
             window.addEventListener('scroll', (e) => {
                 last_know_scroll_position = window.scrollY;
