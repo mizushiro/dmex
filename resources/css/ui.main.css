@@ -288,7 +288,9 @@
     box-shadow:1.2rem 1.3rem 2.6rem rgba(82, 62, 235, 13%), .3rem .3rem 1.7rem rgba(255, 255, 255, 13%);
     border-radius:2.8rem;
     background-color:#7190FF;
+    transition: background-color .2s;
 }
+.main-service-tab-btn:hover .icon {background-color:#5C79E1;}
 .main-service-tab-btn .icon::after {content:"";position:relative;z-index:2;display:block;width:3.4rem;height:3.4rem;background:url("../images/common/icon-service-34-1.svg") no-repeat 0 0 / cover ;transition:transform .3s ease-in;}
 /*.main-service-tab-btn[data-service="1"] .icon,
 .main-service-tab-btn[data-service="3"] .icon,
@@ -298,7 +300,6 @@
 .main-service-tab-btn[data-service="4"] .icon,
 .main-service-tab-btn[data-service="6"] .icon,
 .main-service-tab-btn[data-service="8"] .icon {background:linear-gradient(-45deg, #FF9847, #9558FF 70%);}*/
-
 .main-service-tab-btn[data-service]:hover .icon::after {
     animation:shoung;
     animation-duration:.6s;
