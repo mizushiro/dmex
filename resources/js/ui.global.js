@@ -1497,17 +1497,20 @@ class Layer {
             this.html.dataset.modal = 'show';
         }
 
-        _prev ? _prev.dataset.layerCurrent = 'false' : '';
+        if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
+            _prev ? _prev.dataset.layerCurrent = 'false' : '';
+            this.modal.dataset.layerCurrent = 'true';
+        }
 
         console.log( this.modal);
 
-        this.modal.dataset.layerCurrent = 'true';
+       
         this.modal || this.src && this.setFetch();
         this.modal.dataset.state = 'show';
         this.focus = document.activeElement;
 
         // toast, tooltip 자동 생성 자동 hidden 제외
-        if (this.type !== 'toast' && this.type !== 'tooltip') {
+        if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
             this.html.dataset.layerN = !this.html.dataset.layerN ? 1 : Number(this.html.dataset.layerN) + 1;
             this.modal.style.zIndex = Number(_zindex) + Number(this.html.dataset.layerN);
             this.modal.dataset.layerN = this.html.dataset.layerN;
@@ -1599,7 +1602,7 @@ class Layer {
     }
     hide = () => {
         clearTimeout(this.timer);
-        if (this.type !== 'toast' && this.type !== 'tooltip') {
+        if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
 
             console.log('hide', Number(this.html.dataset.layerN));
             this.html.dataset.layerN = Number(this.html.dataset.layerN) - 1;

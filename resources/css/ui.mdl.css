@@ -94,7 +94,7 @@
 .mdl-layer[data-type=tooltip] .mdl-layer-close,
 .mdl-layer[data-type=tooltip] .mdl-layer-dim {display:none;}
 .mdl-layer[data-type=tooltip][data-state=hide] .mdl-layer-wrap {display:none;}
-.mdl-layer[data-type=select] {position:absolute;width:auto;height:auto;padding:0;overflow:visible;}
+.mdl-layer[data-type=select] {position:absolute;width:auto;height:auto;padding:0;overflow:visible; z-index: 1000;}
 .mdl-layer[data-type=select] .mdl-layer-header {display:none;}
 .mdl-layer[data-type=select] .mdl-layer-wrap {padding:0.8rem 0;min-width:0;max-height:13.6rem;overflow-y:auto;border-radius:0.8rem;width:100%;}
 .mdl-layer[data-type=select] .mdl-layer-wrap:hover :checked + .mdl-select-option {background-color:transparent;}
