@@ -128,7 +128,7 @@
   top:0  !important;
   left:0  !important;
   align-items: flex-end !important;
-  /* background-color: rgba(0, 0, 0, 0.6); */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 [data-col="4"] .mdl-layer[data-type=select] .mdl-layer-wrap{
   border-bottom-left-radius: 0;
