@@ -43,12 +43,51 @@
     gap: 1rem;
     align-items: center;
 }
+.btn-ghost[data-icon="trial"]::before{
+    content:"";
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 1rem;
+    background: url(../images/common/ico-free.svg) no-repeat 50% 50% / 1.6rem;
+}
+.btn-ghost[data-icon="details"]::before{
+    content:"";
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+     margin-right: 1rem;
+    background: url(../images/common/ico-moredetails.svg) no-repeat 50% 50% / 1.6rem;
+}
+.main-visual .slogan .btn-ghost[data-icon="trial"]:hover::before{
+    background-image: url(../images/common/ico-free-hover.svg);
+} 
+.main-visual .slogan .btn-ghost[data-icon="details"]:hover::before{
+    background-image: url(../images/common/ico-moredetails-hover.svg);
+} 
+.main-visual .slogan .btn-ghost:hover{
+    color:#202F5B;
+    background-color: #FFBE22;
+}
+.main-visual .slogan .btn-ghost{
+    color:#FFBE22;
+    border-color: #FFBE22;
+}
 .main-visual .slogan .simbol{
     width: 8.6rem;
+    opacity: 0;
+    animation-name:visualStrong;
+    animation-delay:1s;
+    animation-duration:.8s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
+    animation-play-state:paused;
 }
 .main-visual .slogan h3 {
+    text-transform:uppercase;
     display:block;
-    color:#fff;
+    color:#FFBE22;
     font-size:5.9rem;
     padding: 0 2.4rem;
     font-weight:900;
@@ -57,47 +96,19 @@
     opacity:0;
     animation-name:visualTxt;
     animation-delay:.4s;
-    animation-duration:.3s;
+    animation-duration:.5s;
     animation-iteration-count:1;
     animation-fill-mode:forwards;
     animation-timing-function:cubic-bezier(.56,.68,.01,1.38);
     animation-play-state:paused;
 }
-.main-visual .slogan p {
-    display:block;
-    color:#fff;
-    font-size:1.6rem;
-    font-weight:500;
-    width:100%;
-    text-align:center;
-    opacity:0;
-    animation-name:visualTxt;
-    animation-delay:.7s;
-    animation-duration:.4s;
-    animation-iteration-count:1;
-    animation-fill-mode:forwards;
-    animation-timing-function:cubic-bezier(.56,.68,.01,1.38);
-    animation-play-state:paused;
-}
-.main-visual .slogan strong {
-    color:#fff;
-    /* display:block; */
-    font-size:5.9rem;
-    font-weight:900;
-    width:100%;
-    opacity:0;
-    text-align:center;
-
+.main-visual .slogan.n2 h3 {
     background:linear-gradient(90deg, #A04FFF 0%, #3DB4FF
     );background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-
-    animation-name:visualStrong;
-    animation-delay:1s;
-    animation-duration:.8s;
-    animation-iteration-count:1;
-    animation-fill-mode:forwards;
-    animation-timing-function:ease-in;
-    animation-play-state:paused;
+}
+.main-visual .slogan.n3 h3 {
+    background:linear-gradient(90deg, #A04FFF 0%, #3DB4FF
+    );background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 /* .main-visual .slogan strong span {
     animation-name:shadow;
@@ -107,6 +118,7 @@
     animation-fill-mode:forwards;
     animation-timing-function:ease-in;
 } */
+.main-visual .swiper-slide-active .slogan .simbol,
 .main-visual .swiper-slide-active .slogan p,
 .main-visual .swiper-slide-active .slogan h3,
 .main-visual .swiper-slide-active .slogan strong {animation-play-state:running;}
@@ -207,8 +219,8 @@
     100% {text-shadow:-2rem 0 2rem rgba(255,255,255,0.6), 2rem 0 2rem rgba(137, 4, 245, 0.3);}
 }
 @keyframes visualStrong {
-    0% {transform:rotateY(360deg) scale(3);opacity:0;filter:blur(2rem);}
-    100% {transform:rotateY(0deg) scale(1);opacity:1;filter:blur(0);}
+    0% {transform:rotateX(0deg) scale(1.5);opacity:0;filter:blur(2rem);}
+    100% {transform:rotateX(0deg) scale(1);opacity:1;filter:blur(0);}
 }
 @keyframes visualTxt {
     0% {transform:translateY(4rem);opacity:0;filter:blur(2rem);}
