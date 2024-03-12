@@ -434,6 +434,7 @@
 .dashboard-box-item .payment-item-img img {width:3.2rem;}
 .dashboard-box-item .payment-item-name {font-size:1.2rem;line-height:1.8rem;}
 .dashboard-box-item .payment-item-number {font-size:1.2rem;line-height:1.8rem;}
+.dashboard-box-btn-group {display:flex;align-items:center;justify-content:center;gap:.4rem;}
 .dashboard-service-application-list {margin-top:5.6rem;gap:2rem 1rem;display:flex;flex-wrap:wrap}
 .dashboard-service-application-item {width:calc((100% - 7rem) / 8);display:flex;flex-direction:column;justify-content:flex-start;align-items:center;gap:2rem;}
 [class^="service-application-box-"] {aspect-ratio:1/1;width:8.8rem;border-radius:2.8rem;box-shadow:.4rem .4rem 1.6rem 0 rgba(255, 255, 255, 0.25), 1.2rem 1.2rem 2.6rem 0 rgba(82, 62, 235, 0.13);display:flex;align-items:center;justify-content:center;}
