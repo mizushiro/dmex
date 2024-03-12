@@ -358,7 +358,7 @@
 }
 @media (max-width:700px) {
     .mdl-layer.size-l {padding:0;}
-    .mdl-layer.size-l .mdl-layer-wrap {border-radius:0;width:100%;border:0;}
+    .mdl-layer.size-l .mdl-layer-wrap {border-radius:0;width:100%;border:0;height:100%;}
     .mdl-layer.size-l .mdl-layer-body {max-height:calc(100dvh - 16.4rem);padding:2.4rem;}
     .srv-list .srv-item {width:calc((100% - 2rem) / 2);}
     .srv-list .srv-thumb-images {position:relative;top:0;left:0;}
