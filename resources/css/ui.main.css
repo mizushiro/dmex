@@ -254,7 +254,8 @@
     .main-visual .tlk {transform:translate(21rem, 13rem) scale(0.8);}
 }
 @media (max-width:700px) {
-    /* .main-visual-swiper .swiper-slide{height: 100dvh;} */
+    .base-wrap .main-visual{overflow: visible; display: block; height: auto;}
+    .main-visual-swiper.swiper {height: 100dvh;}
     .main-visual-swiper .swiper-slide{padding-bottom: 5rem;}
     .main-visual .main-service-tab {position: relative; left: 0; transform: translate(0,0);}
     .main-visual{height:100dvh; margin-top: 0; padding-bottom: 3rem; display: flex; justify-content: space-between; align-items: center; flex-direction: column;}
