@@ -189,6 +189,19 @@
     animation-fill-mode:forwards;
     animation-timing-function:ease-in;
 }
+.main-visual .swiper-slide-next .slogan,
+.main-visual .swiper-slide-prev .slogan{
+    animation-name:resetSwiper;
+    animation-duration:.3s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
+}
+@keyframes resetSwiper {
+    0%{opacity: 1;}
+    99%{opacity: 0;}
+    100%{opacity: 0; display: none;}
+}
 .main-visual .swiper-slide-active .slogan .simbol,
 .main-visual .swiper-slide-active .slogan p,
 .main-visual .swiper-slide-active .slogan h3,
