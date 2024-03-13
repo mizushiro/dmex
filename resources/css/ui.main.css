@@ -110,14 +110,85 @@
     background:linear-gradient(90deg, #A04FFF 0%, #3DB4FF
     );background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
-/* .main-visual .slogan strong span {
+.main-visual .slogan p {
+    display:block;
+    color:#fff;
+    font-size:2rem;
+    font-weight:500;
+    width:100%;
+    text-align:center;
+    opacity:0;
+    animation-name:visualTxt;
+    animation-delay:.7s;
+    animation-duration:.4s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:cubic-bezier(.56,.68,.01,1.38);
+    animation-play-state:paused;
+}
+.main-visual .slogan strong {
+    color:#fff;
+    display:block;
+    font-size:9.6rem;
+    font-weight:900;
+    width:100%;
+    opacity:0;
+    text-align:center;
+    animation-name:visualStrong;
+    animation-delay:1s;
+    animation-duration:.8s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
+    animation-play-state:paused;
+}
+.main-visual .slogan strong span {
     animation-name:shadow;
     animation-delay:1s;
     animation-duration:5.8s;
     animation-iteration-count:infinite;
     animation-fill-mode:forwards;
     animation-timing-function:ease-in;
-} */
+}.main-visual .slogan p.old-ver {
+     display:block;
+     color:#fff;
+     font-size:2rem;
+     font-weight:500;
+     width:100%;
+     text-align:center;
+     opacity:0;
+     animation-name:visualTxt;
+     animation-delay:.7s;
+     animation-duration:.4s;
+     animation-iteration-count:1;
+     animation-fill-mode:forwards;
+     animation-timing-function:cubic-bezier(.56,.68,.01,1.38);
+     animation-play-state:paused;
+ }
+.main-visual .slogan strong.old-ver {
+    color:#fff;
+    display:block;
+    font-size:9.6rem;
+    font-weight:900;
+    width:100%;
+    opacity:0;
+    text-align:center;
+    animation-name:visualStrong;
+    animation-delay:1s;
+    animation-duration:.8s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
+    animation-play-state:paused;
+}
+.main-visual .slogan strong.old-ver span {
+    animation-name:shadow;
+    animation-delay:1s;
+    animation-duration:5.8s;
+    animation-iteration-count:infinite;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in;
+}
 .main-visual .swiper-slide-active .slogan .simbol,
 .main-visual .swiper-slide-active .slogan p,
 .main-visual .swiper-slide-active .slogan h3,
