@@ -460,7 +460,7 @@
 .srv-img3 .img1{top:-10.4rem;left:5rem;z-index:4;opacity:0;transform:rotateY(720deg) scale(0.5);}
 .srv-img3 .img2{top:.5rem;left:.8rem;z-index:3;}
 .srv-img3 .img3{top:.5rem;left:.8rem;z-index:1;}
-.srv-img3 .img4{top:7.5rem;left:0rem;z-index:2;opacity:0;}
+.srv-img3 .img4{top:7.5rem;left:0;z-index:2;opacity:0;}
 .srv-img3 .img5{top:0.8rem;left:22rem;z-index:0;opacity:0;}
 .srv-img3[data-scroll-play="on"] .img1{top:-8.4rem;left:5rem;opacity:1;transform:rotateY(0) scale(1);}
 .srv-img3[data-scroll-play="on"] .img2{top:3.5rem;left:.8rem;}
@@ -496,17 +496,17 @@
 .srv-img5[data-scroll-play="on"] .img2{top:8rem;left:22rem;opacity:1;}
 .srv-img5[data-scroll-play="on"] .img3{top:-3rem;left:3.7rem;opacity:1;}
 .srv-img5[data-scroll-play="on"] .img4{top:5.5rem;left:20.5rem;opacity:1;}
-.srv-img5[data-scroll-play="on"] .img5{top:0rem;left:6rem;opacity:1;}
+.srv-img5[data-scroll-play="on"] .img5{top:0;left:6rem;opacity:1;}
 
-.srv-img6 {width:23.9rem;position:relative;margin-top:0rem;height:20rem}
+.srv-img6 {width:23.9rem;position:relative;margin-top:0;height:20rem}
 .srv-img6 > img{position:absolute;top:0;left:0;transition:all .7s ease-in;}
 .srv-img6 .img1{top:-7rem;left:3rem;z-index:0;}
 .srv-img6 .img2{top:4.8rem;left:3.3rem;z-index:4;}
 .srv-img6 .img3{top:0.9rem;left:3.3rem;z-index:2;}
-.srv-img6 .img4{top:auto;bottom:7.6rem;left:16.4rem;z-index:3;width:1.8rem;height:0rem;opacity:0;}
-.srv-img6 .img5{top:auto;bottom:10.4rem;left:19rem;z-index:1;width:1.8rem;height:0rem;opacity:0;}
-.srv-img6 .img7{top:auto;bottom:10.4rem;left:19rem;z-index:1;width:1.8rem;height:0rem;opacity:0;}
-.srv-img6 .img6{top:auto;bottom:7.9rem;left:10.2rem;z-index:2;width:1.8rem;height:0rem;opacity:0;}
+.srv-img6 .img4{top:auto;bottom:7.6rem;left:16.4rem;z-index:3;width:1.8rem;height:0;opacity:0;}
+.srv-img6 .img5{top:auto;bottom:10.4rem;left:19rem;z-index:1;width:1.8rem;height:0;opacity:0;}
+.srv-img6 .img7{top:auto;bottom:10.4rem;left:19rem;z-index:1;width:1.8rem;height:0;opacity:0;}
+.srv-img6 .img6{top:auto;bottom:7.9rem;left:10.2rem;z-index:2;width:1.8rem;height:0;opacity:0;}
 .srv-img6[data-scroll-play="on"] .img1{top:-7rem;left:3rem; }
 .srv-img6[data-scroll-play="on"] .img2{top:8.1rem;left:6.6rem;}
 .srv-img6[data-scroll-play="on"] .img3{top:2.3rem;left:4.7rem;}
