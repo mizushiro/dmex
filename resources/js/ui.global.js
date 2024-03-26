@@ -1576,7 +1576,7 @@ class Layer {
     }
     hidden = () => {
         const _prev = document.querySelector('[data-layer-current="true"]');
-        if (this.type !== 'toast' && this.type !== 'tooltip') {
+        if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
             _prev.dataset.layerCurrent = 'false';
         }
         // this.modal.dataset.layerCurrent = 'true';
@@ -1588,7 +1588,7 @@ class Layer {
         this.select_btn && this.select_btn.setAttribute('aria-expanded', false);
         this.focus.focus();
        
-        if (this.type !== 'toast' && this.type !== 'tooltip') {
+        if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
             console.log(Number(this.html.dataset.layerN));
             if (Number(this.html.dataset.layerN) !== 0) {
                 document.querySelector('.mdl-layer[data-layer-n="'+ this.html.dataset.layerN +'"]').dataset.layerCurrent = 'true';
