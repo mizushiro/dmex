@@ -537,4 +537,9 @@
 .month-payment-form .price-unit {flex-shrink:0;font-size:1.8rem;color:#F00;font-weight:700}
 .month-payment-form .input-size-48-transparent {text-align:right}
 .month-payment-form .text-red {color:#f00;font-weight:700}
+@media (max-width:700px) {
+    .month-payment-form .member-form-item-title {width:12rem;font-size:1.4rem}
+    .month-payment-form .input-size-48-transparent,
+    .month-payment-form .price-unit {font-size:1.4rem}
+}
 /* E : 영어 월간 결제 */
