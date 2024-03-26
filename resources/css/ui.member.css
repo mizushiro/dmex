@@ -531,3 +531,10 @@
     .terms-content {font-size:1.4rem;line-height:2rem;}
 }
 /* E : 약관 */
+/* S : 영어 월간 결제 */
+.month-payment-form {display:flex;flex-direction:column;padding:0 2rem .4rem;gap:.8rem;}
+.month-payment-form .member-form-item-title {width:14rem;font-size:1.5rem}
+.month-payment-form .price-unit {flex-shrink:0;font-size:1.8rem;color:#F00;font-weight:700}
+.month-payment-form .input-size-48-transparent {text-align:right}
+.month-payment-form .text-red {color:#f00;font-weight:700}
+/* E : 영어 월간 결제 */
