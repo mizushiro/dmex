@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-128">
+            <button type="button" class="btn-base btn-color-blue btn-size-64" onclick="UI.exe.modal_sample.show()">
+                <span>영어 월간 결제</span>
+            </button>
+            
+        </div>  
+        <div class="max-w-128">
+            <h2 class="title-size-40-700 text-center">데모 신청</h2>
+            <div class="max-w-50">
+                <div class="mdl-tab mt-x5" data-tab-id="demoTab">
+                    <div class="mdl-tab-wrap">
+                        <button type="button" class="mdl-tab-btn mdl-tab-size-64" data-tab="demo1">
+                            <span class="mdl-tab-text-24">데모신청</span>
+                        </button>
+                        <button type="button" class="mdl-tab-btn mdl-tab-size-64" data-tab="demo2">
+                            <span class="mdl-tab-text-24">신청현황</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-tab-pnl" data-tab-id="demoTab">
+                <section class="mdl-tab-item" data-tab="demo1">
+                    <div class="tab-content-box">
+                       1111
+                    </div>
+                </section>
+
+                <section class="mdl-tab-item" data-tab="demo2">
+                    <div class="tab-content-box">
+                        2222
+                    </div>
+                </section>
+            </div>
+        </div>  
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            UI.exe.sampleTab = new Tab({
+                id: 'demoTab',
+                current: 'demo2',
+                callback: (v) => {
+                    console.log(v.current)
+                }
+            });
+                /**
+             * 탭선택방법
+             * current값으로 탭선택 하거나
+             * current: '{{ data-tab }}'
+             * 주소뒤에 ?tab=demo2
+             * 파라미터값으로 tab={{ data-tab }} 선택
+             */
+
+            
+            UI.exe.modal_sample = new Layer({
+                id :'modal_sample',
+                type: 'modal',
+                src: 'SASS_sample_modal.html',
+                callback: (v) => {
+                    //open
+                    const _modal = document.querySelector('[data-id="modal_sample"]');
+                    const _price = _modal.querySelector('#sample_1');
+                    const _cardnumber = _modal.querySelector('#sample_2');
+
+                    _price.value = '300,000';
+                    _cardnumber.value = '4444-5667-7788-8887';
+                },
+                callback_close: (v) => {
+                    //close
+                    let isClose = confirm('닫아요?');
+
+                    isClose ? UI.exe.modal_sample.hideAct() : '아직 안닫음';
+                }
+            });
+            
+            
+ 
+        });
+    </script>
+</div>
+</body>
+</html>

@@ -920,15 +920,21 @@ class Tab {
         this.init();
     }
     init() {
+        let para = UI.parts.paraGet('tab');
+
+        if (!!para && typeof para === 'string') {
+            this.current = para
+        }
+
         for (let item of this.tab_btns) {
             item.addEventListener('click', this.act);
         }
 
-        !!sessionStorage.getItem(this.id) ? 
-        this.selected(sessionStorage.getItem(this.id)) : 
-        (this.current === false) ? 
-            this.selected(this.tab_btns[0].dataset.tab) : 
+        if (this.current === false) {
+            !!sessionStorage.getItem(this.id) ? this.selected(sessionStorage.getItem(this.id)) :  this.selected(this.tab_btns[0].dataset.tab);
+        } else {
             this.selected(this.current);
+        }
     }
     ps = (e) => {
         const _this = e;
@@ -1110,6 +1116,7 @@ class Layer {
         this.type = !opt.type ? 'modal' : opt.type; 
         this.classname  = opt.classname ? opt.classname : '',
         this.callback = opt.callback;
+        this.callback_close = opt.callback_close;
 
         //system 
         this.ps = opt.ps ?? 'BL';
@@ -1600,18 +1607,27 @@ class Layer {
             this.modal.remove();
         }
     }
-    hide = () => {
+    hideAct = () => {
         clearTimeout(this.timer);
         if (this.type !== 'toast' && this.type !== 'tooltip' && this.type !== 'select') {
 
             console.log('hide', Number(this.html.dataset.layerN));
             this.html.dataset.layerN = Number(this.html.dataset.layerN) - 1;
         }
+
+        
         
         this.select_btn && this.select_btn.addEventListener('click', this.show);
         this.html.removeEventListener('click', this.backClick);
         this.modal.dataset.state = 'hide';
         this.modal_wrap.addEventListener('animationend', this.hidden);
+    }
+    hide = () => {
+        if (this.callback_close) {
+            this.callback_close && this.callback_close();
+        } else {
+            this.hideAct();
+        }
     }
 }
 
