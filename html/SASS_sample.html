@@ -84,7 +84,7 @@
                 id :'modal_sample',
                 type: 'modal',
                 src: 'SASS_sample_modal.html',
-                callback: (v) => {
+                callback: () => {
                     //open
                     const _modal = document.querySelector('[data-id="modal_sample"]');
                     const _price = _modal.querySelector('#sample_1');
@@ -93,7 +93,7 @@
                     _price.value = '300,000';
                     _cardnumber.value = '4444-5667-7788-8887';
                 },
-                callback_close: (v) => {
+                callback_close: () => {
                     //close
                     let isClose = confirm('닫아요?');
 
