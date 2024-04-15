@@ -228,7 +228,8 @@
 [class^="icon-form-"],
 [class^="icon-player-"],
 [class^="icon-company-"],
-[class^="icon-cloud-in-"] {display:block;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;}
+[class^="icon-cloud-in-"],
+[class^="icon-e-book-"] {display:block;background-size:contain;background-position:50% 50%;background-repeat:no-repeat;}
 .icon-streaming-1 {aspect-ratio:1/1;background-image:url("../images/service/icon-streaming-1.png");width:7.6rem;}
 .icon-streaming-2 {aspect-ratio:160/128;background-image:url("../images/service/icon-streaming-2.png");width:8rem;}
 .icon-streaming-3 {aspect-ratio:154/112;background-image:url("../images/service/icon-streaming-3.png");width:7.7rem;}
@@ -292,6 +293,14 @@
 .icon-company-3 {aspect-ratio:36/40;background-image:url("../images/service/icon-company-3.svg");width:3.6rem;}
 .icon-company-4 {aspect-ratio:36/40;background-image:url("../images/service/icon-company-4.svg");width:3.6rem;}
 .icon-company-5 {aspect-ratio:36/40;background-image:url("../images/service/icon-company-5.svg");width:3.6rem;}
+.icon-e-book-1 {aspect-ratio:1/1;background-image:url("../images/service/icon-e-book-1.png");width:4.8rem;}
+.icon-e-book-2 {aspect-ratio:96/112;background-image:url("../images/service/icon-e-book-2.png");width:4.8rem;}
+.icon-e-book-3 {aspect-ratio:89/105;background-image:url("../images/service/icon-e-book-3.png");width:4.4rem;}
+.icon-e-book-4 {aspect-ratio:96/80;background-image:url("../images/service/icon-e-book-4.png");width:4.8rem;}
+.icon-e-book-5 {aspect-ratio:96/108;background-image:url("../images/service/icon-e-book-5.png");width:4.8rem;}
+.icon-e-book-6 {aspect-ratio:128/120;background-image:url("../images/service/icon-e-book-6.png");width:6.4rem;}
+.icon-e-book-7 {aspect-ratio:128/88;background-image:url("../images/service/icon-e-book-7.png");width:6.4rem;}
+.icon-e-book-8 {aspect-ratio:96/112;background-image:url("../images/service/icon-e-book-8.png");width:4.8rem;}
 [class^="icon-cloud-in-"] {aspect-ratio:1/1;width:2.4rem;}
 .icon-cloud-in-1 {background-image:url("../images/service/icon-cloud-in-1.svg");}
 .icon-cloud-in-2 {background-image:url("../images/service/icon-cloud-in-2.svg");}
@@ -381,7 +390,9 @@
     .icon-form-1,
     .icon-form-2,
     .icon-player-1,
-    .icon-player-2  {width:4rem;}
+    .icon-player-2,
+    .icon-e-book-1,
+    .icon-e-book-2 {width:4rem;}
     .icon-live1-2 {width:5rem;}
 }
 /* E :서비스 소개 */
