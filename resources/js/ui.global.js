@@ -147,8 +147,9 @@
                 _tempArray = _tempArray[0];
 
                 console.log(_tempArray);
+            } else {
+                _tempArray = null
             }
-
             return _tempArray;
         },
         paraSet(key, value) {
@@ -922,8 +923,10 @@ class Tab {
     init() {
         let para = UI.parts.paraGet('tab');
 
+        console.log(this.id,para);
+
         if (!!para && typeof para === 'string') {
-            this.current = para
+            this.current = para;
         }
 
         for (let item of this.tab_btns) {
