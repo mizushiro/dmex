@@ -599,98 +599,219 @@
 
                 <section class="mdl-tab-item" data-tab="service6">
                     <div class="tab-content-box">
-                        <div class="table-head j-end">
-                            <div class="mdl-input-wrap">
-                                <div class="mdl-input" data-type="period">
-                                    <input type="date" value="2024-12-31">
-                                    ~
-                                    <input type="date" value="2024-12-31">
+                        <div style="display:none">
+                            <div class="table-head j-end">
+                                <div class="mdl-input-wrap">
+                                    <div class="mdl-input" data-type="period">
+                                        <input type="date" value="2024-12-31">
+                                        ~
+                                        <input type="date" value="2024-12-31">
+                                    </div>
+                                    <div class="mdl-input input-sh">
+                                        <input type="text" placeholder="검색어를 입력해주세요">
+                                        <button type="button" class="btn-search" aria-label="검색"></button>
+                                    </div>
                                 </div>
-                                <div class="mdl-input input-sh">
-                                    <input type="text" placeholder="검색어를 입력해주세요">
-                                    <button type="button" class="btn-search" aria-label="검색"></button>
+                            </div>
+
+                            <div class="mdl-section mt-56">
+                                <div class="srv-head ver-2">
+                                    <div class="srv-head-col-1">
+                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-gray2">
+                                            <i class="icon-chat-bot"></i>
+                                            AI 챗봇
+                                        </button>
+                                    </div>
+                                    <div class="srv-head-col-2">
+                                        <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
+                                            등록
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="service-ai-list">
+                                    <div class="table-list-head" data-flex="table-service-ai-title">
+                                        <div class="table-list-th" data-flex-col="number">번호</div>
+                                        <div class="table-list-th" data-flex-col="title">제목</div>
+                                        <div class="table-list-th" data-flex-col="file">파일형식</div>
+                                        <div class="table-list-th" data-flex-col="type">업로드 구분</div>
+                                        <div class="table-list-th" data-flex-col="date">등록일자</div>
+                                        <div class="table-list-th" data-flex-col="memo">메모</div>
+                                    </div>
+                                    <div class="service-ai-list-body table-list-body">
+                                    </div>
+                                    <script>
+                                        const serviceAi = [
+                                            { file: "../resources/images/common/file-xls.svg"},
+                                            { file: "../resources/images/common/file-hwp.svg"},
+                                            { file: "../resources/images/common/file-pdf.svg"},
+                                            { file: "../resources/images/common/file-ppt.svg"},
+                                            { file: "../resources/images/common/file-doc.svg"},
+                                        ];
+                                        serviceAi.forEach(function (data, i) {
+                                            const template = `
+                                                <div class="table-list-body-item" data-flex="table-service-ai-title">
+                                                    <div class="service-ai-item" data-flex-col="number">
+                                                        <div class="service-ai-item-value">123</div>
+                                                    </div>
+                                                    <div class="service-ai-item" data-flex-col="title">
+                                                        <div class="service-ai-item-value">제목 샘플 텍스트 제목 샘플 텍스트 </div>
+                                                    </div>
+                                                    <div class="service-ai-item" data-flex-col="file">
+                                                        <div class="service-ai-item-value">
+                                                            <img src="${serviceAi[i].file}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-ai-item" data-flex-col="type">
+                                                        <div class="mobile-show table-list-td-title">업로드 구분</div>
+                                                        <div class="service-ai-item-value">신규 </div>
+                                                    </div>
+                                                    <div class="service-ai-item" data-flex-col="date">
+                                                        <div class="mobile-show table-list-td-title">등록일자</div>
+                                                        <div class="service-ai-item-value">2024.02.05</div>
+                                                    </div>
+                                                    <div class="service-ai-item" data-flex-col="memo">
+                                                    <div class="mobile-show table-list-td-title">메모</div>
+                                                        <div class="service-ai-item-value">메모</div>
+                                                    </div>
+                                                </div>
+                                            `;
+                                            document.querySelector(".service-ai-list-body").insertAdjacentHTML("beforeend", template);
+                                        });
+                                    </script>
+                                </div>
+
+                                <div class="pagination">
+                                    <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
+                                    <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
+                                    <a href="" class="paging-num" data-selected="true">1</a>
+                                    <a href="" class="paging-num">2</a>
+                                    <a href="" class="paging-num">3</a>
+                                    <a href="" class="paging-num">4</a>
+                                    <a href="" class="paging-num">5</a>
+                                    <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
+                                    <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mdl-section mt-56">
-                            <div class="srv-head ver-2">
-                                <div class="srv-head-col-1">
-                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-gray2">
-                                        <i class="icon-chat-bot"></i>
-                                        AI 챗봇
+                        <div>
+                            <div class="ai-title-box">
+                                <p class="title-size-28-700">AI 챗봇 서비스</p>
+                                <div class="list-type-btn-group">
+                                    <button type="button" class="active">
+                                        <i class="ico-list"></i>
                                     </button>
-                                </div>
-                                <div class="srv-head-col-2">
-                                    <button type="button" class="btn-base btn-size-40 btn-round btn-color-dark">
-                                        등록
+                                    <button type="button">
+                                        <i class="ico-album"></i>
                                     </button>
                                 </div>
                             </div>
-
-                            <div class="service-ai-list">
-                                <div class="table-list-head" data-flex="table-service-ai-title">
-                                    <div class="table-list-th" data-flex-col="number">번호</div>
-                                    <div class="table-list-th" data-flex-col="title">제목</div>
-                                    <div class="table-list-th" data-flex-col="file">파일형식</div>
-                                    <div class="table-list-th" data-flex-col="type">업로드 구분</div>
-                                    <div class="table-list-th" data-flex-col="date">등록일자</div>
-                                    <div class="table-list-th" data-flex-col="memo">메모</div>
+                            <div class="list-type">
+                                <div class="list-type-item">
+                                   <p class="list-type-item-title" data-ellipsis="1">
+                                       이러닝 고객센터
+                                   </p>
+                                    <p class="list-type-item-desc" data-ellipsis="1">
+                                        설정에서 원하시는 내용을 학습시키신 후 AI 챗봇 서비스를 사용해보세요
+                                    </p>
+                                    <div class="list-type-item-btn">
+                                        <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                            <i class="ico-link-copy"></i>
+                                            주소복사
+                                        </button>
+                                        <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                            <i class="ico-play"></i>
+                                        </button>
+                                        <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                            <i class="ico-add"></i>
+                                            등록
+                                        </button>
+                                        <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                            <i class="ico-setting"></i>
+                                            설정
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="service-ai-list-body table-list-body">
-                                </div>
-                                <script>
-                                    const serviceAi = [
-                                        { file: "../resources/images/common/file-xls.svg"},
-                                        { file: "../resources/images/common/file-hwp.svg"},
-                                        { file: "../resources/images/common/file-pdf.svg"},
-                                        { file: "../resources/images/common/file-ppt.svg"},
-                                        { file: "../resources/images/common/file-doc.svg"},
-                                    ];
-                                    serviceAi.forEach(function (data, i) {
-                                        const template = `
-                                            <div class="table-list-body-item" data-flex="table-service-ai-title">
-                                                <div class="service-ai-item" data-flex-col="number">
-                                                    <div class="service-ai-item-value">123</div>
-                                                </div>
-                                                <div class="service-ai-item" data-flex-col="title">
-                                                    <div class="service-ai-item-value">제목 샘플 텍스트 제목 샘플 텍스트 </div>
-                                                </div>
-                                                <div class="service-ai-item" data-flex-col="file">
-                                                    <div class="service-ai-item-value">
-                                                        <img src="${serviceAi[i].file}" />
-                                                    </div>
-                                                </div>
-                                                <div class="service-ai-item" data-flex-col="type">
-                                                    <div class="mobile-show table-list-td-title">업로드 구분</div>
-                                                    <div class="service-ai-item-value">신규 </div>
-                                                </div>
-                                                <div class="service-ai-item" data-flex-col="date">
-                                                    <div class="mobile-show table-list-td-title">등록일자</div>
-                                                    <div class="service-ai-item-value">2024.02.05</div>
-                                                </div>
-                                                <div class="service-ai-item" data-flex-col="memo">
-                                                <div class="mobile-show table-list-td-title">메모</div>
-                                                    <div class="service-ai-item-value">메모</div>
-                                                </div>
+                            </div>
+                            <script>
+                                const listList = [
+                                    { title: "이러닝 고객센터"},
+                                    { title: "이러닝 고객센터"},
+                                    { title: "이러닝 고객센터"},
+                                ];
+                                listList.forEach(function (data, i) {
+                                    const template = `
+                                        <div class="list-type-item">
+                                           <p class="list-type-item-title" data-ellipsis="1">
+                                               ${listList[i].title}
+                                           </p>
+                                            <p class="list-type-item-desc" data-ellipsis="1">
+                                                설정에서 원하시는 내용을 학습시키신 후 AI 챗봇 서비스를 사용해보세요
+                                            </p>
+                                            <div class="list-type-item-btn">
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-link-copy"></i>
+                                                    주소복사
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-play"></i>
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-add"></i>
+                                                    등록
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-setting"></i>
+                                                    설정
+                                                </button>
                                             </div>
+                                        </div>
                                         `;
-                                        document.querySelector(".service-ai-list-body").insertAdjacentHTML("beforeend", template);
-                                    });
-                                </script>
+                                    document.querySelector(".list-type").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
+                            <div class="album-type">
                             </div>
-
-                            <div class="pagination">
-                                <button type="button" class="paging-move" data-page="first" aria-label="처음으로 이동"></button>
-                                <button type="button" class="paging-move" data-page="prev" aria-label="이전"></button>
-                                <a href="" class="paging-num" data-selected="true">1</a>
-                                <a href="" class="paging-num">2</a>
-                                <a href="" class="paging-num">3</a>
-                                <a href="" class="paging-num">4</a>
-                                <a href="" class="paging-num">5</a>
-                                <button type="button" class="paging-move" data-page="next" aria-label="다음"></button>
-                                <button type="button" class="paging-move" data-page="last" aria-label="마지막으로 이동"></button>
-                            </div>
+                            <script>
+                                const albumList = [
+                                    { thumb: "https://picsum.photos/id/23/200/300"},
+                                    { thumb: "https://picsum.photos/id/57/200/300"},
+                                    { thumb: "https://picsum.photos/id/83/200/300"},
+                                    { thumb: "https://picsum.photos/id/84/200/300"},
+                                ];
+                                albumList.forEach(function (data, i) {
+                                    const template = `
+                                        <div class="album-type-item">
+                                            <p class="album-type-item-title" data-ellipsis="1">이러닝 고객센터</p>
+                                            <div class="album-type-item-img">
+                                                <img src="${albumList[i].thumb}" class="thumb-images-full" />
+                                            </div>
+                                            <p class="album-type-item-desc" data-ellipsis="2">
+                                                설정에서 원하시는 내용을 학습시키신 후 AI 챗봇 서비스를 사용해보세요
+                                            </p>
+                                            <div class="album-type-item-btn">
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-link-copy"></i>
+                                                    주소복사
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-play"></i>
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-add"></i>
+                                                    등록
+                                                </button>
+                                                <button type="button" class="btn-base btn-size-36 btn-line-sora">
+                                                    <i class="ico-setting"></i>
+                                                    설정
+                                                </button>
+                                            </div>
+                                        </div>
+                                        `;
+                                    document.querySelector(".album-type").insertAdjacentHTML("beforeend", template);
+                                });
+                            </script>
                         </div>
                     </div>
                 </section>
@@ -706,7 +827,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             UI.exe.serviceTab = new Tab({
                 id: 'serviceTab',
-                current: 'service1',
+                current: 'service6',
                 callback: (v) => {
                     console.log(v.current)
                     if (v.current === 'service2') {

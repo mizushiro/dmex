@@ -94,6 +94,7 @@ html.scroll_off {overflow:hidden}
 .title-size-40 {font-size:4rem;line-height:5.6rem;font-weight:900;color:#000}
 .title-size-40-700 {font-size:4rem;line-height:4.8rem;font-weight:700;color:#111}
 .title-size-28 {font-size:2.8rem;line-height:3.2rem;font-weight:600;color:#111;letter-spacing:-.05rem}
+.title-size-28-700 {font-size:2.8rem;line-height:3.2rem;font-weight:700;color:#343434;letter-spacing:-.05rem}
 .title-size-28-w {font-size:2.8rem;line-height:3.6rem;font-weight:900;color:#fff;letter-spacing:-.05rem}
 .title-size-24 {font-size:2.4rem;line-height:5.6rem;font-weight:700;color:#000}
 .title-desc-size-24 {font-size:2.4rem;line-height:2.4rem;font-weight:800;color:#000}
@@ -113,6 +114,7 @@ html.scroll_off {overflow:hidden}
 @media (max-width:700px) {
     .title-size-40 {font-size:2.4rem;line-height:2.8rem}
     .title-size-40-700 {font-size:3.2rem;}
+    .title-size-28-700,
     .title-size-28-w {font-size:2.4rem;line-height:2.8rem;}
     .title-size-24 {font-size:2rem;font-weight:800;line-height:2.8rem}
     .title-desc-size-24 {font-size:1.6rem;line-height:2.8rem;font-weight:900}
