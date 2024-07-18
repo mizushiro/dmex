@@ -295,10 +295,10 @@ main {position:relative;z-index:1;}
     letter-spacing:-0.11rem;
     background-repeat:no-repeat;
     background-image:url(../images/common/logo-h.png);
-    background-size:9.4rem;
     line-height:1;
     margin-top:2.4rem;
     text-decoration:none;
+    background-size:contain;
 }
 .header-util {display:flex;margin-top:calc(.8rem * 3);align-items:center;gap:2rem;}
 .header-util-btn {font-size:1.6rem;font-weight:600;letter-spacing:-0.1rem;color:#fff;text-decoration:none;white-space:nowrap;}
@@ -469,9 +469,14 @@ main {position:relative;z-index:1;}
 .chat-date {margin-top:.8rem;padding-left:0.8rem;font-size:1.2rem;color:#000;}
 .chat-user .chat-balloon {background:#EAEEFF;font-weight:600;border:0;}
 .chat-bot .chat-balloon::before {content:"";display:block;width:2.6rem;height:1.6rem;background:url(../images/common/chat-tail-bot.svg) no-repeat 0 0 / 2.6rem;position:absolute;top:-0.1rem;left:-1.1rem;}
-.chat-user .chat-balloon::before {content:"";display:block;width:2.6rem;height:1.6rem;background:url(../images/common/chat-tail-user.svg) no-repeat 0 0 / 2.6rem;position:absolute;top:-0.1rem;right:-1.1rem;}
-.chat-bot {padding-left:8.6rem;position:relative;}
-.chat-bot::before {content:"";display:block;width:5.6rem;height:5.6rem;border-radius:50%;background:#F4F3F8 url(../images/common/chatbot.png) no-repeat 50% 50% / 4rem;position:absolute;left:0;top:-.6rem;}
+.chat-user .chat-balloon::before {content:"";display:block;width:2.6rem;height:1.6rem;background:url(../images/common/chat-tail-user.svg) no-repeat 0 0 / 2.6rem;position:absolute;top:0;right:-1.1rem;}
+.chat-user,
+.chat-bot {display:flex;align-items:flex-start;gap:1.6rem;}
+.chat-balloon-area {flex:1;margin-top:1.4rem;}
+.profile-img-area {width:5.6rem;flex-shrink:0;height:5.6rem;border-radius:50%;background-color:#F4F3F8;display:flex;align-items:center;justify-content:center;}
+.profile-img-area img {display:block;width:4rem;}
+.chat-user .profile-img-area {background-color:transparent;}
+.chat-user .profile-img-area img {width:100%}
 
 
 [data-flex-align="right"]{justify-content:flex-end;}
