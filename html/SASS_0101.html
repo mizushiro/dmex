@@ -698,16 +698,16 @@
                         <div>
                             <div class="ai-title-box">
                                 <p class="title-size-28-700">AI 챗봇 서비스</p>
-                                <div class="list-type-btn-group">
-                                    <button type="button" class="active">
+                                <div class="list-type-btn-group" data-switch-list="sass0101_ai">
+                                    <button type="button" class="active" data-type="list">
                                         <i class="ico-list"></i>
                                     </button>
-                                    <button type="button">
+                                    <button type="button" data-type="album">
                                         <i class="ico-album"></i>
                                     </button>
                                 </div>
                             </div>
-                            <div class="list-type">
+                            <div class="list-type" data-switch-cont="sass0101_ai" data-type="list" data-selected="true">
                                 <div class="list-type-item">
                                    <p class="list-type-item-title" data-ellipsis="1">
                                        이러닝 고객센터
@@ -771,7 +771,7 @@
                                     document.querySelector(".list-type").insertAdjacentHTML("beforeend", template);
                                 });
                             </script>
-                            <div class="album-type">
+                            <div class="album-type" data-switch-cont="sass0101_ai" data-type="album">
                             </div>
                             <script>
                                 const albumList = [
@@ -858,6 +858,31 @@
             for (let item of vodMores) {
                 item.addEventListener('click', actMoreToggle);
             }
+
+
+            //list album 
+            const switchList = (v) => {
+                const listGroup = document.querySelector(`[data-switch-list="${v}"]`);
+                const btns = listGroup.querySelectorAll('button');
+                const listConts = document.querySelectorAll(`[data-switch-cont="${v}"]`);
+
+                const act = e => {
+                    const _this = e.currentTarget;
+                    const _name = _this.dataset.type;
+                    const _selected = listGroup.querySelector('.active');
+
+                    _selected.classList.remove('active');
+                    _this.classList.add('active');
+
+                    for (const item of listConts) {
+                        item.dataset.selected =  item.dataset.type === _name ? true : false;
+                    }
+                }
+                for (const item of btns) {
+                    item.addEventListener('click', act)
+                }
+            }
+            switchList('sass0101_ai')
         });
     </script>
 </div>

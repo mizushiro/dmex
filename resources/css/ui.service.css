@@ -622,3 +622,6 @@
     .list-type-item-title {width:100%;font-weight:700;}
     .list-type-item-btn {width:100%;}
 }
+
+[data-switch-cont] {display:none;}
+[data-switch-cont][data-selected="true"] {display:block;}
