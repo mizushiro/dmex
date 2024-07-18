@@ -211,6 +211,8 @@ select::-ms-expand {display:none}
 .btn-color-sky:hover {background-color:#E7E6F1;color:#343434;}
 .btn-color-depp-blue {background-color:#20334F;color:#ffffff;font-weight:500;}
 .btn-color-gray2 {background-color:#F4F3F8;color:#111;font-weight:700;}
+.btn-color-gray2:hover {color:#313EC0}
+.btn-color-gray2 .icon-arrow-2 {transform:scaleX(-1)}
 
 .btn-line-sky {background-color:#fff;color:#6A7DDC;font-weight:700;border:1px solid #CCD4FF;}
 .btn-line-sky:hover {font-weight:800;}
