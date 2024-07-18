@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>DMEX</title>
+
+    <link rel="stylesheet" href="../resources/css/ui.base.css">
+
+    <link rel="stylesheet" href="../resources/lib/swiper-bundle.min.css">
+    <script src="../resources/lib/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+<div class="base-wrap">
+    <header class="header" data-id="header"></header>
+    <main class="page-content">
+        <div class="max-w-50">
+            <h2 class="title-size-40-700 text-center">설정</h2>
+            <div class="member-form-group">
+                <span class="member-form-item-title requisite mb-m-8">로고 선택</span>
+                <div class="member-form-item" data-type="line" data-dir="column">
+                    <div class="file-area">
+                        000*000 사이즈 로고 이미지 등록 (png, jpeg, gif)
+                    </div>
+                    <div class="file-btn-wrap">
+                        <button type="button" class="btn-txt" data-ico="file">
+                            파일선택
+                        </button>
+                    </div>
+                </div>
+
+                <div class="member-form-item">
+                    <span class="member-form-item-title w-156 requisite">챗봇창 안내 메세지</span>
+                    <input type="text" class="input-size-48-transparent" placeholder="메세지를 입력하세요" />
+                    <button type="button" class="input-value-del">
+                        <i class="icon-del"></i>
+                    </button>
+                </div>
+                <p class="error-massage">유효성 메세지 영역</p>
+
+                <div class="member-form-item" data-dir="column">
+                    <span class="member-form-item-title">챗봇창 환영 메세지</span>
+                    <textarea placeholder="메세지를 입력하세요" class="input-size-48-transparent min-h-96"></textarea>
+                    <p class="write-data">0/50자</p>
+                </div>
+
+                <span class="member-form-item-title requisite mb-m-8">디자인 설정</span>
+                <div class="admin-set-up-box">
+                    <div class="admin-set-up-item">
+                        <p class="admin-set-up-title">글꼴</p>
+                        <div class="admin-set-up-content">
+                            <span class="radio-button-type">
+                                <input type="radio" id="aa-1" name="aa" class="radio-button-input">
+                                <label for="aa-1" class="radio-button-type-label font-1">굴림</label>
+                            </span>
+                            <span class="radio-button-type">
+                                <input type="radio" id="aa-2" name="aa" class="radio-button-input">
+                                <label for="aa-2" class="radio-button-type-label font-2">나눔고딕</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="admin-set-up-item">
+                        <p class="admin-set-up-title">테마</p>
+                        <div class="admin-set-up-content">
+                            <span class="radio-button-type">
+                                <input type="radio" id="bb-1" name="bb" class="radio-button-input">
+                                <label for="bb-1" class="radio-button-type-label">White</label>
+                            </span>
+                            <span class="radio-button-type">
+                                <input type="radio" id="bb-2" name="bb" class="radio-button-input">
+                                <label for="bb-2" class="radio-button-type-label">Dark</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="admin-set-up-item">
+                        <p class="admin-set-up-title">출력길이</p>
+                        <div class="admin-set-up-content">
+                            <div class="range-box">
+                                <input class="range-input" type="range" min="0" max="2048" step="1" />
+                                <p class="range-max">2048</p>
+                                <!-- D : range 값 기준으로 left 값을 백분율로 계산해서 넣어주세요 -->
+                                <div class="range-value" style="left:50%"><output id="value"></output></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-wrap mt-16">
+                <button type="button" class="btn-base btn-color-gray btn-size-64">취소</button>
+                <button type="button" class="btn-base btn-color-blue btn-size-64">등록하기</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" data-id="footer"></footer>
+
+    <script src="../resources/js/ui.global.js"></script>
+    <script src="../resources/js/ui.common.js"></script>
+    <script>
+        const value = document.querySelector("#value");
+        const input = document.querySelector(".range-input");
+        value.textContent = input.value;
+        input.addEventListener("input", (event) => {
+            value.textContent = event.target.value;
+        });
+        document.querySelector('.range-input').addEventListener('input',function(event){
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #4369F6 0%, #4369F6 '+gradient_value * event.target.value +'%, rgb(217, 217, 217) ' +gradient_value *  event.target.value + '%, rgb(217, 217, 217) 100%)';
+        });
+    </script>
+</div>
+</body>
+</html>

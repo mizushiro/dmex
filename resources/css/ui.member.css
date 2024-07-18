@@ -7,8 +7,10 @@
 .member-form-item {display:flex;min-height:6.4rem;border-radius:1.2rem;padding:.7rem 2.4rem;position:relative;background-color:#F4F4F4;align-items:center;border:1px solid transparent}
 .member-form-item[data-type="line"] {border:.1rem solid #BDC3E3;background-color:#fff;padding:2rem;gap:1.2rem;}
 .member-form-item[data-dir="column"] > *{width:100%;}
-.member-form-item[data-dir="column"] {flex-direction:column;}
+.member-form-item[data-dir="column"] {flex-direction:column;overflow:hidden}
 .member-form-item[data-dir="column"] textarea {width:100%;padding:1rem 0;}
+.member-form-item .radio-group-area {background-color:#F4F3F8;border-top:.1rem solid #BDC3E3;margin:0 -2rem -2rem -2rem;width:calc(100% + 4rem);padding:1.6rem 3.2rem;display:flex;flex-direction:column;gap:.8rem}
+.radio-group-area .form_element-radio label:before {background-color:#fff;border-radius:9999em}
 .member-form-item-group {display:flex;gap:.8rem;}
 .member-form-item-col .error-massage {margin-top:1.2rem;}
 .member-form-item-col .member-form-item-title {width:8rem;}
@@ -18,6 +20,7 @@
 .member-form-item.error-case {border-color:#000;}
 .member-form-item .input-size-48-transparent {min-width:0;flex:1;}
 .member-form-item-title {font-size:1.8rem;font-weight:600;color:#000;line-height:2.2rem;padding-top:1.3rem;flex-shrink:0;width:12.8rem;align-self:flex-start;display:flex;}
+.member-form-item-title.w-156 {width:15.6rem;}
 .member-form-item-title.requisite:after {content:'';width:.6rem;height:.6rem;border-radius:999rem;background-color:#6A7DDC;display:inline-block;margin-left:.6rem;vertical-align:top;position:relative;top:.2rem;flex-shrink:0;}
 .member-form-item .mdl-select {width:100%;height:4.8rem}
 .member-form-item .mdl-select-btn {width:100%;border:0;background-color:transparent;height:4.8rem;}
@@ -42,7 +45,9 @@
 .file-btn-wrap {gap:2.8rem;display:flex;justify-content:center;align-items:center;}
 .btn-txt {font-size:1.6rem;font-weight:600;color:#000;display:flex;align-items:center;}
 .add-img-list {display:flex;flex-wrap:wrap;gap:1.6rem;margin-bottom:4.4rem;}
+.add-img-list.mb-16 {margin-bottom:1.6rem}
 .add-img-item {position:relative;}
+.add-img-item .file-icon {width:3.6rem}
 .add-img-box {border-radius:1.2rem;width:8rem;height:5rem;border:1px solid #000;overflow:hidden;}
 .add-img-box img {width:100%;height:100%;object-fit:cover;}
 .btn-img-del {position:absolute;top:-.8rem;right:-.8rem;width:2.4rem;height:2.4rem;border:1px solid #000;border-radius:999em;background-color:#fff;display:flex;align-items:center;justify-content:center;}
@@ -61,10 +66,13 @@
     .member-form-group {gap:1.2rem;}
     .member-form-item-title {font-size:1.6rem;width:11.4rem;}
     .member-form-item-title.requisite:after {margin-left:.4rem;}
+    .member-form-item-title.w-156 {width:13.2rem;}
     .member-form-item {min-height:5.6rem;padding:.3rem 2rem;}
     .error-massage {font-size:1.4rem;line-height:2rem;}
     .file-area {display:none;}
     .btn-leave-area {margin-top:4rem;}
+
+    .member-form-item .radio-group-area {padding:1.6rem;margin-top:.8rem;}
 }
 /* E :로그인 */
 /* S :회원가입 */
@@ -176,6 +184,7 @@
 /* E :연결정보변경 */
 /* S :서비스 신청 내역 */
 [data-flex="table-service-title"] {width:100%;display:flex;gap:1.2rem;}
+[data-flex="table-service-title"] .table-list-th {font-size:1.6rem !important;}
 [data-flex="table-service-title"] [data-flex-col="name"] {width:16rem;}
 [data-flex="table-service-title"] [data-flex-col="desc"] {flex:1;}
 [data-flex="table-service-title"] [data-flex-col="payment"] {width:12rem;}
@@ -392,6 +401,7 @@
 .service-banner-list .table-list-body-item {padding:2rem 0;align-items:center;}
 .service-banner-item {font-size:1.6rem;color:#343434;font-weight:400;display:flex;align-items:center;justify-content:center}
 [data-flex="table-service-banner-title"] {width:100%;display:flex;gap:1.6rem;}
+[data-flex="table-service-banner-title"] .table-list-th {font-size:1.6rem !important;}
 [data-flex="table-service-banner-title"] [data-flex-col="number"] {width:5.2rem;flex-shrink:0;}
 [data-flex="table-service-banner-title"] [data-flex-col="title"] {flex:1;}
 [data-flex="table-service-banner-title"] [data-flex-col="img"],
@@ -418,6 +428,38 @@
     .service-banner-list .table-list-body-item {width:100%;}
 }
 /* E : 웹플레이어 배너 */
+/* S : 챗봇 */
+.service-ai-list {margin-top:.8rem;}
+.service-ai-list .table-list-head {height:6rem;}
+.service-ai-list .table-list-body-item {padding:2rem 0;align-items:center;}
+.service-ai-item {font-size:1.6rem;color:#343434;font-weight:400;display:flex;align-items:center;justify-content:center}
+[data-flex="table-service-ai-title"] {width:100%;display:flex;gap:1.6rem;}
+[data-flex="table-service-ai-title"] .table-list-th {font-size:1.6rem !important;}
+[data-flex="table-service-ai-title"] [data-flex-col="number"] {width:5.2rem;flex-shrink:0;}
+[data-flex="table-service-ai-title"] [data-flex-col="title"],
+[data-flex="table-service-ai-title"] [data-flex-col="memo"] {flex:1;}
+[data-flex="table-service-ai-title"] [data-flex-col="file"],
+[data-flex="table-service-ai-title"] [data-flex-col="type"] {width:10rem;flex-shrink:0;}
+[data-flex="table-service-ai-title"] [data-flex-col="date"] {width:12rem;flex-shrink:0;}
+.table-list-body-item [data-flex-col="title"],
+.table-list-body-item [data-flex-col="memo"] {justify-content:flex-start;}
+@media (max-width:1024px) {
+    .service-ai-list .table-list-head {display:none;}
+    .service-ai-list .table-list-body {border-top:none;display:flex;flex-wrap:wrap;gap:1.6rem;}
+    .service-ai-list .table-list-body-item {border:1px solid #e3e3e3;padding:2rem;border-radius:1.6rem;gap:.8rem;flex-wrap:wrap;width:calc((100% - 1.6rem) / 2)}
+    .service-ai-list .service-ai-item {gap:.8rem;justify-content:flex-start;align-items:flex-start;}
+    .service-ai-list-body .service-ai-item[data-flex-col="number"] {display:none;}
+    [data-flex="table-service-ai-title"] [data-flex-col="title"] {font-weight:600;}
+    [data-flex="table-service-ai-title"] [data-flex-col="title"],
+    [data-flex="table-service-ai-title"] [data-flex-col="file"] {width:100%;flex:auto;}
+    [data-flex="table-service-ai-title"] [data-flex-col="date"]{width:100%;align-items:center}
+    .service-ai-item-value {font-size:1.4rem;flex:1;line-height:2.2rem;}
+}
+@media (max-width:700px) {
+    .service-ai-list .table-list-body {gap:.8rem;}
+    .service-ai-list .table-list-body-item {width:100%;}
+}
+/* E : 챗봇 */
 /* S : 대시보드 */
 .dashboard-top-box {margin-top:4.4rem;border-radius:2.4rem;position:relative;border:1px solid transparent;background-image:linear-gradient(#fff, #fff), linear-gradient(0deg, var(--Gradient-Blue) 0%, var(--Gradient-Purple) 100%);background-origin:border-box;background-clip:content-box,border-box;}
 .dashboard-top-box-content {padding:3.2rem 2rem;}
